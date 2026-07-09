@@ -162,4 +162,14 @@
 
 ---
 
-**Статус проекта:** Сайт опубликован на домене [lapomellia.com](https://lapomellia.com), почта в процессе финальной активации.
+## 🔒 Инвентаризация доступов (Setup Log)
+*   **Сайт:** GitHub (`lapomellia-afk`), Netlify.
+*   **Продажи:** Instagram Shop (Catalog: `lapomellia_catalog.csv`), Stripe.
+*   **Маркетинг:** Pinterest, Instagram Ads.
+*   **Инструкция по восстановлению:** см. файл `ACCESS_GUIDE.md` в корне проекта.
+
+## 📈 Предстоящие задачи (Next Steps)
+1.  **Stripe Verification:** Загрузить паспорт в Stripe до **14 июля (вторник)**.
+2.  **Instagram Ads:** Запустить тестовый «Boost Post» на аудиторию Франции/Германии (€5/день).
+3.  **Pinterest Growth:** Продолжать публикацию 1-2 пинов в день по графику.
+4.  **Auto-Deploy Test:** Попросить Accio внести любое изменение (например, добавить скидку), чтобы проверить автоматическое обновление сайта через GitHub.
