@@ -1,0 +1,47 @@
+# Ignore all zip and archive files
+*.zip
+*.tar.gz
+*.7z
+
+# Ignore Python scripts and virtual environments
+*.py
+__pycache__/
+venv/
+.venv/
+
+# Ignore PowerShell scripts
+*.ps1
+
+# Ignore temporary and test folders
+temp/
+temp_overtone/
+test_extract/
+test_extract_fix/
+verify_fix/
+-p/
+cropped_output/
+pinterest_extract/
+
+# Ignore local source images (unprocessed)
+Visual_Lab_Final_Photos/
+Visual_Lab_Full_Archive_Photos/
+Visual_Lab_Full_Archive_Photos_Cropped/
+*.jpg
+*.png
+!images/
+!guide*.png
+!pin*.png
+!classic_elegance.png
+!weekend_casual.png
+!winter_minimalism.png
+!jewelry.png
+
+# Keep core project files
+!index.html
+!CNAME
+!Project_Logbook_Fire_Goat_2027.md
+!lapomellia_catalog.csv
+!dist/
+!all_*.txt
+!Jewelry_Rendering_Guide_2026.md
+!Visual_Lab_Final_Catalog.md

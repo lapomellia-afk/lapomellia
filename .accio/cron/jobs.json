@@ -1,0 +1,35 @@
+{
+  "version": 2,
+  "jobs": [
+    {
+      "id": "cron-1783320234764-rstea6bl",
+      "name": "Stripe Passport Verification Reminder",
+      "description": "Reminder to upload passport to Stripe for verification.",
+      "enabled": true,
+      "deleteAfterRun": true,
+      "createdAtMs": 1783320234764,
+      "updatedAtMs": 1783320243893,
+      "schedule": {
+        "kind": "at",
+        "atMs": 1783994400000
+      },
+      "payload": {
+        "kind": "tool",
+        "tool": "notify_user",
+        "args": "{ \"message\": \"🔔 Напоминание: Пожалуйста, загрузите скан паспорта в Stripe для верификации выплат La Pomellia.\" }"
+      },
+      "state": {
+        "nextRunAtMs": 1783994400000
+      },
+      "target": {
+        "type": "conversation",
+        "conversationId": "CID-35812299U1780551-68EA32-3060-7DC21E"
+      },
+      "workspacePath": "C:\\Users\\Redmi\\.accio\\accounts\\1763812299\\agents\\DID-F456DA-99F456DAU1779251-9542-9971BA\\project",
+      "createdBy": {
+        "source": "agent",
+        "actorId": "DID-F456DA-99F456DAU1779251-9542-9971BA"
+      }
+    }
+  ]
+}

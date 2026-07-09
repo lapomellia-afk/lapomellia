@@ -1,0 +1,8 @@
+[2026-06-04 13:49:34] === Instagram Auto-Scheduler Started ===
+[2026-06-04 13:49:34] Found pending post ID 2: 'Кольцо Toi et Moi (Sculptural Set)'
+[2026-06-04 13:49:34] Running command: accio-mcp-cli call INSTAGRAM_POST_IG_USER_MEDIA
+[2026-06-04 13:49:41] Successfully created media container. Creation ID: 18098630179917672
+[2026-06-04 13:49:41] Running command: accio-mcp-cli call INSTAGRAM_POST_IG_USER_MEDIA_PUBLISH
+[2026-06-04 13:49:46] Successfully published post on Instagram! Published Media ID: 18070483625676526
+[2026-06-04 13:49:46] Successfully updated queue file with published status.
+[2026-06-04 13:49:46] === Instagram Auto-Scheduler Successfully Completed ===
