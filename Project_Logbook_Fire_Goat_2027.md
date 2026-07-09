@@ -131,7 +131,7 @@
         1.  **Версия с цаворитом:** [https://sc01.alicdn.com/kf/H4d8a284e535b4a12abde2483d7a60a7cL.png](https://sc01.alicdn.com/kf/H4d8a284e535b4a12abde2483d7a60a7cL.png)
         2.  **Версия с бриллиантами:** [https://sc01.alicdn.com/kf/Hc3b340a653fb4343a878696924b4efccz.png](https://sc01.alicdn.com/kf/Hc3b340a653fb4343a878696924b4efccz.png)
         3.  **Вид на модели:** [https://sc01.alicdn.com/kf/Hb5cdbeca15c84b458cd00494d8dd8ba2f.jpg](https://sc01.alicdn.com/kf/Hb5cdbeca15c84b458cd00494d8dd8ba2f.jpg)
-    *   **Tempo Ring** (Кольцо Tempo) — от €435. Характеристики: золото 18K Solid Gold (Au750), размеры 52-57 (EU). Дизайн с чередующимися полированными сегментами и текстурой «алмазная грань». Интерактивная галерея ракурсов:
+    *   **Tempo Ring** (Кольцо Tempo) — от €495. Характеристики: золото 18K Solid Gold (Au750), размеры 52-57 (EU). Дизайн с чередующимися полированными сегментами и текстурой «алмазная грань». Интерактивная галерея ракурсов:
         1.  **Макро-вид (детализация):** [https://sc01.alicdn.com/kf/H8e20bf2fa5cc4cd28e2c090132a5dd59X.jpg](https://sc01.alicdn.com/kf/H8e20bf2fa5cc4cd28e2c090132a5dd59X.jpg)
         2.  **Вид в анфас:** [https://sc01.alicdn.com/kf/Hf43047534d1b44d5879c66cf8acf0213C.jpg](https://sc01.alicdn.com/kf/Hf43047534d1b44d5879c66cf8acf0213C.jpg)
         3.  **Вид в перспективе:** [https://sc01.alicdn.com/kf/Ha36773d22c1a461d9d8bc1a7fdfbb456B.jpg](https://sc01.alicdn.com/kf/Ha36773d22c1a461d9d8bc1a7fdfbb456B.jpg)
