@@ -30,6 +30,10 @@ Keep this document safe. If you lose access to your devices, use these details t
     *   Profile: `La Pomellia | Luxury 18K Gold`
     *   Login: `la.pomellia@gmail.com`
 
+## 🏢 Business Locations
+*   **Hong Kong (Legal Office):** Room 302, 143 Wai Yip street, Kwun Tong, Kowloon, Hong Kong.
+*   **Mainland China (Atelier):** Office 623, No. 448 Guangzhou Avenue, Haizhu District, Guangzhou, China.
+
 ---
 
 ### 🛡️ Safety Checklist

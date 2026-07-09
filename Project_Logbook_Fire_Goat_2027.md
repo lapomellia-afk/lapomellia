@@ -166,6 +166,7 @@
 *   **Сайт:** GitHub (`lapomellia-afk`), Netlify.
 *   **Продажи:** Instagram Shop (Catalog: `lapomellia_catalog.csv`), Stripe.
 *   **Маркетинг:** Pinterest, Instagram Ads, Meta Pixel (ID: `1362246469337917`).
+*   **Адреса:** Гонконг (Legal), Гуанчжоу (Atelier).
 *   **Инструкция по восстановлению:** см. файл `ACCESS_GUIDE.md` в корне проекта.
 
 ## 📈 Предстоящие задачи (Next Steps)
