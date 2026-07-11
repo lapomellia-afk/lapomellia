@@ -136,6 +136,9 @@
         2.  **Вид в анфас:** [https://sc01.alicdn.com/kf/Hf43047534d1b44d5879c66cf8acf0213C.jpg](https://sc01.alicdn.com/kf/Hf43047534d1b44d5879c66cf8acf0213C.jpg)
         3.  **Вид в перспективе:** [https://sc01.alicdn.com/kf/Ha36773d22c1a461d9d8bc1a7fdfbb456B.jpg](https://sc01.alicdn.com/kf/Ha36773d22c1a461d9d8bc1a7fdfbb456B.jpg)
         4.  **Вид на руке:** [https://sc01.alicdn.com/kf/Hcf78879c262e418aba74bfa69e9ed1deZ.jpg](https://sc01.alicdn.com/kf/Hcf78879c262e418aba74bfa69e9ed1deZ.jpg)
+    *   **Infinite Hoop Earrings** (Серьги-кольца Infinite) — от €630. Характеристики: золото 18K Solid Gold, диаметр трубки 1.5 мм. Доступны в двух размерах:
+        1.  **Диаметр 40 мм:** €630. [Посмотреть](https://sc02.alicdn.com/kf/H8eb9a949be4947568cc23bae8195221cV.jpg)
+        2.  **Диаметр 50 мм:** €695. [Посмотреть](https://sc02.alicdn.com/kf/Hf517a048df8d442d874089f4045a930e4.jpg)
     *   **Bespoke Commissions** (Индивидуальный заказ) — Карточка-призыв для обсуждения персонального дизайна.
 5.  **Our Philosophy (Философия бренда):** Манифест бренда о долговечности изделий и ценности семейных реликвий, передающихся из поколения в поколение.
 6.  **Pre-Order Form (Форма предзаказа):** Интерактивная форма с автоматическим заполнением выбранного изделия и плавным скроллом.
