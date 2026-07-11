@@ -640,6 +640,31 @@
         </div>
     </section>
 
+    <!-- NEWSLETTER / PREMIERE CIRCLE -->
+    <section class="py-20 px-6 bg-white border-b border-[#D4AF37]/10">
+        <div class="max-w-4xl mx-auto text-center space-y-10">
+            <div class="space-y-4">
+                <span class="text-[10px] uppercase tracking-[0.4em] text-luxury-gold block font-semibold">Exclusivity</span>
+                <h2 class="font-serif text-3xl sm:text-4xl text-luxury-charcoal tracking-wide">Join the Premiere Circle</h2>
+                <div class="h-[1px] w-12 bg-luxury-gold mx-auto"></div>
+                <p class="text-xs text-luxury-stone font-light max-w-md mx-auto leading-relaxed">
+                    Subscribe to receive exclusive early access to new sculptural creations, limited edition releases, and private events.
+                </p>
+            </div>
+            
+            <form onsubmit="handleNewsletterSubmit(event)" class="max-w-md mx-auto flex flex-col sm:flex-row gap-0 border border-[#D4AF37]/20 focus-within:border-luxury-gold transition duration-300">
+                <input type="email" id="newsletter-email" placeholder="Your Email Address" required 
+                       class="flex-grow px-6 py-4 text-xs font-light tracking-widest outline-none bg-luxury-cream/30">
+                <button type="submit" class="bg-luxury-charcoal text-white text-[10px] uppercase tracking-[0.2em] font-bold px-8 py-4 hover:bg-luxury-gold transition duration-500 whitespace-nowrap">
+                    Join Now
+                </button>
+            </form>
+            <div id="newsletter-success" class="hidden text-xs text-luxury-gold font-medium tracking-widest animate-fade-in">
+                Thank you. You have been added to the Premiere Circle.
+            </div>
+        </div>
+    </section>
+
     <!-- PRE-ORDER / RESERVATION FORM -->
 
     <!-- PRE-ORDER / RESERVATION FORM -->
@@ -1046,6 +1071,22 @@
         function setPreorderProduct(productName) {
             // Scroll to concierge section smoothly
             document.getElementById('preorder').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Newsletter Submit handler
+        function handleNewsletterSubmit(event) {
+            event.preventDefault();
+            const email = document.getElementById('newsletter-email').value;
+            
+            // For now, we'll open the mail client with a subscription request
+            const subject = encodeURIComponent("Join the Premiere Circle");
+            const body = encodeURIComponent(`I would like to join the La Pomellia Premiere Circle.\n\nMy Email: ${email}`);
+            
+            window.location.href = `mailto:concierge@lapomellia.com?subject=${subject}&body=${body}`;
+            
+            // Show success UI
+            document.getElementById('newsletter-success').classList.remove('hidden');
+            event.target.classList.add('hidden');
         }
     </script>
 </body>
