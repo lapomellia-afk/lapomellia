@@ -22,157 +22,147 @@
     /></noscript>
     <!-- End Meta Pixel Code -->
     <title>LA POMELLIA | Premium Fine Jewelry</title>
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        serif: ['"Playfair Display"', 'serif'],
-                        sans: ['Montserrat', 'sans-serif'],
-                    },
-                    colors: {
-                        luxury: {
-                            gold: '#D4AF37',
-                            darkGold: '#AA820A',
-                            cream: '#FAF8F5',
-                            charcoal: '#1A1A1A',
-                            stone: '#707070',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
     <style>
-        body {
-            background-color: #FAF8F5;
-            color: #1A1A1A;
-        }
+        body { font-family: 'Montserrat', sans-serif; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .bg-luxury-cream { background-color: #FAF8F5; }
+        .bg-luxury-charcoal { background-color: #1A1A1A; }
+        .text-luxury-gold { color: #D4AF37; }
+        .border-luxury-gold { border-color: #D4AF37; }
+        .text-luxury-charcoal { color: #1A1A1A; }
+        .text-luxury-stone { color: #707070; }
+        
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #FAF8F5; }
+        ::-webkit-scrollbar-thumb { background: #D4AF37; }
+        
         .active-angle { border-color: #D4AF37 !important; border-width: 2px !important; }
     </style>
 </head>
-<body class="font-sans antialiased">
+<body class="bg-luxury-cream text-luxury-charcoal selection:bg-luxury-gold selection:text-white overflow-x-hidden">
 
-    <!-- HEADER / NAVIGATION -->
-    <header class="fixed top-0 left-0 w-full z-50 bg-[#FAF8F5]/90 backdrop-blur-md border-b border-[#D4AF37]/10 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-            <a href="#" class="font-serif text-2xl tracking-[0.25em] text-luxury-charcoal hover:opacity-80 transition font-medium">
-                LA POMELLIA
-            </a>
-            <nav class="hidden md:flex space-x-10 text-xs tracking-[0.15em] uppercase font-medium text-luxury-charcoal/80">
-                <a href="#collection" class="hover:text-luxury-gold transition duration-300">The Collection</a>
-                <a href="#heritage" class="hover:text-luxury-gold transition duration-300">Our Heritage</a>
-                <a href="#philosophy" class="hover:text-luxury-gold transition duration-300">Philosophy</a>
-                <a href="#preorder" class="hover:text-luxury-gold transition duration-300">Pre-Order</a>
-            </nav>
-            <div class="hidden md:block">
-                <a href="#preorder" class="inline-block text-xs uppercase tracking-[0.15em] px-6 py-3 border border-luxury-gold text-luxury-charcoal hover:bg-luxury-gold hover:text-white transition duration-500">
-                    Reserve a Piece
-                </a>
+    <!-- NAVIGATION -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-[#D4AF37]/10 px-6 py-4 transition-all duration-300">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" class="font-serif text-2xl tracking-[0.2em] font-medium text-luxury-charcoal">LA POMELLIA</a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-12 text-[10px] uppercase tracking-[0.3em] font-semibold">
+                <a href="#collection" class="hover:text-luxury-gold transition">Collection</a>
+                <a href="#philosophy" class="hover:text-luxury-gold transition">Heritage</a>
+                <a href="#preorder" class="hover:text-luxury-gold transition">Concierge</a>
             </div>
-            <button id="mobile-menu-btn" class="md:hidden flex flex-col justify-between w-6 h-4 text-luxury-charcoal focus:outline-none">
-                <span class="w-full h-[1px] bg-luxury-charcoal transition-all"></span>
-                <span class="w-full h-[1px] bg-luxury-charcoal transition-all"></span>
-                <span class="w-full h-[1px] bg-luxury-charcoal transition-all"></span>
+
+            <!-- Mobile Menu Btn -->
+            <button id="mobile-menu-btn" class="md:hidden text-luxury-charcoal">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16m-7 6h7" stroke-width="1.5" stroke-linecap="round"></path></svg>
             </button>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-[#FAF8F5] border-b border-[#D4AF37]/10 px-6 py-8 shadow-lg flex flex-col space-y-6 text-center text-xs tracking-[0.15em] uppercase font-medium">
-            <a href="#collection" class="block py-2 hover:text-luxury-gold transition" onclick="toggleMenu()">The Collection</a>
-            <a href="#heritage" class="block py-2 hover:text-luxury-gold transition" onclick="toggleMenu()">Our Heritage</a>
-            <a href="#philosophy" class="block py-2 hover:text-luxury-gold transition" onclick="toggleMenu()">Philosophy</a>
-            <a href="#preorder" class="block py-2 hover:text-luxury-gold transition bg-luxury-gold text-white" onclick="toggleMenu()">Pre-Order</a>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="hidden fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center space-y-8 text-sm uppercase tracking-[0.3em]">
+        <button onclick="toggleMenu()" class="absolute top-6 right-6"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-width="1.5"></path></svg></button>
+        <a href="#collection" onclick="toggleMenu()" class="hover:text-luxury-gold">Collection</a>
+        <a href="#philosophy" onclick="toggleMenu()" class="hover:text-luxury-gold">Heritage</a>
+        <a href="#preorder" onclick="toggleMenu()" class="hover:text-luxury-gold">Concierge</a>
+    </div>
+
+    <!-- HERO SECTION -->
+    <header class="relative h-screen flex items-center justify-center text-center px-6 overflow-hidden">
+        <div class="absolute inset-0 bg-luxury-cream -z-10">
+            <div class="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/silk.png')]"></div>
+        </div>
+        
+        <div class="space-y-8 animate-fade-in max-w-4xl">
+            <div class="space-y-4">
+                <span class="text-xs uppercase tracking-[0.5em] text-luxury-gold font-semibold block">The Premiere Creations</span>
+                <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl leading-tight text-luxury-charcoal tracking-wide">
+                    Sculpted in Gold
+                </h1>
+                <div class="h-[1px] w-20 bg-luxury-gold mx-auto my-8"></div>
+                <p class="font-serif italic text-xl md:text-2xl text-luxury-stone font-light max-w-2xl mx-auto leading-relaxed">
+                    "Where sculptural gold geometry meets modern fine jewelry."
+                </p>
+            </div>
+            
+            <div class="pt-6">
+                <a href="#collection" class="bg-luxury-charcoal text-white px-12 py-5 text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-luxury-gold transition duration-500 shadow-xl">
+                    Explore Collection
+                </a>
+            </div>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="relative min-h-screen flex items-center justify-center pt-24 pb-16 px-6 overflow-hidden">
-        <div class="absolute inset-0 z-0 opacity-40 bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:32px_32px]"></div>
-        <div class="max-w-4xl mx-auto text-center z-10 space-y-8">
-            <span class="text-xs uppercase tracking-[0.3em] text-luxury-gold block font-semibold animate-pulse font-sans">The Premiere Creations</span>
-            <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl leading-tight text-luxury-charcoal tracking-wide">
-                LA POMELLIA
-            </h1>
-            <p class="font-serif italic text-lg sm:text-2xl text-luxury-stone font-light max-w-2xl mx-auto leading-relaxed">
-                "Where sculptural gold geometry meets modern fine jewelry."
-            </p>
-            <div class="h-[1px] w-24 bg-luxury-gold mx-auto my-6"></div>
-            <p class="text-sm tracking-[0.05em] text-luxury-charcoal/80 max-w-xl mx-auto leading-relaxed font-light">
-                La Pomellia crafts modern family heirlooms in 18K solid yellow gold, marrying masterfully polished lines with bold, organic sculptural silhouettes.
-            </p>
-            <div class="pt-4 flex flex-col sm:flex-row justify-center items-center gap-4">
-                <a href="#collection" class="w-full sm:w-auto text-xs uppercase tracking-[0.15em] px-8 py-4 bg-luxury-charcoal text-white hover:bg-luxury-gold transition duration-500">
-                    Explore Collection
-                </a>
-                <a href="#preorder" class="w-full sm:w-auto text-xs uppercase tracking-[0.15em] px-8 py-4 border border-luxury-charcoal text-luxury-charcoal hover:bg-[#1A1A1A]/5 transition duration-500">
-                    Private Reservation
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- THE HERITAGE SECTION -->
-    <section id="heritage" class="py-24 bg-white border-y border-[#D4AF37]/10 px-6">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div class="space-y-8">
-                <span class="text-xs uppercase tracking-[0.3em] text-luxury-gold block font-semibold">Our Heritage</span>
-                <h2 class="font-serif text-3xl sm:text-5xl text-luxury-charcoal leading-tight">
-                    The Art of Sculptural Form
-                </h2>
-                <div class="h-[1px] w-16 bg-luxury-gold"></div>
-                <div class="space-y-6 text-sm text-luxury-stone leading-relaxed font-light">
-                    <p>Every creation from <strong class="text-luxury-charcoal font-medium">La Pomellia</strong> represents a harmonious dialogue between modern artistic sculpture and the precision of fine jewelry craftsmanship.</p>
-                    <p>Our design language focuses on bold, fluid lines and organic shapes that resemble "liquid gold". This sculptural aesthetic ensures that each piece is not merely an ornament, but a wearable work of art that conforms beautifully to the human silhouette.</p>
-                    <p>We use only 18K solid yellow gold, finished with exceptional high-polish treatments that catch and direct light beautifully across every hand-finished curve and plane.</p>
-                </div>
-            </div>
-            <div class="flex justify-center">
-                <div class="relative overflow-hidden aspect-square w-full max-w-md bg-luxury-cream border border-[#D4AF37]/20 flex items-center justify-center p-8 hover:shadow-xl transition duration-500 group">
-                    <img src="https://sc01.alicdn.com/kf/H8cfbcbf3b0d3422aa7f74d2e19c05c57l.png" alt="La Pomellia Signature" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
-                    <span class="absolute bottom-4 left-4 text-[10px] tracking-[0.2em] uppercase text-luxury-gold font-medium">Signature Creation</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- THE COLLECTION SHOWCASE -->
-    <section id="collection" class="py-24 px-6 bg-luxury-cream">
-        <div class="max-w-7xl mx-auto space-y-16">
-            <div class="text-center space-y-4 max-w-xl mx-auto">
-                <span class="text-xs uppercase tracking-[0.3em] text-luxury-gold block font-semibold font-sans">The Premiere Creations</span>
-                <h2 class="font-serif text-3xl sm:text-5xl text-luxury-charcoal">
-                    The Collection
-                </h2>
-                <p class="text-xs tracking-[0.15em] text-luxury-stone uppercase">Limited Release & Bespoke Commissions</p>
-                <div class="h-[1px] w-12 bg-luxury-gold mx-auto"></div>
+    <!-- COLLECTION SECTION -->
+    <section id="collection" class="py-32 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-24 space-y-6">
+                <h2 class="font-serif text-4xl md:text-6xl text-luxury-charcoal tracking-wide">The Artisan Batch</h2>
+                <div class="h-[1px] w-16 bg-luxury-gold mx-auto"></div>
+                <p class="text-xs uppercase tracking-[0.3em] text-luxury-stone max-w-md mx-auto leading-relaxed font-light">
+                    Handcrafted in our studio, each piece is a celebration of 18K solid gold and natural gemstones.
+                </p>
             </div>
 
+            <!-- Product Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
                 <!-- Product 1: The Diamond Triangle Pendant -->
                 <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
                     <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
+                        <!-- Main Product Image -->
                         <img id="triangle-img" src="https://sc01.alicdn.com/kf/H8cfbcbf3b0d3422aa7f74d2e19c05c57l.png" alt="Triangle Pendant" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
+                        
+                        <!-- Mini Multi-Angle & Model View Selectors -->
                         <div class="absolute bottom-4 left-4 flex flex-wrap gap-1.5 max-w-[90%] z-10">
-                            <button onclick="changeTriangleAngle('https://sc01.alicdn.com/kf/H8cfbcbf3b0d3422aa7f74d2e19c05c57l.png', this)" class="w-7 h-7 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle">
+                            <!-- Main Studio shot -->
+                            <button onclick="changeTriangleAngle('https://sc01.alicdn.com/kf/H8cfbcbf3b0d3422aa7f74d2e19c05c57l.png', this)" class="w-7 h-7 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle" title="Studio View">
                                 <img src="https://sc01.alicdn.com/kf/H8cfbcbf3b0d3422aa7f74d2e19c05c57l.png" class="w-full h-full object-contain">
                             </button>
-                            <button onclick="changeTriangleAngle('https://sc02.alicdn.com/kf/A01eaf6e6a1b741aa9e1abb3baf6abf71J.png', this)" class="w-7 h-7 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
+                            <!-- Model Angle 1 -->
+                            <button onclick="changeTriangleAngle('https://sc02.alicdn.com/kf/A01eaf6e6a1b741aa9e1abb3baf6abf71J.png', this)" class="w-7 h-7 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold" title="Model View 1">
                                 <img src="https://sc02.alicdn.com/kf/A01eaf6e6a1b741aa9e1abb3baf6abf71J.png" class="w-full h-full object-contain">
                             </button>
+                            <!-- Model Angle 2 -->
+                            <button onclick="changeTriangleAngle('https://sc02.alicdn.com/kf/A10c6041da8934fee8dfa875f7365f29dl.png', this)" class="w-7 h-7 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold" title="Model View 2">
+                                <img src="https://sc02.alicdn.com/kf/A10c6041da8934fee8dfa875f7365f29dl.png" class="w-full h-full object-contain">
+                            </button>
+                            <!-- Model Angle 3 -->
+                            <button onclick="changeTriangleAngle('https://sc02.alicdn.com/kf/Aee6d97eb1abc420f847059418b109c2b3.png', this)" class="w-7 h-7 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold" title="Model View 3">
+                                <img src="https://sc02.alicdn.com/kf/Aee6d97eb1abc420f847059418b109c2b3.png" class="w-full h-full object-contain">
+                            </button>
+                            <!-- Model Angle 4 -->
+                            <button onclick="changeTriangleAngle('https://sc02.alicdn.com/kf/Aa3247407466646f292524e93c5c22879O.png', this)" class="w-7 h-7 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold" title="Model View 4">
+                                <img src="https://sc02.alicdn.com/kf/Aa3247407466646f292524e93c5c22879O.png" class="w-full h-full object-contain">
+                            </button>
+                            <!-- Model Angle 5 -->
+                            <button onclick="changeTriangleAngle('https://sc02.alicdn.com/kf/Abebf18a48d3443f48057b465d0761078Y.png', this)" class="w-7 h-7 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold" title="Model View 5">
+                                <img src="https://sc02.alicdn.com/kf/Abebf18a48d3443f48057b465d0761078Y.png" class="w-full h-full object-contain">
+                            </button>
+                            <!-- Model Angle 6 -->
+                            <button onclick="changeTriangleAngle('https://sc02.alicdn.com/kf/Ac8a5f2c2998947bebbde259e3838853en.png', this)" class="w-7 h-7 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold" title="Model View 6">
+                                <img src="https://sc02.alicdn.com/kf/Ac8a5f2c2998947bebbde259e3838853en.png" class="w-full h-full object-contain">
+                            </button>
+                            <!-- Model Angle 7 -->
+                            <button onclick="changeTriangleAngle('https://sc02.alicdn.com/kf/A54fa1b70b67b41189a7235983688400aj.png', this)" class="w-7 h-7 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold" title="Model View 7">
+                                <img src="https://sc02.alicdn.com/kf/A54fa1b70b67b41189a7235983688400aj.png" class="w-full h-full object-contain">
+                            </button>
                         </div>
-                        <span class="absolute top-4 right-4 bg-luxury-gold text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">18K Solid Gold</span>
+                        <span class="absolute top-4 right-4 bg-luxury-gold text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">Model Showcase</span>
                     </div>
                     <div class="p-8 flex-grow flex flex-col justify-between space-y-6">
                         <div class="space-y-2">
                             <h3 class="font-serif text-2xl text-luxury-charcoal tracking-wide">Diamond Triangle Pendant</h3>
-                            <p class="text-xs text-luxury-stone leading-relaxed font-light">18K solid gold (2.08g) set with brilliant-cut diamonds (0.15ct).</p>
+                            <p class="text-xs uppercase tracking-[0.15em] text-luxury-gold font-semibold">Available for Pre-Order</p>
+                        <p class="text-xs text-luxury-stone leading-relaxed font-light">
+                            Features clean geometric triangular form in 18K solid gold (2.08g), set with a premium array of brilliant-cut diamonds (0.15ct, H color, Si1-Si2 clarity). Dimensions: 33.5mm height, 27mm width.
+                        </p>
                         </div>
                         <div class="flex justify-between items-center pt-4 border-t border-[#D4AF37]/10">
                             <div class="flex flex-col">
@@ -184,10 +174,13 @@
                     </div>
                 </div>
 
-                <!-- Product 2: Liquid Gold Pendant -->
+                <!-- Product 2: Liquid Gold Sculptural Pendant -->
                 <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
                     <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
+                        <!-- Main Product Image -->
                         <img id="liquid-gold-img" src="https://sc02.alicdn.com/kf/A2f10bb6b9e324662baaad8c959a4a4987.png" alt="Liquid Gold Pendant" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
+                        
+                        <!-- Mini Multi-Angle View Selectors -->
                         <div class="absolute bottom-4 left-4 flex space-x-2 z-10">
                             <button onclick="changeLiquidGoldAngle('https://sc02.alicdn.com/kf/A2f10bb6b9e324662baaad8c959a4a4987.png', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle">
                                 <img src="https://sc02.alicdn.com/kf/A2f10bb6b9e324662baaad8c959a4a4987.png" class="w-full h-full object-contain">
@@ -196,12 +189,15 @@
                                 <img src="https://sc02.alicdn.com/kf/A54bf7637fccd4e9f9bd1ed7dafce645bU.png" class="w-full h-full object-contain">
                             </button>
                         </div>
-                        <span class="absolute top-4 right-4 bg-luxury-charcoal text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">18K Solid Gold</span>
+                        <span class="absolute top-4 right-4 bg-luxury-charcoal text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">Multi-Angle View</span>
                     </div>
                     <div class="p-8 flex-grow flex flex-col justify-between space-y-6">
                         <div class="space-y-2">
                             <h3 class="font-serif text-2xl text-luxury-charcoal tracking-wide">Liquid Gold Pendant</h3>
-                            <p class="text-xs text-luxury-stone leading-relaxed font-light">Solid 18K yellow gold (approx. 1.8g) masterfully polished to a mirror shine.</p>
+                            <p class="text-xs uppercase tracking-[0.15em] text-luxury-gold font-semibold font-sans">Available for Pre-Order</p>
+                            <p class="text-xs text-luxury-stone leading-relaxed font-light">
+                                An extraordinary study in fluid organic form. Solid 18K yellow gold (18K Solid Gold, approx. 1.8g) masterfully polished to a mirror shine. Dimensions: 30.8mm height, 26mm width, 3mm thickness.
+                            </p>
                         </div>
                         <div class="flex justify-between items-center pt-4 border-t border-[#D4AF37]/10">
                             <div class="flex flex-col">
@@ -213,24 +209,32 @@
                     </div>
                 </div>
 
-                <!-- Product 3: Trinity Ear Cuff -->
+                <!-- Product 3: Trinity Triple-Band Ear Cuff -->
                 <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
                     <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
-                        <img id="ear-cuff-img" src="https://sc01.alicdn.com/kf/H8fc0ac1470a5428ead71a79419af02beM.png" alt="Trinity Ear Cuff" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
+                        <!-- Main Product Image -->
+                        <img id="ear-cuff-img" src="https://sc01.alicdn.com/kf/H8fc0ac1470a5428ead71a79419af02beM.png" alt="Trinity Triple-Band Ear Cuff" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
+                        
+                        <!-- Variant Selectors -->
                         <div class="absolute bottom-4 left-4 flex space-x-2 z-10">
-                            <button onclick="changeCuffVariant('https://sc01.alicdn.com/kf/H8fc0ac1470a5428ead71a79419af02beM.png', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle">
+                            <!-- Yellow Gold Option -->
+                            <button onclick="changeCuffVariant('https://sc01.alicdn.com/kf/H8fc0ac1470a5428ead71a79419af02beM.png', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle" title="18K Yellow Gold">
                                 <img src="https://sc01.alicdn.com/kf/H8fc0ac1470a5428ead71a79419af02beM.png" class="w-full h-full object-contain">
                             </button>
-                            <button onclick="changeCuffVariant('https://sc01.alicdn.com/kf/Hca38a9359fd449aeaa83ca64c2910689l.jpg', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
+                            <!-- Tri-Color Option -->
+                            <button onclick="changeCuffVariant('https://sc01.alicdn.com/kf/Hca38a9359fd449aeaa83ca64c2910689l.jpg', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold" title="18K Tri-Color Fusion">
                                 <img src="https://sc01.alicdn.com/kf/Hca38a9359fd449aeaa83ca64c2910689l.jpg" class="w-full h-full object-contain">
                             </button>
                         </div>
-                        <span class="absolute top-4 right-4 bg-luxury-charcoal text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">18K Solid Gold</span>
+                        <span class="absolute top-4 right-4 bg-luxury-charcoal text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">18K Gold Variants</span>
                     </div>
                     <div class="p-8 flex-grow flex flex-col justify-between space-y-6">
                         <div class="space-y-2">
                             <h3 class="font-serif text-2xl text-luxury-charcoal tracking-wide">Trinity Ear Cuff</h3>
-                            <p class="text-xs text-luxury-stone leading-relaxed font-light">18K solid gold (0.7g) featuring three distinct interlocking bands.</p>
+                            <p class="text-xs uppercase tracking-[0.15em] text-luxury-gold font-semibold font-sans">Available for Pre-Order</p>
+                            <p class="text-xs text-luxury-stone leading-relaxed font-light">
+                                An exquisite multi-textured ear cuff hand-sculpted in 18K solid gold (approx. 0.7g). Features three distinct interlocking bands: a classic rope twist, a polished fluid wave, and a signature quilted band. Dimensions: 13mm width, 13mm height, with a precise 3.5mm opening.
+                            </p>
                         </div>
                         <div class="flex justify-between items-center pt-4 border-t border-[#D4AF37]/10">
                             <div class="flex flex-col">
@@ -245,21 +249,33 @@
                 <!-- Product 4: Overtone Hoop Earrings -->
                 <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
                     <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
+                        <!-- Main Product Image -->
                         <img id="overtone-img" src="https://sc01.alicdn.com/kf/Hc3fe8654779943399471779c04a85c2c0.png" alt="Overtone Hoop Earrings" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
+                        
+                        <!-- Mini Multi-Angle View Selectors -->
                         <div class="absolute bottom-4 left-4 flex space-x-2 z-10">
-                            <button onclick="changeOvertoneAngle('https://sc01.alicdn.com/kf/Hc3fe8654779943399471779c04a85c2c0.png', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle">
+                            <!-- Angle 1 -->
+                            <button onclick="changeOvertoneAngle('https://sc01.alicdn.com/kf/Hc3fe8654779943399471779c04a85c2c0.png', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle" title="Perspective View">
                                 <img src="https://sc01.alicdn.com/kf/Hc3fe8654779943399471779c04a85c2c0.png" class="w-full h-full object-contain">
                             </button>
-                            <button onclick="changeOvertoneAngle('https://sc01.alicdn.com/kf/H0bc91a54406c4e56ad58ca6c52a375e0S.png', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
+                            <!-- Angle 2 -->
+                            <button onclick="changeOvertoneAngle('https://sc01.alicdn.com/kf/H0bc91a54406c4e56ad58ca6c52a375e0S.png', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold" title="Warm Reflection">
                                 <img src="https://sc01.alicdn.com/kf/H0bc91a54406c4e56ad58ca6c52a375e0S.png" class="w-full h-full object-contain">
                             </button>
+                            <!-- Angle 3 -->
+                            <button onclick="changeOvertoneAngle('https://sc01.alicdn.com/kf/H88e8add49a324892911be7c0921042dbC.png', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold" title="Flat Lay">
+                                <img src="https://sc01.alicdn.com/kf/H88e8add49a324892911be7c0921042dbC.png" class="w-full h-full object-contain">
+                            </button>
                         </div>
-                        <span class="absolute top-4 right-4 bg-luxury-gold text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">18K Solid Gold</span>
+                        <span class="absolute top-4 right-4 bg-luxury-gold text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">New Arrival</span>
                     </div>
                     <div class="p-8 flex-grow flex flex-col justify-between space-y-6">
                         <div class="space-y-2">
                             <h3 class="font-serif text-2xl text-luxury-charcoal tracking-wide">Overtone Hoop Earrings</h3>
-                            <p class="text-xs text-luxury-stone leading-relaxed font-light">18K yellow and white gold hoops (26mm). Twisted duo-tone ribbons.</p>
+                            <p class="text-xs uppercase tracking-[0.15em] text-luxury-gold font-semibold font-sans">Available for Pre-Order</p>
+                            <p class="text-xs text-luxury-stone leading-relaxed font-light">
+                                A masterfully twisted duo-tone pair hand-crafted in 18K solid yellow and white gold. Featuring an external diameter of 26mm, these hoops seamlessly intertwine high-polish gold and diamond-cut textured ribbons.
+                            </p>
                         </div>
                         <div class="flex justify-between items-center pt-4 border-t border-[#D4AF37]/10">
                              <div class="flex flex-col">
@@ -274,21 +290,33 @@
                 <!-- Product 5: Eclipse Drop Earrings -->
                 <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
                     <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
+                        <!-- Main Product Image -->
                         <img id="mosaic-img" src="https://sc01.alicdn.com/kf/Hbc06c22ab9e64f3081a7a4abe752e12ca.png" alt="Eclipse Drop Earrings" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
+                        
+                        <!-- Mini Multi-Angle View Selectors -->
                         <div class="absolute bottom-4 left-4 flex space-x-2 z-10">
-                            <button onclick="changeMosaicAngle('https://sc01.alicdn.com/kf/Hbc06c22ab9e64f3081a7a4abe752e12ca.png', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle">
+                            <!-- Angle 1 -->
+                            <button onclick="changeMosaicAngle('https://sc01.alicdn.com/kf/Hbc06c22ab9e64f3081a7a4abe752e12ca.png', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle" title="Front View">
                                 <img src="https://sc01.alicdn.com/kf/Hbc06c22ab9e64f3081a7a4abe752e12ca.png" class="w-full h-full object-contain">
                             </button>
-                            <button onclick="changeMosaicAngle('https://sc01.alicdn.com/kf/Hbd72ec1af0294f37adccba21c882a261h.png', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
+                            <!-- Angle 2 -->
+                            <button onclick="changeMosaicAngle('https://sc01.alicdn.com/kf/Hbd72ec1af0294f37adccba21c882a261h.png', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold" title="Perspective View">
                                 <img src="https://sc01.alicdn.com/kf/Hbd72ec1af0294f37adccba21c882a261h.png" class="w-full h-full object-contain">
                             </button>
+                            <!-- Angle 3 -->
+                            <button onclick="changeMosaicAngle('https://sc01.alicdn.com/kf/H20f53fe4649a4995b00ca4013c6340dev.png', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold" title="Detail View">
+                                <img src="https://sc01.alicdn.com/kf/H20f53fe4649a4995b00ca4013c6340dev.png" class="w-full h-full object-contain">
+                            </button>
                         </div>
-                        <span class="absolute top-4 right-4 bg-luxury-gold text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">18K Solid Gold</span>
+                        <span class="absolute top-4 right-4 bg-luxury-gold text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">Limited Edition</span>
                     </div>
                     <div class="p-8 flex-grow flex flex-col justify-between space-y-6">
                         <div class="space-y-2">
                             <h3 class="font-serif text-2xl text-luxury-charcoal tracking-wide">Eclipse Drop Earrings</h3>
-                            <p class="text-xs text-luxury-stone leading-relaxed font-light">18K solid gold (3.65g) with a "Crushed Ice" hammered finish.</p>
+                            <p class="text-xs uppercase tracking-[0.15em] text-luxury-gold font-semibold font-sans">Available for Pre-Order</p>
+                            <p class="text-xs text-luxury-stone leading-relaxed font-light">
+                                Hand-crafted in 18K solid gold (approx. 3.65g), these earrings feature a mesmerizing "Crushed Ice" hammered finish on dual golden disks. Designed to catch light from every angle. Total height: 27.2mm.
+                            </p>
                         </div>
                         <div class="flex justify-between items-center pt-4 border-t border-[#D4AF37]/10">
                             <div class="flex flex-col">
@@ -303,21 +331,37 @@
                 <!-- Product 6: Cat's Eye Knot Earrings -->
                 <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
                     <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
+                        <!-- Main Product Image -->
                         <img id="cats-eye-img" src="https://sc01.alicdn.com/kf/H5c27b792e20e41e0bf7ec14ece2ce554s.jpg" alt="Cat's Eye Knot Earrings" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
+                        
+                        <!-- Mini Multi-Angle View Selectors -->
                         <div class="absolute bottom-4 left-4 flex space-x-2 z-10">
-                            <button onclick="changeCatsEyeAngle('https://sc01.alicdn.com/kf/H5c27b792e20e41e0bf7ec14ece2ce554s.jpg', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle">
+                            <!-- Angle 1: Studio -->
+                            <button onclick="changeCatsEyeAngle('https://sc01.alicdn.com/kf/H5c27b792e20e41e0bf7ec14ece2ce554s.jpg', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle" title="Studio View">
                                 <img src="https://sc01.alicdn.com/kf/H5c27b792e20e41e0bf7ec14ece2ce554s.jpg" class="w-full h-full object-contain">
                             </button>
-                            <button onclick="changeCatsEyeAngle('https://sc01.alicdn.com/kf/H1476434f6cb1442c884d71826218cf94z.png', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
+                            <!-- Angle 2: Perspective -->
+                            <button onclick="changeCatsEyeAngle('https://sc01.alicdn.com/kf/H1476434f6cb1442c884d71826218cf94z.png', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold" title="Perspective View">
                                 <img src="https://sc01.alicdn.com/kf/H1476434f6cb1442c884d71826218cf94z.png" class="w-full h-full object-contain">
                             </button>
+                            <!-- Angle 3: Model -->
+                            <button onclick="changeCatsEyeAngle('https://sc01.alicdn.com/kf/H68f1753196164e5b970bb5bcdb162e14s.jpg', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold" title="Model View">
+                                <img src="https://sc01.alicdn.com/kf/H68f1753196164e5b970bb5bcdb162e14s.jpg" class="w-full h-full object-contain">
+                            </button>
+                            <!-- Angle 4: Detail -->
+                            <button onclick="changeCatsEyeAngle('https://sc01.alicdn.com/kf/H4cd5ef9135844d40a5dedf6fda62814dY.jpg', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold" title="Detail View">
+                                <img src="https://sc01.alicdn.com/kf/H4cd5ef9135844d40a5dedf6fda62814dY.jpg" class="w-full h-full object-contain">
+                            </button>
                         </div>
-                        <span class="absolute top-4 right-4 bg-luxury-gold text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">18K Solid Gold</span>
+                        <span class="absolute top-4 right-4 bg-luxury-gold text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">Artisan Selection</span>
                     </div>
                     <div class="p-8 flex-grow flex flex-col justify-between space-y-6">
                         <div class="space-y-2">
                             <h3 class="font-serif text-2xl text-luxury-charcoal tracking-wide">Cat's Eye Knot Earrings</h3>
-                            <p class="text-xs text-luxury-stone leading-relaxed font-light">18K solid gold (2.97g) with artisanal knots and 4.8mm polished beads.</p>
+                            <p class="text-xs uppercase tracking-[0.15em] text-luxury-gold font-semibold font-sans">Available for Pre-Order</p>
+                            <p class="text-xs text-luxury-stone leading-relaxed font-light">
+                                Elegant drop earrings featuring artisanal golden knots and polished beads in 18K solid gold (approx. 2.97g). Total height: 50mm. Each bead measures 4.8mm in diameter, showcasing a harmonious blend of matte and high-polish finishes.
+                            </p>
                         </div>
                         <div class="flex justify-between items-center pt-4 border-t border-[#D4AF37]/10">
                             <div class="flex flex-col">
@@ -332,21 +376,37 @@
                 <!-- Product 7: Clover Peridot Pendant -->
                 <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
                     <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
+                        <!-- Main Product Image -->
                         <img id="clover-img" src="https://sc01.alicdn.com/kf/H6e3c8782b2484e19bd50dae993886901i.jpg" alt="Clover Peridot Pendant" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
+                        
+                        <!-- Mini Multi-Angle View Selectors -->
                         <div class="absolute bottom-4 left-4 flex space-x-2 z-10">
-                            <button onclick="changeCloverAngle('https://sc01.alicdn.com/kf/H6e3c8782b2484e19bd50dae993886901i.jpg', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle">
+                            <!-- Angle 1: Studio -->
+                            <button onclick="changeCloverAngle('https://sc01.alicdn.com/kf/H6e3c8782b2484e19bd50dae993886901i.jpg', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle" title="Studio View">
                                 <img src="https://sc01.alicdn.com/kf/H6e3c8782b2484e19bd50dae993886901i.jpg" class="w-full h-full object-contain">
                             </button>
-                            <button onclick="changeCloverAngle('https://sc01.alicdn.com/kf/H1a309323c7994880a1b41fedb2821c61V.jpg', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
+                            <!-- Angle 2: Perspective -->
+                            <button onclick="changeCloverAngle('https://sc01.alicdn.com/kf/H1a309323c7994880a1b41fedb2821c61V.jpg', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold" title="Perspective View">
                                 <img src="https://sc01.alicdn.com/kf/H1a309323c7994880a1b41fedb2821c61V.jpg" class="w-full h-full object-contain">
                             </button>
+                            <!-- Angle 3: Detail -->
+                            <button onclick="changeCloverAngle('https://sc01.alicdn.com/kf/H1ee4edc12167402791234558caeab862A.jpg', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold" title="Setting Detail">
+                                <img src="https://sc01.alicdn.com/kf/H1ee4edc12167402791234558caeab862A.jpg" class="w-full h-full object-contain">
+                            </button>
+                            <!-- Angle 4: Close-up -->
+                            <button onclick="changeCloverAngle('https://sc01.alicdn.com/kf/H9f979e00c729409ca6a520b90a28eca8A.jpg', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold" title="Stone Detail">
+                                <img src="https://sc01.alicdn.com/kf/H9f979e00c729409ca6a520b90a28eca8A.jpg" class="w-full h-full object-contain">
+                            </button>
                         </div>
-                        <span class="absolute top-4 right-4 bg-luxury-gold text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">18K Solid Gold</span>
+                        <span class="absolute top-4 right-4 bg-luxury-gold text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">Summer Selection</span>
                     </div>
                     <div class="p-8 flex-grow flex flex-col justify-between space-y-6">
                         <div class="space-y-2">
                             <h3 class="font-serif text-2xl text-luxury-charcoal tracking-wide">Clover Peridot Pendant</h3>
-                            <p class="text-xs text-luxury-stone leading-relaxed font-light">18K solid gold with a vibrant 1.11ct natural peridot.</p>
+                            <p class="text-xs uppercase tracking-[0.15em] text-luxury-gold font-semibold font-sans">Available for Pre-Order</p>
+                            <p class="text-xs text-luxury-stone leading-relaxed font-light">
+                                A delicate clover-shaped pendant in 18K solid gold, featuring a vibrant 1.11ct Peridot center stone. Dimensions: 16mm height, 8.6mm width. A symbol of luck and natural elegance.
+                            </p>
                         </div>
                         <div class="flex justify-between items-center pt-4 border-t border-[#D4AF37]/10">
                             <div class="flex flex-col">
@@ -358,7 +418,7 @@
                     </div>
                 </div>
 
-                <!-- Product 8: Ruby Heirloom Bracelet -->
+                <!-- Product 8: Ruby & Diamond Bracelet -->
                 <div class="bg-white group flex flex-col min-h-[550px] border border-[#D4AF37]/10 hover:border-[#D4AF37]/30 transition-all duration-500">
                     <div class="aspect-[4/5] overflow-hidden bg-luxury-cream relative">
                         <img id="ruby-bracelet-img" src="https://sc02.alicdn.com/kf/H55ed47e8d5984d67a6936666a2bff1ddB.jpg" alt="Ruby & Diamond Bracelet" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
@@ -379,7 +439,7 @@
                         <div class="space-y-2">
                             <h3 class="font-serif text-2xl text-luxury-charcoal tracking-wide">Ruby Heirloom Bracelet</h3>
                             <p class="text-xs uppercase tracking-[0.15em] text-luxury-gold font-semibold font-sans">Artisan Elegance</p>
-                            <p class="text-xs text-luxury-stone leading-relaxed font-light">18K solid gold (18.5cm) with a natural 0.238ct ruby and 0.068ct diamonds. Handcrafted luxury.</p>
+                            <p class="text-xs text-luxury-stone leading-relaxed font-light">18K solid gold (18.5cm) featuring a vibrant 0.238ct natural ruby and six brilliant-cut diamonds (0.068ct). Handcrafted luxury.</p>
                         </div>
                         <div class="flex justify-between items-center pt-4 border-t border-[#D4AF37]/10">
                             <div class="flex flex-col">
@@ -394,12 +454,17 @@
                 <!-- Product 9: Wind Sculptural Pendant -->
                 <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
                     <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
+                        <!-- Main Product Image -->
                         <img id="wind-img" src="https://sc01.alicdn.com/kf/H4d8a284e535b4a12abde2483d7a60a7cL.png" alt="Wind Sculptural Pendant" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
+                        
+                        <!-- Variant Selectors -->
                         <div class="absolute bottom-4 left-4 flex space-x-2 z-10">
-                            <button onclick="changeWindVariant('https://sc01.alicdn.com/kf/H4d8a284e535b4a12abde2483d7a60a7cL.png', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle">
+                            <!-- Tsavorite Option -->
+                            <button onclick="changeWindVariant('https://sc01.alicdn.com/kf/H4d8a284e535b4a12abde2483d7a60a7cL.png', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle" title="18K Gold & Tsavorite">
                                 <img src="https://sc01.alicdn.com/kf/H4d8a284e535b4a12abde2483d7a60a7cL.png" class="w-full h-full object-contain">
                             </button>
-                            <button onclick="changeWindVariant('https://sc01.alicdn.com/kf/Hc3b340a653fb4343a878696924b4efccz.png', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
+                            <!-- Diamond Option -->
+                            <button onclick="changeWindVariant('https://sc01.alicdn.com/kf/Hc3b340a653fb4343a878696924b4efccz.png', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold" title="18K Gold & Diamonds">
                                 <img src="https://sc01.alicdn.com/kf/Hc3b340a653fb4343a878696924b4efccz.png" class="w-full h-full object-contain">
                             </button>
                         </div>
@@ -409,7 +474,9 @@
                         <div class="space-y-2">
                             <h3 class="font-serif text-2xl text-luxury-charcoal tracking-wide">Wind Pendant</h3>
                             <p class="text-xs uppercase tracking-[0.15em] text-luxury-gold font-semibold font-sans">Signature Collection</p>
-                            <p class="text-xs text-luxury-stone leading-relaxed font-light">Handcrafted in 18K solid gold, available with natural tsavorites or brilliant diamonds.</p>
+                            <p class="text-xs text-luxury-stone leading-relaxed font-light">
+                                An evocative sculptural pendant inspired by the fluid motion of wind. Hand-crafted in 18K solid gold, available with vibrant natural tsavorites or brilliant diamonds. Dimensions: 27.7mm height, 20mm diameter.
+                            </p>
                         </div>
                         <div class="flex justify-between items-center pt-4 border-t border-[#D4AF37]/10">
                             <div class="flex flex-col">
@@ -425,6 +492,7 @@
                 <div class="bg-white group flex flex-col min-h-[550px] border border-[#D4AF37]/10 hover:border-[#D4AF37]/30 transition-all duration-500">
                     <div class="aspect-[4/5] overflow-hidden bg-luxury-cream relative">
                         <img id="tempo-img" src="https://sc01.alicdn.com/kf/Ha36773d22c1a461d9d8bc1a7fdfbb456B.jpg" alt="Tempo Ring" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                        <!-- Mini Thumbnails -->
                         <div class="absolute bottom-4 left-4 flex space-x-2 z-20">
                             <button onclick="changeTempoAngle('https://sc01.alicdn.com/kf/Ha36773d22c1a461d9d8bc1a7fdfbb456B.jpg', this)" class="w-8 h-8 rounded border border-luxury-gold scale-110 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
                                 <img src="https://sc01.alicdn.com/kf/Ha36773d22c1a461d9d8bc1a7fdfbb456B.jpg" class="w-full h-full object-cover">
@@ -439,7 +507,9 @@
                         <div class="space-y-2">
                             <h3 class="font-serif text-2xl text-luxury-charcoal tracking-wide">Tempo Ring</h3>
                             <p class="text-xs uppercase tracking-[0.15em] text-luxury-gold font-semibold font-sans">Modern Rhythm</p>
-                            <p class="text-xs text-luxury-stone leading-relaxed font-light">Handcrafted in 18K solid gold with alternating polished and diamond-cut segments.</p>
+                            <p class="text-xs text-luxury-stone leading-relaxed font-light">
+                                A masterpiece of rhythmic design. The Tempo ring features alternating segments of high-polished 18K solid gold and brilliant diamond-cut textures that capture light from every angle. Available in sizes 52-57.
+                            </p>
                         </div>
                         <div class="flex justify-between items-center pt-4 border-t border-[#D4AF37]/10">
                             <div class="flex flex-col">
@@ -454,11 +524,16 @@
                 <!-- Product 11: Infinite Hoop Earrings -->
                 <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
                     <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
+                        <!-- Main Product Image -->
                         <img id="hoop-img" src="https://sc02.alicdn.com/kf/H8eb9a949be4947568cc23bae8195221cV.jpg" alt="Infinite Hoop Earrings" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
+                        
+                        <!-- Mini View Selectors -->
                         <div class="absolute bottom-4 left-4 flex space-x-2 z-10">
+                            <!-- 40mm View -->
                             <button onclick="changeHoopSize('https://sc02.alicdn.com/kf/H8eb9a949be4947568cc23bae8195221cV.jpg', 'From €795', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle" title="40mm Diameter">
                                 <img src="https://sc02.alicdn.com/kf/H8eb9a949be4947568cc23bae8195221cV.jpg" class="w-full h-full object-contain">
                             </button>
+                            <!-- 50mm View -->
                             <button onclick="changeHoopSize('https://sc02.alicdn.com/kf/Hf517a048df8d442d874089f4045a930e4.jpg', 'From €885', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold" title="50mm Diameter">
                                 <img src="https://sc02.alicdn.com/kf/Hf517a048df8d442d874089f4045a930e4.jpg" class="w-full h-full object-contain">
                             </button>
@@ -469,7 +544,9 @@
                         <div class="space-y-2">
                             <h3 class="font-serif text-2xl text-luxury-charcoal tracking-wide">Infinite Hoop Earrings</h3>
                             <p class="text-xs uppercase tracking-[0.15em] text-luxury-gold font-semibold font-sans">Timeless Minimalism</p>
-                            <p class="text-xs text-luxury-stone leading-relaxed font-light">Hand-crafted 18K solid gold hoops (1.5mm tube). Available in 40mm and 50mm sizes.</p>
+                            <p class="text-xs text-luxury-stone leading-relaxed font-light">
+                                Hand-crafted 18K solid gold hoops featuring a delicate 1.5mm tube diameter. A perfect balance of strength and elegance. Available in 40mm and 50mm sizes.
+                            </p>
                         </div>
                         <div class="flex justify-between items-center pt-4 border-t border-[#D4AF37]/10">
                             <div class="flex flex-col">
@@ -490,192 +567,3 @@
                     </p>
                     <a href="#preorder" onclick="setPreorderProduct('Custom Bespoke Commission')" class="mt-8 text-xs uppercase tracking-[0.15em] font-semibold text-luxury-gold hover:opacity-80 border-b border-luxury-gold pb-1 transition">Begin Consultation</a>
                 </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- BRAND STORY & PHILOSOPHY -->
-    <section id="philosophy" class="py-24 px-6 bg-luxury-charcoal text-white text-center relative overflow-hidden">
-        <div class="absolute top-12 left-1/2 -translate-x-1/2 text-luxury-gold/20 text-7xl font-serif">✦</div>
-        <div class="max-w-3xl mx-auto space-y-8 relative z-10 pt-8">
-            <span class="text-xs uppercase tracking-[0.3em] text-luxury-gold block font-semibold">Our Philosophy</span>
-            <h2 class="font-serif text-3xl sm:text-5xl leading-tight tracking-wide text-[#FAF8F5]">
-                Jewelry to be Inherited, Not Just Worn
-            </h2>
-            <div class="h-[1px] w-16 bg-luxury-gold mx-auto my-6"></div>
-            <p class="font-serif italic text-lg text-luxury-gold/90 font-light leading-relaxed">"Our pieces are designed for a lifecycle spanning generations."</p>
-            <p class="text-sm text-[#FAF8F5]/80 leading-relaxed font-light max-w-2xl mx-auto">
-                La Pomellia rejects the transient nature of modern fashion. Every curve of gold, every selected diamond and natural gemstone is treated as a component of a permanent legacy.
-            </p>
-        </div>
-    </section>
-
-    <!-- NEWSLETTER / PREMIERE CIRCLE -->
-    <section class="py-20 px-6 bg-white border-b border-[#D4AF37]/10">
-        <div class="max-w-4xl mx-auto text-center space-y-10">
-            <div class="space-y-4">
-                <span class="text-[10px] uppercase tracking-[0.4em] text-luxury-gold block font-semibold">Exclusivity</span>
-                <h2 class="font-serif text-3xl sm:text-4xl text-luxury-charcoal tracking-wide">Join the Premiere Circle</h2>
-                <div class="h-[1px] w-12 bg-luxury-gold mx-auto"></div>
-                <p class="text-xs text-luxury-stone font-light max-w-md mx-auto leading-relaxed">Subscribe to receive exclusive early access to new sculptural creations.</p>
-            </div>
-            <form onsubmit="handleNewsletterSubmit(event)" class="max-w-md mx-auto flex flex-col sm:flex-row gap-0 border border-[#D4AF37]/20 focus-within:border-luxury-gold transition duration-300">
-                <input type="email" id="newsletter-email" placeholder="Your Email Address" required class="flex-grow px-6 py-4 text-xs font-light tracking-widest outline-none bg-luxury-cream/30">
-                <button type="submit" class="bg-luxury-charcoal text-white text-[10px] uppercase tracking-[0.2em] font-bold px-8 py-4 hover:bg-luxury-gold transition duration-500 whitespace-nowrap">Join Now</button>
-            </form>
-            <div id="newsletter-success" class="hidden text-xs text-luxury-gold font-medium tracking-widest animate-fade-in">Added to the Premiere Circle.</div>
-        </div>
-    </section>
-
-    <!-- CONCIERGE & SHIPPING -->
-    <section id="preorder" class="py-24 px-6 bg-white">
-        <div class="max-w-3xl mx-auto space-y-12">
-            <div id="preorder" class="bg-luxury-cream border border-[#D4AF37]/30 p-12 text-center space-y-8">
-                <div class="space-y-4">
-                    <span class="text-[10px] uppercase tracking-[0.3em] text-luxury-gold block font-semibold">Private Reservation</span>
-                    <h3 class="font-serif text-3xl text-luxury-charcoal">Connect with our Concierge</h3>
-                    <div class="h-[1px] w-12 bg-luxury-gold mx-auto"></div>
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-lg mx-auto">
-                    <a href="https://wa.me/8618665723438" target="_blank" class="flex items-center justify-center space-x-3 bg-[#25D366] text-white py-4 px-6 text-[10px] uppercase tracking-widest font-bold hover:bg-[#128C7E] transition duration-500">
-                        <span>WhatsApp Concierge</span>
-                    </a>
-                    <a href="mailto:concierge@lapomellia.com" class="flex items-center justify-center space-x-3 bg-luxury-charcoal text-white py-4 px-6 text-[10px] uppercase tracking-widest font-bold hover:bg-luxury-gold transition duration-500">
-                        <span>Email Inquiry</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- MATERIALS & HERITAGE -->
-    <section class="py-24 px-6 bg-luxury-cream">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-                <div class="space-y-8">
-                    <h2 class="font-serif text-4xl text-luxury-charcoal leading-tight">Materials & Heritage</h2>
-                    <div class="space-y-6">
-                        <div class="space-y-3">
-                            <h3 class="text-[11px] uppercase tracking-[0.2em] font-bold text-luxury-charcoal">18K Solid Gold (AU 750)</h3>
-                            <p class="text-sm font-light text-luxury-stone leading-relaxed">La Pomellia utilizes exclusively 18K Solid Gold. Retains its deep, radiant warmth for a lifetime.</p>
-                        </div>
-                        <div class="space-y-3">
-                            <h3 class="text-[11px] uppercase tracking-[0.2em] font-bold text-luxury-charcoal">Living Finish & Artisan Patina</h3>
-                            <p class="text-sm font-light text-luxury-stone leading-relaxed">Our 18K solid gold creations feature a living finish. Over time, your piece will develop a soft, natural patina.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="aspect-[4/5] bg-white overflow-hidden border border-[#D4AF37]/20">
-                    <img src="https://sc01.alicdn.com/kf/H4cd5ef9135844d40a5dedf6fda62814dY.jpg" class="w-full h-full object-cover">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="py-12 px-6 bg-white border-t border-[#D4AF37]/10 text-center space-y-6">
-        <div class="font-serif text-xl text-luxury-charcoal tracking-widest">LA POMELLIA</div>
-        <div class="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12">
-            <div class="space-y-1">
-                <span class="text-[9px] uppercase tracking-widest text-luxury-gold block font-semibold">Hong Kong Office</span>
-                <p class="text-[10px] text-luxury-stone font-light">Room 302, 143 Wai Yip street, Kowloon</p>
-            </div>
-            <div class="space-y-1">
-                <span class="text-[9px] uppercase tracking-widest text-luxury-gold block font-semibold">Mainland China Atelier</span>
-                <p class="text-[10px] text-luxury-stone font-light">Office 623, No. 448 Guangzhou Avenue, Guangzhou</p>
-            </div>
-        </div>
-        <p class="text-[9px] text-luxury-stone/60 uppercase tracking-widest">© 2027 La Pomellia Fine Jewelry. All Rights Reserved.</p>
-    </footer>
-
-    <script>
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
-        function toggleMenu() { menu.classList.add('hidden'); }
-
-        function changeTriangleAngle(imgUrl, buttonElement) {
-            document.getElementById('triangle-img').src = imgUrl;
-            const buttons = buttonElement.parentNode.querySelectorAll('button');
-            buttons.forEach(b => { b.classList.remove('active-angle', 'scale-110'); b.classList.add('border-gray-200'); });
-            buttonElement.classList.remove('border-gray-200'); buttonElement.classList.add('active-angle', 'scale-110');
-        }
-        function changeLiquidGoldAngle(imgUrl, buttonElement) {
-            document.getElementById('liquid-gold-img').src = imgUrl;
-            const buttons = buttonElement.parentNode.querySelectorAll('button');
-            buttons.forEach(b => { b.classList.remove('active-angle', 'scale-110'); b.classList.add('border-gray-200'); });
-            buttonElement.classList.remove('border-gray-200'); buttonElement.classList.add('active-angle', 'scale-110');
-        }
-        function changeCuffVariant(imgUrl, buttonElement) {
-            document.getElementById('ear-cuff-img').src = imgUrl;
-            const buttons = buttonElement.parentNode.querySelectorAll('button');
-            buttons.forEach(b => { b.classList.remove('active-angle', 'scale-110'); b.classList.add('border-gray-200'); });
-            buttonElement.classList.remove('border-gray-200'); buttonElement.classList.add('active-angle', 'scale-110');
-        }
-        function changeOvertoneAngle(imgUrl, buttonElement) {
-            document.getElementById('overtone-img').src = imgUrl;
-            const buttons = buttonElement.parentNode.querySelectorAll('button');
-            buttons.forEach(b => { b.classList.remove('active-angle', 'scale-110'); b.classList.add('border-gray-200'); });
-            buttonElement.classList.remove('border-gray-200'); buttonElement.classList.add('active-angle', 'scale-110');
-        }
-        function changeMosaicAngle(imgUrl, buttonElement) {
-            document.getElementById('mosaic-img').src = imgUrl;
-            const buttons = buttonElement.parentNode.querySelectorAll('button');
-            buttons.forEach(b => { b.classList.remove('active-angle', 'scale-110'); b.classList.add('border-gray-200'); });
-            buttonElement.classList.remove('border-gray-200'); buttonElement.classList.add('active-angle', 'scale-110');
-        }
-        function changeCatsEyeAngle(imgUrl, buttonElement) {
-            document.getElementById('cats-eye-img').src = imgUrl;
-            const buttons = buttonElement.parentNode.querySelectorAll('button');
-            buttons.forEach(b => { b.classList.remove('active-angle', 'scale-110'); b.classList.add('border-gray-200'); });
-            buttonElement.classList.remove('border-gray-200'); buttonElement.classList.add('active-angle', 'scale-110');
-        }
-        function changeCloverAngle(imgUrl, buttonElement) {
-            document.getElementById('clover-img').src = imgUrl;
-            const buttons = buttonElement.parentNode.querySelectorAll('button');
-            buttons.forEach(b => { b.classList.remove('active-angle', 'scale-110'); b.classList.add('border-gray-200'); });
-            buttonElement.classList.remove('border-gray-200'); buttonElement.classList.add('active-angle', 'scale-110');
-        }
-        function changeBraceletAngle(imgUrl, buttonElement) {
-            document.getElementById('bracelet-img').src = imgUrl;
-            const buttons = buttonElement.parentNode.querySelectorAll('button');
-            buttons.forEach(b => { b.classList.remove('active-angle', 'scale-110'); b.classList.add('border-gray-200'); });
-            buttonElement.classList.remove('border-gray-200'); buttonElement.classList.add('active-angle', 'scale-110');
-        }
-        function changeRubyBraceletAngle(imgUrl, buttonElement) {
-            document.getElementById('ruby-bracelet-img').src = imgUrl;
-            const buttons = buttonElement.parentNode.querySelectorAll('button');
-            buttons.forEach(b => { b.classList.remove('active-angle', 'scale-110'); b.classList.add('border-gray-200'); });
-            buttonElement.classList.remove('border-gray-200'); buttonElement.classList.add('active-angle', 'scale-110');
-        }
-        function changeWindVariant(imgUrl, buttonElement) {
-            document.getElementById('wind-img').src = imgUrl;
-            const buttons = buttonElement.parentNode.querySelectorAll('button');
-            buttons.forEach(b => { b.classList.remove('active-angle', 'scale-110'); b.classList.add('border-gray-200'); });
-            buttonElement.classList.remove('border-gray-200'); buttonElement.classList.add('active-angle', 'scale-110');
-        }
-        function changeTempoAngle(imgUrl, buttonElement) {
-            document.getElementById('tempo-img').src = imgUrl;
-            const buttons = buttonElement.parentNode.querySelectorAll('button');
-            buttons.forEach(b => { b.classList.remove('active-angle', 'scale-110'); b.classList.add('border-gray-200'); });
-            buttonElement.classList.remove('border-gray-200'); buttonElement.classList.add('active-angle', 'scale-110');
-        }
-        function changeHoopSize(imgUrl, priceText, buttonElement) {
-            document.getElementById('hoop-img').src = imgUrl;
-            document.getElementById('hoop-price').innerText = priceText;
-            const buttons = buttonElement.parentNode.querySelectorAll('button');
-            buttons.forEach(b => { b.classList.remove('active-angle', 'scale-110'); b.classList.add('border-gray-200'); });
-            buttonElement.classList.remove('border-gray-200'); buttonElement.classList.add('active-angle', 'scale-110');
-        }
-        function setPreorderProduct(productName) { document.getElementById('preorder').scrollIntoView({ behavior: 'smooth' }); }
-        function handleNewsletterSubmit(event) {
-            event.preventDefault();
-            const email = document.getElementById('newsletter-email').value;
-            window.location.href = `mailto:concierge@lapomellia.com?subject=Join%20the%20Premiere%20Circle&body=Email%3A%20${email}`;
-            document.getElementById('newsletter-success').classList.remove('hidden');
-            event.target.classList.add('hidden');
-        }
-    </script>
-</body>
-</html>
