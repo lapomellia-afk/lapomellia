@@ -122,11 +122,11 @@
         2.  **Вид в перспективе:** [https://sc01.alicdn.com/kf/H1a309323c7994880a1b41fedb2821c61V.jpg](https://sc01.alicdn.com/kf/H1a309323c7994880a1b41fedb2821c61V.jpg)
         3.  **Деталь крепления:** [https://sc01.alicdn.com/kf/H1ee4edc12167402791234558caeab862A.jpg](https://sc01.alicdn.com/kf/H1ee4edc12167402791234558caeab862A.jpg)
         4.  **Макро-вид камня:** [https://sc01.alicdn.com/kf/H9f979e00c729409ca6a520b90a28eca8A.jpg](https://sc01.alicdn.com/kf/H9f979e00c729409ca6a520b90a28eca8A.jpg)
-    *   **Ruby & Diamond Bracelet** (Браслет с рубином и бриллиантами) — от €985. Характеристики: золото 18K Solid Gold, длина 18.5 см, рубин 0.238 карата, бриллианты 0.07 карата. Имеет интерактивную галерею:
-        1.  **Основной вид:** [https://sc01.alicdn.com/kf/Ha2e53ce1f963467680b4806fcfc27b5fl.jpg](https://sc01.alicdn.com/kf/Ha2e53ce1f963467680b4806fcfc27b5fl.jpg)
-        2.  **Перспектива:** [https://sc01.alicdn.com/kf/H0a7abcb7fed14418b2d512f37d89c731Z.jpg](https://sc01.alicdn.com/kf/H0a7abcb7fed14418b2d512f37d89c731Z.jpg)
-        3.  **Детальный вид:** [https://sc01.alicdn.com/kf/Hce1f975001ad4390970c24643b6cdc55m.jpg](https://sc01.alicdn.com/kf/Hce1f975001ad4390970c24643b6cdc55m.jpg)
-        4.  **Макро-вид:** [https://sc01.alicdn.com/kf/Ha084b16051b9414381c1fa3aca0910a34.jpg](https://sc01.alicdn.com/kf/Ha084b16051b9414381c1fa3aca0910a34.jpg)
+    *   **Ruby Heirloom Bracelet** (Браслет с Рубином и Бриллиантами) — от €985. Характеристики: золото 18K Solid Gold, длина 18.5 см, натуральный рубин 0.238 карата, 6 бриллиантов (0.068 карата). Фото-сет:
+        1.  **Основной вид (студия):** [https://sc02.alicdn.com/kf/H55ed47e8d5984d67a6936666a2bff1ddB.jpg](https://sc02.alicdn.com/kf/H55ed47e8d5984d67a6936666a2bff1ddB.jpg)
+        2.  **Вид в 3/4:** [https://sc02.alicdn.com/kf/H6dfbf3c946ad4e0596d3a772e7feb3120.jpg](https://sc02.alicdn.com/kf/H6dfbf3c946ad4e0596d3a772e7feb3120.jpg)
+        3.  **Макро-детализация:** [https://sc02.alicdn.com/kf/H94dee89b95b3439e81562417f7b32e36H.jpg](https://sc02.alicdn.com/kf/H94dee89b95b3439e81562417f7b32e36H.jpg)
+        4.  **Вид на руке:** [https://sc02.alicdn.com/kf/H5e4abdb848264d21b493d39372e8fe4f9.jpg](https://sc02.alicdn.com/kf/H5e4abdb848264d21b493d39372e8fe4f9.jpg)
     *   **Wind Sculptural Pendant** (Подвеска «Ветер») — от €675. Характеристики: золото 18K Solid Gold, высота 27.7 мм, диаметр 20 мм. Доступна в двух версиях (с цаворитами и с бриллиантами). Фото-сет:
         1.  **Версия с цаворитом:** [https://sc01.alicdn.com/kf/H4d8a284e535b4a12abde2483d7a60a7cL.png](https://sc01.alicdn.com/kf/H4d8a284e535b4a12abde2483d7a60a7cL.png)
         2.  **Версия с бриллиантами:** [https://sc01.alicdn.com/kf/Hc3b340a653fb4343a878696924b4efccz.png](https://sc01.alicdn.com/kf/Hc3b340a653fb4343a878696924b4efccz.png)

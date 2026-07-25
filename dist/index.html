@@ -532,9 +532,52 @@
                         </div>
                         <div class="flex justify-between items-center pt-4 border-t border-[#D4AF37]/10">
                             <div class="flex flex-col">
-                                <span class="font-serif text-lg text-luxury-charcoal font-medium">From €675</span>
+                                <span class="font-serif text-lg text-luxury-charcoal font-medium">From €985</span>
                                 <span class="text-[9px] uppercase tracking-wider text-luxury-stone/60">Excl. €50 Insured Shipping</span>
                             </div>
+                            <a href="#preorder" onclick="setPreorderProduct('Ruby & Diamond Heirloom Bracelet')" class="text-[10px] uppercase tracking-[0.2em] font-semibold text-luxury-gold hover:text-luxury-charcoal transition duration-300">Reserve →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ruby & Diamond Bracelet Card -->
+                <div class="bg-white group flex flex-col min-h-[550px] border border-[#D4AF37]/10 hover:border-[#D4AF37]/30 transition-all duration-500">
+                    <div class="aspect-[4/5] overflow-hidden bg-luxury-cream relative">
+                        <img id="ruby-bracelet-img" src="https://sc02.alicdn.com/kf/H55ed47e8d5984d67a6936666a2bff1ddB.jpg" alt="Ruby & Diamond Bracelet" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                        <!-- Mini Thumbnails -->
+                        <div class="absolute bottom-4 left-4 flex space-x-2 z-20">
+                            <button onclick="changeRubyBraceletAngle('https://sc02.alicdn.com/kf/H55ed47e8d5984d67a6936666a2bff1ddB.jpg', this)" class="w-8 h-8 rounded border border-luxury-gold scale-110 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
+                                <img src="https://sc02.alicdn.com/kf/H55ed47e8d5984d67a6936666a2bff1ddB.jpg" class="w-full h-full object-cover">
+                            </button>
+                            <button onclick="changeRubyBraceletAngle('https://sc02.alicdn.com/kf/H6dfbf3c946ad4e0596d3a772e7feb3120.jpg', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
+                                <img src="https://sc02.alicdn.com/kf/H6dfbf3c946ad4e0596d3a772e7feb3120.jpg" class="w-full h-full object-cover">
+                            </button>
+                            <button onclick="changeRubyBraceletAngle('https://sc02.alicdn.com/kf/H94dee89b95b3439e81562417f7b32e36H.jpg', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
+                                <img src="https://sc02.alicdn.com/kf/H94dee89b95b3439e81562417f7b32e36H.jpg" class="w-full h-full object-cover">
+                            </button>
+                            <button onclick="changeRubyBraceletAngle('https://sc02.alicdn.com/kf/H5e4abdb848264d21b493d39372e8fe4f9.jpg', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
+                                <img src="https://sc02.alicdn.com/kf/H5e4abdb848264d21b493d39372e8fe4f9.jpg" class="w-full h-full object-cover">
+                            </button>
+                        </div>
+                        <span class="absolute top-4 right-4 bg-luxury-charcoal text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">Natural Gemstones</span>
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col justify-between space-y-6">
+                        <div class="space-y-2">
+                            <h3 class="font-serif text-2xl text-luxury-charcoal tracking-wide">Ruby Heirloom Bracelet</h3>
+                            <p class="text-xs uppercase tracking-[0.15em] text-luxury-gold font-semibold font-sans">Artisan Elegance</p>
+                            <p class="text-xs text-luxury-stone leading-relaxed font-light">
+                                A symbol of permanent status. This elegant 18K solid gold bracelet features a vibrant 0.238ct natural ruby accented by six brilliant-cut diamonds (0.068ct). Handcrafted to be passed through generations. Length: 18.5 cm.
+                            </p>
+                        </div>
+                        <div class="flex justify-between items-center pt-4 border-t border-[#D4AF37]/10">
+                            <div class="flex flex-col">
+                                <span class="font-serif text-lg text-luxury-charcoal font-medium">From €985</span>
+                                <span class="text-[9px] uppercase tracking-wider text-luxury-stone/60">Excl. €50 Insured Shipping</span>
+                            </div>
+                            <a href="#preorder" onclick="setPreorderProduct('Ruby Heirloom Bracelet')" class="text-[10px] uppercase tracking-[0.2em] font-semibold text-luxury-gold hover:text-luxury-charcoal transition duration-300">Reserve →</a>
+                        </div>
+                    </div>
+                </div>
                             <a href="#preorder" onclick="setPreorderProduct('Wind Sculptural Pendant')" class="text-[10px] uppercase tracking-[0.2em] font-semibold text-luxury-gold hover:text-luxury-charcoal transition duration-300">Reserve →</a>
                         </div>
                     </div>
@@ -1067,6 +1110,22 @@
             document.getElementById('hoop-price').innerText = priceText;
             
             // Update active state of buttons
+            const buttons = buttonElement.parentNode.querySelectorAll('button');
+            buttons.forEach(b => {
+                b.classList.remove('border-luxury-gold', 'scale-110');
+                b.classList.add('border-gray-200');
+            });
+            
+            buttonElement.classList.remove('border-gray-200');
+            buttonElement.classList.add('border-luxury-gold', 'scale-110');
+        }
+
+        // Change angle for Ruby Bracelet card
+        function changeRubyBraceletAngle(imgUrl, buttonElement) {
+            // Update main image src
+            document.getElementById('ruby-bracelet-img').src = imgUrl;
+            
+            // Update active state of mini buttons
             const buttons = buttonElement.parentNode.querySelectorAll('button');
             buttons.forEach(b => {
                 b.classList.remove('border-luxury-gold', 'scale-110');
