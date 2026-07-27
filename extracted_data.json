@@ -1,0 +1,52 @@
+{
+  "alicdn": {
+    "count": 312,
+    "found": true
+  },
+  "cache": {
+    "fullText": "      使用高效的缓存生命周期 预计节省 170 KiB          延长缓存生命周期可加快网页重访速度。详细了解缓存。LCPFCP不计分     显示第三方资源 (7)  请求缓存 TTL传输文件大小Facebook social 177 KiB/en_US/fbevents.js(connect.facebook.net)20分钟108 KiB…config/136…?v=…(connect.facebook.net)20分钟69 KiB/tr/?id=…(www.facebook.com)None0 KiBwikimedia.org14 KiB…b5/PayPal.svg(upload.wikimedia.org)None4 KiB…2a/Mastercard-logo.svg(upload.wikimedia.org)None4 KiB…ba/Stripe_Logo%2C_revised_2016.svg(upload.wikimedia.org)None3 KiB…b0/Apple_Pay_logo.svg(upload.wikimedia.org)None3 KiB "
+  },
+  "lcp": {
+    "fullText": "      LCP 细分           每个子部分都有特定的改进策略。理想情况下，LCP 的大部分时间应该用于加载资源，而不是消耗在延迟上。LCP不计分  子部分时长第一字节时间 (Time to First Byte)90毫秒元素渲染延迟1,460毫秒              La Pomellia crafts modern family heirlooms in 18K solid yellow gold, marrying m…<p class=\"text-sm tracking-[0.05em] text-luxury-charcoal/80 max-w-xl mx-auto leading…\"> "
+  },
+  "renderBlocking": {
+    "fullText": "      渲染阻塞请求 预计缩短 2,580 毫秒          请求正在屏蔽网页的初始渲染，这可能会延迟 LCP。延迟或内嵌可以将这些网络请求移出关键路径。LCPFCP不计分  \n    .lh-3p-filter {\n      color: var(--color-gray-600);\n      float: right;\n      padding: 6px var(--stackpack-padding-horizontal);\n    }\n    .lh-3p-filter-label, .lh-3p-filter-input {\n      vertical-align: middle;\n      user-select: none;\n    }\n    .lh-3p-filter-input:disabled + .lh-3p-ui-string {\n      text-decoration: line-through;\n    }\n     显示第三方资源 (2)  网址传输文件大小时长tailwindcss.com124.1 KiB760毫秒/3.4.17(cdn.tailwindcss.com)124.1 KiB760毫秒Google Fonts cdn 1.6 KiB780毫秒/css2?family=…(fonts.googleapis.com)1.6 KiB780毫秒 ",
+    "items": [
+      {
+        "savings": "124.1 KiB",
+        "url": "tailwindcss.com"
+      },
+      {
+        "savings": "124.1 KiB",
+        "url": "/3.4.17(cdn.tailwindcss.com)"
+      },
+      {
+        "savings": "1.6 KiB",
+        "url": "Google Fonts cdn"
+      },
+      {
+        "savings": "1.6 KiB",
+        "url": "/css2?family=…(fonts.googleapis.com)"
+      },
+      {
+        "url": "https://developer.chrome.com/docs/performance/insights/render-blocking?utm_source=lighthouse&utm_medium=lr"
+      },
+      {
+        "url": "https://cdn.tailwindcss.com/3.4.17"
+      },
+      {
+        "url": "https://fonts.google.com/"
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      }
+    ]
+  },
+  "tailwindcss": {
+    "count": 30,
+    "found": true
+  },
+  "thirdParty": {
+    "fullText": "      渲染阻塞请求 预计缩短 2,580 毫秒          请求正在屏蔽网页的初始渲染，这可能会延迟 LCP。延迟或内嵌可以将这些网络请求移出关键路径。LCPFCP不计分  \n    .lh-3p-filter {\n      color: var(--color-gray-600);\n      float: right;\n      padding: 6px var(--stackpack-padding-horizontal);\n    }\n    .lh-3p-filter-label, .lh-3p-filter-input {\n      vertical-align: middle;\n      user-select: none;\n    }\n    .lh-3p-filter-input:disabled + .lh-3p-ui-string {\n      text-decoration: line-through;\n    }\n     显示第三方资源 (2)  网址传输文件大小时长tailwindcss.com124.1 KiB760毫秒/3.4.17(cdn.tailwindcss.com)124.1 KiB760毫秒Google Fonts cdn 1.6 KiB780毫秒/css2?family=…(fonts.googleapis.com)1.6 KiB780毫秒 "
+  }
+}
