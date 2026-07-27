@@ -56,8 +56,6 @@
             color: #1A1A1A;
         }
         .active-angle { border-color: #D4AF37 !important; border-width: 2px !important; }
-        /* Fix for potential masonry-style drift */
-        .grid-item { break-inside: avoid; margin-bottom: 2rem; }
     </style>
 </head>
 <body class="font-sans antialiased">
@@ -155,9 +153,8 @@
                 <div class="h-[1px] w-12 bg-luxury-gold mx-auto"></div>
             </div>
 
-            <!-- Clean Product Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- 1: Tempo Ring -->
+                <!-- Product 1: Tempo Ring -->
                 <div class="bg-white group flex flex-col min-h-[550px] border border-[#D4AF37]/10 hover:border-[#D4AF37]/30 transition-all duration-500">
                     <div class="aspect-[4/5] overflow-hidden bg-luxury-cream relative">
                         <img id="tempo-img" src="https://sc01.alicdn.com/kf/Ha36773d22c1a461d9d8bc1a7fdfbb456B.jpg_350x350.jpg" alt="Tempo Ring" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
@@ -187,7 +184,7 @@
                     </div>
                 </div>
 
-                <!-- 2: Ruby & Diamond Bracelet -->
+                <!-- Product 2: Ruby & Diamond Bracelet -->
                 <div class="bg-white group flex flex-col min-h-[550px] border border-[#D4AF37]/10 hover:border-[#D4AF37]/30 transition-all duration-500">
                     <div class="aspect-[4/5] overflow-hidden bg-luxury-cream relative">
                         <img id="bracelet-img" loading="lazy" src="https://sc01.alicdn.com/kf/Ha2e53ce1f963467680b4806fcfc27b5fl.jpg_350x350.jpg" alt="Ruby & Diamond Bracelet" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
@@ -216,7 +213,7 @@
                     </div>
                 </div>
 
-                <!-- 3: Diamond Triangle Pendant -->
+                <!-- Product 3: The Diamond Triangle Pendant -->
                 <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
                     <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
                         <img id="triangle-img" loading="lazy" src="https://sc01.alicdn.com/kf/H8cfbcbf3b0d3422aa7f74d2e19c05c57l.png_350x350.jpg" alt="Triangle Pendant" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
@@ -245,7 +242,7 @@
                     </div>
                 </div>
 
-                <!-- 4: Liquid Gold Pendant -->
+                <!-- Product 4: Liquid Gold Pendant -->
                 <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
                     <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
                         <img id="liquid-gold-img" loading="lazy" src="https://sc02.alicdn.com/kf/A2f10bb6b9e324662baaad8c959a4a4987.png_350x350.jpg" alt="Liquid Gold Pendant" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
@@ -274,7 +271,7 @@
                     </div>
                 </div>
 
-                <!-- 5: Trinity Ear Cuff -->
+                <!-- Product 5: Trinity Ear Cuff -->
                 <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
                     <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
                         <img id="ear-cuff-img" loading="lazy" src="https://sc01.alicdn.com/kf/H8fc0ac1470a5428ead71a79419af02beM.png_350x350.jpg" alt="Trinity Ear Cuff" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
@@ -303,7 +300,7 @@
                     </div>
                 </div>
 
-                <!-- 6: Overtone Hoop Earrings -->
+                <!-- Product 6: Overtone Hoop Earrings -->
                 <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
                     <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
                         <img id="overtone-img" loading="lazy" src="https://sc01.alicdn.com/kf/Hc3fe8654779943399471779c04a85c2c0.png_350x350.jpg" alt="Overtone Hoop Earrings" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
@@ -332,7 +329,7 @@
                     </div>
                 </div>
 
-                <!-- 7: Eclipse Drop Earrings -->
+                <!-- Product 7: Eclipse Drop Earrings -->
                 <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
                     <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
                         <img id="mosaic-img" loading="lazy" src="https://sc01.alicdn.com/kf/Hbc06c22ab9e64f3081a7a4abe752e12ca.png_350x350.jpg" alt="Eclipse Drop Earrings" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
@@ -361,7 +358,7 @@
                     </div>
                 </div>
 
-                <!-- 8: Cat's Eye Knot Earrings -->
+                <!-- Product 8: Cat's Eye Knot Earrings -->
                 <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
                     <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
                         <img id="cats-eye-img" loading="lazy" src="https://sc01.alicdn.com/kf/H5c27b792e20e41e0bf7ec14ece2ce554s.jpg_350x350.jpg" alt="Cat's Eye Knot Earrings" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
@@ -479,7 +476,7 @@
                     </div>
                 </div>
 
-                <!-- Custom Bespoke Commissions Card -->
+                <!-- Product 12: Custom Bespoke Commissions Card -->
                 <div class="border border-dashed border-[#D4AF37]/30 bg-white flex flex-col items-center justify-center text-center p-8 min-h-[450px]">
                     <span class="text-4xl text-luxury-gold mb-4">✦</span>
                     <h3 class="font-serif text-2xl text-luxury-charcoal tracking-wider">Bespoke Commissions</h3>
