@@ -56,6 +56,8 @@
             color: #1A1A1A;
         }
         .active-angle { border-color: #D4AF37 !important; border-width: 2px !important; }
+        /* Fix for potential masonry-style drift */
+        .grid-item { break-inside: avoid; margin-bottom: 2rem; }
     </style>
 </head>
 <body class="font-sans antialiased">
@@ -134,7 +136,7 @@
             </div>
             <div class="flex justify-center">
                 <div class="relative overflow-hidden aspect-square w-full max-w-md bg-luxury-cream border border-[#D4AF37]/20 flex items-center justify-center p-8 hover:shadow-xl transition duration-500 group">
-                    <img src="https://sc01.alicdn.com/kf/H8cfbcbf3b0d3422aa7f74d2e19c05c57l.png" alt="La Pomellia Signature" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
+                    <img src="https://sc01.alicdn.com/kf/H8cfbcbf3b0d3422aa7f74d2e19c05c57l.png_350x350.jpg" alt="La Pomellia Signature" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
                     <span class="absolute bottom-4 left-4 text-[10px] tracking-[0.2em] uppercase text-luxury-gold font-medium">Signature Creation</span>
                 </div>
             </div>
@@ -153,18 +155,18 @@
                 <div class="h-[1px] w-12 bg-luxury-gold mx-auto"></div>
             </div>
 
+            <!-- Clean Product Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <!-- Product 1: Tempo Ring -->
+                <!-- 1: Tempo Ring -->
                 <div class="bg-white group flex flex-col min-h-[550px] border border-[#D4AF37]/10 hover:border-[#D4AF37]/30 transition-all duration-500">
                     <div class="aspect-[4/5] overflow-hidden bg-luxury-cream relative">
-                        <img id="tempo-img" src="https://sc01.alicdn.com/kf/Ha36773d22c1a461d9d8bc1a7fdfbb456B.jpg" alt="Tempo Ring" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                        <img id="tempo-img" src="https://sc01.alicdn.com/kf/Ha36773d22c1a461d9d8bc1a7fdfbb456B.jpg_350x350.jpg" alt="Tempo Ring" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
                         <div class="absolute bottom-4 left-4 flex space-x-2 z-20">
-                            <button onclick="changeTempoAngle('https://sc01.alicdn.com/kf/Ha36773d22c1a461d9d8bc1a7fdfbb456B.jpg', this)" class="w-8 h-8 rounded border border-luxury-gold scale-110 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
-                                <img src="https://sc01.alicdn.com/kf/Ha36773d22c1a461d9d8bc1a7fdfbb456B.jpg" class="w-full h-full object-cover">
+                            <button onclick="changeTempoAngle('https://sc01.alicdn.com/kf/Ha36773d22c1a461d9d8bc1a7fdfbb456B.jpg_350x350.jpg', this)" class="w-8 h-8 rounded border border-luxury-gold scale-110 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
+                                <img src="https://sc01.alicdn.com/kf/Ha36773d22c1a461d9d8bc1a7fdfbb456B.jpg_100x100.jpg" class="w-full h-full object-cover">
                             </button>
-                            <button onclick="changeTempoAngle('https://sc01.alicdn.com/kf/H8e20bf2fa5cc4cd28e2c090132a5dd59X.jpg', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
-                                <img src="https://sc01.alicdn.com/kf/H8e20bf2fa5cc4cd28e2c090132a5dd59X.jpg" class="w-full h-full object-cover">
+                            <button onclick="changeTempoAngle('https://sc01.alicdn.com/kf/H8e20bf2fa5cc4cd28e2c090132a5dd59X.jpg_350x350.jpg', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
+                                <img src="https://sc01.alicdn.com/kf/H8e20bf2fa5cc4cd28e2c090132a5dd59X.jpg_100x100.jpg" class="w-full h-full object-cover">
                             </button>
                         </div>
                         <span class="absolute top-4 right-4 bg-luxury-charcoal text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">18K Solid Gold</span>
@@ -185,17 +187,16 @@
                     </div>
                 </div>
 
-                <!-- Product 2: Ruby Heirloom Bracelet -->
+                <!-- 2: Ruby & Diamond Bracelet -->
                 <div class="bg-white group flex flex-col min-h-[550px] border border-[#D4AF37]/10 hover:border-[#D4AF37]/30 transition-all duration-500">
                     <div class="aspect-[4/5] overflow-hidden bg-luxury-cream relative">
-                        <!-- Main Product Image -->
-                        <img id="bracelet-img" src="https://sc01.alicdn.com/kf/Ha2e53ce1f963467680b4806fcfc27b5fl.jpg" alt="Ruby & Diamond Bracelet" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
+                        <img id="bracelet-img" loading="lazy" src="https://sc01.alicdn.com/kf/Ha2e53ce1f963467680b4806fcfc27b5fl.jpg_350x350.jpg" alt="Ruby & Diamond Bracelet" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
                         <div class="absolute bottom-4 left-4 flex space-x-2 z-10">
-                            <button onclick="changeBraceletAngle('https://sc01.alicdn.com/kf/Ha2e53ce1f963467680b4806fcfc27b5fl.jpg', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle">
-                                <img src="https://sc01.alicdn.com/kf/Ha2e53ce1f963467680b4806fcfc27b5fl.jpg" class="w-full h-full object-contain">
+                            <button onclick="changeBraceletAngle('https://sc01.alicdn.com/kf/Ha2e53ce1f963467680b4806fcfc27b5fl.jpg_350x350.jpg', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle">
+                                <img src="https://sc01.alicdn.com/kf/Ha2e53ce1f963467680b4806fcfc27b5fl.jpg_100x100.jpg" class="w-full h-full object-contain">
                             </button>
-                            <button onclick="changeBraceletAngle('https://sc01.alicdn.com/kf/H0a7abcb7fed14418b2d512f37d89c731Z.jpg', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
-                                <img src="https://sc01.alicdn.com/kf/H0a7abcb7fed14418b2d512f37d89c731Z.jpg" class="w-full h-full object-contain">
+                            <button onclick="changeBraceletAngle('https://sc01.alicdn.com/kf/H0a7abcb7fed14418b2d512f37d89c731Z.jpg_350x350.jpg', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
+                                <img src="https://sc01.alicdn.com/kf/H0a7abcb7fed14418b2d512f37d89c731Z.jpg_100x100.jpg" class="w-full h-full object-contain">
                             </button>
                         </div>
                         <span class="absolute top-4 right-4 bg-luxury-gold text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">18K Solid Gold</span>
@@ -215,16 +216,16 @@
                     </div>
                 </div>
 
-                <!-- Product 3: The Diamond Triangle Pendant -->
+                <!-- 3: Diamond Triangle Pendant -->
                 <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
                     <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
-                        <img id="triangle-img" src="https://sc01.alicdn.com/kf/H8cfbcbf3b0d3422aa7f74d2e19c05c57l.png" alt="Triangle Pendant" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
+                        <img id="triangle-img" loading="lazy" src="https://sc01.alicdn.com/kf/H8cfbcbf3b0d3422aa7f74d2e19c05c57l.png_350x350.jpg" alt="Triangle Pendant" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
                         <div class="absolute bottom-4 left-4 flex flex-wrap gap-1.5 max-w-[90%] z-10">
-                            <button onclick="changeTriangleAngle('https://sc01.alicdn.com/kf/H8cfbcbf3b0d3422aa7f74d2e19c05c57l.png', this)" class="w-7 h-7 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle">
-                                <img src="https://sc01.alicdn.com/kf/H8cfbcbf3b0d3422aa7f74d2e19c05c57l.png" class="w-full h-full object-contain">
+                            <button onclick="changeTriangleAngle('https://sc01.alicdn.com/kf/H8cfbcbf3b0d3422aa7f74d2e19c05c57l.png_350x350.jpg', this)" class="w-7 h-7 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle">
+                                <img src="https://sc01.alicdn.com/kf/H8cfbcbf3b0d3422aa7f74d2e19c05c57l.png_100x100.jpg" class="w-full h-full object-contain">
                             </button>
-                            <button onclick="changeTriangleAngle('https://sc02.alicdn.com/kf/A01eaf6e6a1b741aa9e1abb3baf6abf71J.png', this)" class="w-7 h-7 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
-                                <img src="https://sc02.alicdn.com/kf/A01eaf6e6a1b741aa9e1abb3baf6abf71J.png" class="w-full h-full object-contain">
+                            <button onclick="changeTriangleAngle('https://sc02.alicdn.com/kf/A01eaf6e6a1b741aa9e1abb3baf6abf71J.png_350x350.jpg', this)" class="w-7 h-7 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
+                                <img src="https://sc02.alicdn.com/kf/A01eaf6e6a1b741aa9e1abb3baf6abf71J.png_100x100.jpg" class="w-full h-full object-contain">
                             </button>
                         </div>
                         <span class="absolute top-4 right-4 bg-luxury-gold text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">18K Solid Gold</span>
@@ -244,16 +245,16 @@
                     </div>
                 </div>
 
-                <!-- Product 4: Liquid Gold Pendant -->
+                <!-- 4: Liquid Gold Pendant -->
                 <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
                     <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
-                        <img id="liquid-gold-img" src="https://sc02.alicdn.com/kf/A2f10bb6b9e324662baaad8c959a4a4987.png" alt="Liquid Gold Pendant" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
+                        <img id="liquid-gold-img" loading="lazy" src="https://sc02.alicdn.com/kf/A2f10bb6b9e324662baaad8c959a4a4987.png_350x350.jpg" alt="Liquid Gold Pendant" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
                         <div class="absolute bottom-4 left-4 flex space-x-2 z-10">
-                            <button onclick="changeLiquidGoldAngle('https://sc02.alicdn.com/kf/A2f10bb6b9e324662baaad8c959a4a4987.png', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle">
-                                <img src="https://sc02.alicdn.com/kf/A2f10bb6b9e324662baaad8c959a4a4987.png" class="w-full h-full object-contain">
+                            <button onclick="changeLiquidGoldAngle('https://sc02.alicdn.com/kf/A2f10bb6b9e324662baaad8c959a4a4987.png_350x350.jpg', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle">
+                                <img src="https://sc02.alicdn.com/kf/A2f10bb6b9e324662baaad8c959a4a4987.png_100x100.jpg" class="w-full h-full object-contain">
                             </button>
-                            <button onclick="changeLiquidGoldAngle('https://sc02.alicdn.com/kf/A54bf7637fccd4e9f9bd1ed7dafce645bU.png', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
-                                <img src="https://sc02.alicdn.com/kf/A54bf7637fccd4e9f9bd1ed7dafce645bU.png" class="w-full h-full object-contain">
+                            <button onclick="changeLiquidGoldAngle('https://sc02.alicdn.com/kf/A54bf7637fccd4e9f9bd1ed7dafce645bU.png_350x350.jpg', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
+                                <img src="https://sc02.alicdn.com/kf/A54bf7637fccd4e9f9bd1ed7dafce645bU.png_100x100.jpg" class="w-full h-full object-contain">
                             </button>
                         </div>
                         <span class="absolute top-4 right-4 bg-luxury-charcoal text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">18K Solid Gold</span>
@@ -273,16 +274,16 @@
                     </div>
                 </div>
 
-                <!-- Product 5: Trinity Ear Cuff -->
+                <!-- 5: Trinity Ear Cuff -->
                 <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
                     <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
-                        <img id="ear-cuff-img" src="https://sc01.alicdn.com/kf/H8fc0ac1470a5428ead71a79419af02beM.png" alt="Trinity Ear Cuff" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
+                        <img id="ear-cuff-img" loading="lazy" src="https://sc01.alicdn.com/kf/H8fc0ac1470a5428ead71a79419af02beM.png_350x350.jpg" alt="Trinity Ear Cuff" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
                         <div class="absolute bottom-4 left-4 flex space-x-2 z-10">
-                            <button onclick="changeCuffVariant('https://sc01.alicdn.com/kf/H8fc0ac1470a5428ead71a79419af02beM.png', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle">
-                                <img src="https://sc01.alicdn.com/kf/H8fc0ac1470a5428ead71a79419af02beM.png" class="w-full h-full object-contain">
+                            <button onclick="changeCuffVariant('https://sc01.alicdn.com/kf/H8fc0ac1470a5428ead71a79419af02beM.png_350x350.jpg', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle">
+                                <img src="https://sc01.alicdn.com/kf/H8fc0ac1470a5428ead71a79419af02beM.png_100x100.jpg" class="w-full h-full object-contain">
                             </button>
-                            <button onclick="changeCuffVariant('https://sc01.alicdn.com/kf/Hca38a9359fd449aeaa83ca64c2910689l.jpg', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
-                                <img src="https://sc01.alicdn.com/kf/Hca38a9359fd449aeaa83ca64c2910689l.jpg" class="w-full h-full object-contain">
+                            <button onclick="changeCuffVariant('https://sc01.alicdn.com/kf/Hca38a9359fd449aeaa83ca64c2910689l.jpg_350x350.jpg', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
+                                <img src="https://sc01.alicdn.com/kf/Hca38a9359fd449aeaa83ca64c2910689l.jpg_100x100.jpg" class="w-full h-full object-contain">
                             </button>
                         </div>
                         <span class="absolute top-4 right-4 bg-luxury-charcoal text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">18K Solid Gold</span>
@@ -302,16 +303,16 @@
                     </div>
                 </div>
 
-                <!-- Product 6: Overtone Hoop Earrings -->
+                <!-- 6: Overtone Hoop Earrings -->
                 <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
                     <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
-                        <img id="overtone-img" src="https://sc01.alicdn.com/kf/Hc3fe8654779943399471779c04a85c2c0.png" alt="Overtone Hoop Earrings" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
+                        <img id="overtone-img" loading="lazy" src="https://sc01.alicdn.com/kf/Hc3fe8654779943399471779c04a85c2c0.png_350x350.jpg" alt="Overtone Hoop Earrings" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
                         <div class="absolute bottom-4 left-4 flex space-x-2 z-10">
-                            <button onclick="changeOvertoneAngle('https://sc01.alicdn.com/kf/Hc3fe8654779943399471779c04a85c2c0.png', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle">
-                                <img src="https://sc01.alicdn.com/kf/Hc3fe8654779943399471779c04a85c2c0.png" class="w-full h-full object-contain">
+                            <button onclick="changeOvertoneAngle('https://sc01.alicdn.com/kf/Hc3fe8654779943399471779c04a85c2c0.png_350x350.jpg', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle">
+                                <img src="https://sc01.alicdn.com/kf/Hc3fe8654779943399471779c04a85c2c0.png_100x100.jpg" class="w-full h-full object-contain">
                             </button>
-                            <button onclick="changeOvertoneAngle('https://sc01.alicdn.com/kf/H0bc91a54406c4e56ad58ca6c52a375e0S.png', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
-                                <img src="https://sc01.alicdn.com/kf/H0bc91a54406c4e56ad58ca6c52a375e0S.png" class="w-full h-full object-contain">
+                            <button onclick="changeOvertoneAngle('https://sc01.alicdn.com/kf/H0bc91a54406c4e56ad58ca6c52a375e0S.png_350x350.jpg', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
+                                <img src="https://sc01.alicdn.com/kf/H0bc91a54406c4e56ad58ca6c52a375e0S.png_100x100.jpg" class="w-full h-full object-contain">
                             </button>
                         </div>
                         <span class="absolute top-4 right-4 bg-luxury-gold text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">18K Solid Gold</span>
@@ -331,16 +332,16 @@
                     </div>
                 </div>
 
-                <!-- Product 7: Eclipse Drop Earrings -->
+                <!-- 7: Eclipse Drop Earrings -->
                 <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
                     <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
-                        <img id="mosaic-img" src="https://sc01.alicdn.com/kf/Hbc06c22ab9e64f3081a7a4abe752e12ca.png" alt="Eclipse Drop Earrings" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
+                        <img id="mosaic-img" loading="lazy" src="https://sc01.alicdn.com/kf/Hbc06c22ab9e64f3081a7a4abe752e12ca.png_350x350.jpg" alt="Eclipse Drop Earrings" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
                         <div class="absolute bottom-4 left-4 flex space-x-2 z-10">
-                            <button onclick="changeMosaicAngle('https://sc01.alicdn.com/kf/Hbc06c22ab9e64f3081a7a4abe752e12ca.png', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle">
-                                <img src="https://sc01.alicdn.com/kf/Hbc06c22ab9e64f3081a7a4abe752e12ca.png" class="w-full h-full object-contain">
+                            <button onclick="changeMosaicAngle('https://sc01.alicdn.com/kf/Hbc06c22ab9e64f3081a7a4abe752e12ca.png_350x350.jpg', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle">
+                                <img src="https://sc01.alicdn.com/kf/Hbc06c22ab9e64f3081a7a4abe752e12ca.png_100x100.jpg" class="w-full h-full object-contain">
                             </button>
-                            <button onclick="changeMosaicAngle('https://sc01.alicdn.com/kf/Hbd72ec1af0294f37adccba21c882a261h.png', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
-                                <img src="https://sc01.alicdn.com/kf/Hbd72ec1af0294f37adccba21c882a261h.png" class="w-full h-full object-contain">
+                            <button onclick="changeMosaicAngle('https://sc01.alicdn.com/kf/Hbd72ec1af0294f37adccba21c882a261h.png_350x350.jpg', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
+                                <img src="https://sc01.alicdn.com/kf/Hbd72ec1af0294f37adccba21c882a261h.png_100x100.jpg" class="w-full h-full object-contain">
                             </button>
                         </div>
                         <span class="absolute top-4 right-4 bg-luxury-gold text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">18K Solid Gold</span>
@@ -360,15 +361,15 @@
                     </div>
                 </div>
 
-                <!-- Product 8: Cat's Eye Knot Earrings -->
+                <!-- 8: Cat's Eye Knot Earrings -->
                 <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
                     <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
-                        <img id="cats-eye-img" src="https://sc01.alicdn.com/kf/H5c27b792e20e41e0bf7ec14ece2ce554s.jpg" alt="Cat's Eye Knot Earrings" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
+                        <img id="cats-eye-img" loading="lazy" src="https://sc01.alicdn.com/kf/H5c27b792e20e41e0bf7ec14ece2ce554s.jpg_350x350.jpg" alt="Cat's Eye Knot Earrings" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
                         <div class="absolute bottom-4 left-4 flex space-x-2 z-10">
                             <button onclick="changeCatsEyeAngle('https://sc01.alicdn.com/kf/H5c27b792e20e41e0bf7ec14ece2ce554s.jpg', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle">
                                 <img src="https://sc01.alicdn.com/kf/H5c27b792e20e41e0bf7ec14ece2ce554s.jpg" class="w-full h-full object-contain">
                             </button>
-                            <button onclick="changeCatsEyeAngle('https://sc01.alicdn.com/kf/H1476434f6cb1442c884d71826218cf94z.png', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
+                            <button onclick="changeCatsEyeAngle('https://sc01.alicdn.com/kf/H1476434f6cb1442c884d71826218cf94z.png_350x350.jpg', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
                                 <img src="https://sc01.alicdn.com/kf/H1476434f6cb1442c884d71826218cf94z.png" class="w-full h-full object-contain">
                             </button>
                         </div>
@@ -392,12 +393,12 @@
                 <!-- Product 9: Clover Peridot Pendant -->
                 <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
                     <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
-                        <img id="clover-img" src="https://sc01.alicdn.com/kf/H6e3c8782b2484e19bd50dae993886901i.jpg" alt="Clover Peridot Pendant" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
+                        <img id="clover-img" loading="lazy" src="https://sc01.alicdn.com/kf/H6e3c8782b2484e19bd50dae993886901i.jpg_350x350.jpg" alt="Clover Peridot Pendant" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
                         <div class="absolute bottom-4 left-4 flex space-x-2 z-10">
                             <button onclick="changeCloverAngle('https://sc01.alicdn.com/kf/H6e3c8782b2484e19bd50dae993886901i.jpg', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle">
                                 <img src="https://sc01.alicdn.com/kf/H6e3c8782b2484e19bd50dae993886901i.jpg" class="w-full h-full object-contain">
                             </button>
-                            <button onclick="changeCloverAngle('https://sc01.alicdn.com/kf/H1a309323c7994880a1b41fedb2821c61V.jpg', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
+                            <button onclick="changeCloverAngle('https://sc01.alicdn.com/kf/H1a309323c7994880a1b41fedb2821c61V.jpg_350x350.jpg', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
                                 <img src="https://sc01.alicdn.com/kf/H1a309323c7994880a1b41fedb2821c61V.jpg" class="w-full h-full object-contain">
                             </button>
                         </div>
@@ -421,12 +422,12 @@
                 <!-- Product 10: Wind Sculptural Pendant -->
                 <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
                     <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
-                        <img id="wind-img" src="https://sc01.alicdn.com/kf/H4d8a284e535b4a12abde2483d7a60a7cL.png" alt="Wind Sculptural Pendant" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
+                        <img id="wind-img" loading="lazy" src="https://sc01.alicdn.com/kf/H4d8a284e535b4a12abde2483d7a60a7cL.png_350x350.jpg" alt="Wind Sculptural Pendant" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
                         <div class="absolute bottom-4 left-4 flex space-x-2 z-10">
-                            <button onclick="changeWindVariant('https://sc01.alicdn.com/kf/H4d8a284e535b4a12abde2483d7a60a7cL.png', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle">
+                            <button onclick="changeWindVariant('https://sc01.alicdn.com/kf/H4d8a284e535b4a12abde2483d7a60a7cL.png_350x350.jpg', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle">
                                 <img src="https://sc01.alicdn.com/kf/H4d8a284e535b4a12abde2483d7a60a7cL.png" class="w-full h-full object-contain">
                             </button>
-                            <button onclick="changeWindVariant('https://sc01.alicdn.com/kf/Hc3b340a653fb4343a878696924b4efccz.png', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
+                            <button onclick="changeWindVariant('https://sc01.alicdn.com/kf/Hc3b340a653fb4343a878696924b4efccz.png_350x350.jpg', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
                                 <img src="https://sc01.alicdn.com/kf/Hc3b340a653fb4343a878696924b4efccz.png" class="w-full h-full object-contain">
                             </button>
                         </div>
@@ -451,13 +452,13 @@
                 <!-- Product 11: Infinite Hoop Earrings -->
                 <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
                     <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
-                        <img id="hoop-img" src="https://sc02.alicdn.com/kf/H8eb9a949be4947568cc23bae8195221cV.jpg" alt="Infinite Hoop Earrings" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
+                        <img id="hoop-img" loading="lazy" src="https://sc02.alicdn.com/kf/H8eb9a949be4947568cc23bae8195221cV.jpg_350x350.jpg" alt="Infinite Hoop Earrings" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
                         <div class="absolute bottom-4 left-4 flex space-x-2 z-10">
-                            <button onclick="changeHoopSize('https://sc02.alicdn.com/kf/H8eb9a949be4947568cc23bae8195221cV.jpg', 'From €795', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle" title="40mm Diameter">
-                                <img src="https://sc02.alicdn.com/kf/H8eb9a949be4947568cc23bae8195221cV.jpg" class="w-full h-full object-contain">
+                            <button onclick="changeHoopSize('https://sc02.alicdn.com/kf/H8eb9a949be4947568cc23bae8195221cV.jpg_350x350.jpg', 'From €795', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle" title="40mm Diameter">
+                                <img src="https://sc02.alicdn.com/kf/H8eb9a949be4947568cc23bae8195221cV.jpg_100x100.jpg" class="w-full h-full object-contain">
                             </button>
-                            <button onclick="changeHoopSize('https://sc02.alicdn.com/kf/Hf517a048df8d442d874089f4045a930e4.jpg', 'From €885', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold" title="50mm Diameter">
-                                <img src="https://sc02.alicdn.com/kf/Hf517a048df8d442d874089f4045a930e4.jpg" class="w-full h-full object-contain">
+                            <button onclick="changeHoopSize('https://sc02.alicdn.com/kf/Hf517a048df8d442d874089f4045a930e4.jpg_350x350.jpg', 'From €885', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold" title="50mm Diameter">
+                                <img src="https://sc02.alicdn.com/kf/Hf517a048df8d442d874089f4045a930e4.jpg_100x100.jpg" class="w-full h-full object-contain">
                             </button>
                         </div>
                         <span class="absolute top-4 right-4 bg-luxury-gold text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">18K Solid Gold</span>
@@ -483,650 +484,10 @@
                     <span class="text-4xl text-luxury-gold mb-4">✦</span>
                     <h3 class="font-serif text-2xl text-luxury-charcoal tracking-wider">Bespoke Commissions</h3>
                     <p class="text-xs text-luxury-stone font-light max-w-[280px] mt-4 leading-relaxed">
-                        Have a custom, bespoke vision in mind? Work directly with La Pomellia artisans to craft a uniquely personalized heirloom.
+                        Have a custom, bespoke vision in mind? Work directly with La Pomellia artisans to craft a uniquely personalized heirloom in solid yellow gold and rare natural gemstones.
                     </p>
                     <a href="#preorder" onclick="setPreorderProduct('Custom Bespoke Commission')" class="mt-8 text-xs uppercase tracking-[0.15em] font-semibold text-luxury-gold hover:opacity-80 border-b border-luxury-gold pb-1 transition">Begin Consultation</a>
                 </div>
-
-                        <span class="absolute top-4 right-4 bg-luxury-gold text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">18K Solid Gold</span>
-                    </div>
-                    <div class="p-8 flex-grow flex flex-col justify-between space-y-6">
-                        <div class="space-y-2">
-                            <h3 class="font-serif text-2xl text-luxury-charcoal tracking-wide">Diamond Triangle Pendant</h3>
-                            <p class="text-xs text-luxury-stone leading-relaxed font-light">18K solid gold (2.08g) set with brilliant-cut diamonds (0.15ct).</p>
-                        </div>
-                        <div class="flex justify-between items-center pt-4 border-t border-[#D4AF37]/10">
-                            <div class="flex flex-col">
-                                <span class="font-serif text-lg text-luxury-charcoal font-medium">From €845</span>
-                                <span class="text-[9px] uppercase tracking-wider text-luxury-stone/60">Excl. €50 Insured Shipping</span>
-                            </div>
-                            <a href="#preorder" onclick="setPreorderProduct('Diamond Triangle Pendant')" class="text-[10px] uppercase tracking-[0.2em] font-semibold text-luxury-gold hover:text-luxury-charcoal transition duration-300">Reserve →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 2: Liquid Gold Pendant -->
-                <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
-                    <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
-                        <img id="liquid-gold-img" src="https://sc02.alicdn.com/kf/A2f10bb6b9e324662baaad8c959a4a4987.png" alt="Liquid Gold Pendant" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
-                        <div class="absolute bottom-4 left-4 flex space-x-2 z-10">
-                            <button onclick="changeLiquidGoldAngle('https://sc02.alicdn.com/kf/A2f10bb6b9e324662baaad8c959a4a4987.png', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle">
-                                <img src="https://sc02.alicdn.com/kf/A2f10bb6b9e324662baaad8c959a4a4987.png" class="w-full h-full object-contain">
-                            </button>
-                            <button onclick="changeLiquidGoldAngle('https://sc02.alicdn.com/kf/A54bf7637fccd4e9f9bd1ed7dafce645bU.png', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
-                                <img src="https://sc02.alicdn.com/kf/A54bf7637fccd4e9f9bd1ed7dafce645bU.png" class="w-full h-full object-contain">
-                            </button>
-                        </div>
-                        <span class="absolute top-4 right-4 bg-luxury-charcoal text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">18K Solid Gold</span>
-                    </div>
-                    <div class="p-8 flex-grow flex flex-col justify-between space-y-6">
-                        <div class="space-y-2">
-                            <h3 class="font-serif text-2xl text-luxury-charcoal tracking-wide">Liquid Gold Pendant</h3>
-                            <p class="text-xs text-luxury-stone leading-relaxed font-light">Solid 18K yellow gold (approx. 1.8g) masterfully polished to a mirror shine.</p>
-                        </div>
-                        <div class="flex justify-between items-center pt-4 border-t border-[#D4AF37]/10">
-                            <div class="flex flex-col">
-                                <span class="font-serif text-lg text-luxury-charcoal font-medium">From €745</span>
-                                <span class="text-[9px] uppercase tracking-wider text-luxury-stone/60">Excl. €50 Insured Shipping</span>
-                            </div>
-                            <a href="#preorder" onclick="setPreorderProduct('Liquid Gold Sculptural Pendant')" class="text-[10px] uppercase tracking-[0.2em] font-semibold text-luxury-gold hover:text-luxury-charcoal transition duration-300">Reserve →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 3: Trinity Ear Cuff -->
-                <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
-                    <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
-                        <img id="ear-cuff-img" src="https://sc01.alicdn.com/kf/H8fc0ac1470a5428ead71a79419af02beM.png" alt="Trinity Ear Cuff" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
-                        <div class="absolute bottom-4 left-4 flex space-x-2 z-10">
-                            <button onclick="changeCuffVariant('https://sc01.alicdn.com/kf/H8fc0ac1470a5428ead71a79419af02beM.png', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle">
-                                <img src="https://sc01.alicdn.com/kf/H8fc0ac1470a5428ead71a79419af02beM.png" class="w-full h-full object-contain">
-                            </button>
-                            <button onclick="changeCuffVariant('https://sc01.alicdn.com/kf/Hca38a9359fd449aeaa83ca64c2910689l.jpg', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
-                                <img src="https://sc01.alicdn.com/kf/Hca38a9359fd449aeaa83ca64c2910689l.jpg" class="w-full h-full object-contain">
-                            </button>
-                        </div>
-                        <span class="absolute top-4 right-4 bg-luxury-charcoal text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">18K Solid Gold</span>
-                    </div>
-                    <div class="p-8 flex-grow flex flex-col justify-between space-y-6">
-                        <div class="space-y-2">
-                            <h3 class="font-serif text-2xl text-luxury-charcoal tracking-wide">Trinity Ear Cuff</h3>
-                            <p class="text-xs text-luxury-stone leading-relaxed font-light">18K solid gold (0.7g) featuring three distinct interlocking bands.</p>
-                        </div>
-                        <div class="flex justify-between items-center pt-4 border-t border-[#D4AF37]/10">
-                            <div class="flex flex-col">
-                                <span class="font-serif text-lg text-luxury-charcoal font-medium">From €218</span>
-                                <span class="text-[9px] uppercase tracking-wider text-luxury-stone/60">Excl. €50 Insured Shipping</span>
-                            </div>
-                            <a href="#preorder" onclick="setPreorderProduct('Trinity Triple-Band Ear Cuff')" class="text-[10px] uppercase tracking-[0.2em] font-semibold text-luxury-gold hover:text-luxury-charcoal transition duration-300">Reserve →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 4: Overtone Hoop Earrings -->
-                <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
-                    <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
-                        <img id="overtone-img" src="https://sc01.alicdn.com/kf/Hc3fe8654779943399471779c04a85c2c0.png" alt="Overtone Hoop Earrings" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
-                        <div class="absolute bottom-4 left-4 flex space-x-2 z-10">
-                            <button onclick="changeOvertoneAngle('https://sc01.alicdn.com/kf/Hc3fe8654779943399471779c04a85c2c0.png', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle">
-                                <img src="https://sc01.alicdn.com/kf/Hc3fe8654779943399471779c04a85c2c0.png" class="w-full h-full object-contain">
-                            </button>
-                            <button onclick="changeOvertoneAngle('https://sc01.alicdn.com/kf/H0bc91a54406c4e56ad58ca6c52a375e0S.png', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
-                                <img src="https://sc01.alicdn.com/kf/H0bc91a54406c4e56ad58ca6c52a375e0S.png" class="w-full h-full object-contain">
-                            </button>
-                        </div>
-                        <span class="absolute top-4 right-4 bg-luxury-gold text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">18K Solid Gold</span>
-                    </div>
-                    <div class="p-8 flex-grow flex flex-col justify-between space-y-6">
-                        <div class="space-y-2">
-                            <h3 class="font-serif text-2xl text-luxury-charcoal tracking-wide">Overtone Hoop Earrings</h3>
-                            <p class="text-xs text-luxury-stone leading-relaxed font-light">18K yellow and white gold hoops (26mm). Twisted duo-tone ribbons.</p>
-                        </div>
-                        <div class="flex justify-between items-center pt-4 border-t border-[#D4AF37]/10">
-                             <div class="flex flex-col">
-                                <span class="font-serif text-lg text-luxury-charcoal font-medium">From €645</span>
-                                <span class="text-[9px] uppercase tracking-wider text-luxury-stone/60">Excl. €50 Insured Shipping</span>
-                            </div>
-                            <a href="#preorder" onclick="setPreorderProduct('Overtone Hoop Earrings')" class="text-[10px] uppercase tracking-[0.2em] font-semibold text-luxury-gold hover:text-luxury-charcoal transition duration-300">Reserve →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 5: Eclipse Drop Earrings -->
-                <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
-                    <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
-                        <img id="mosaic-img" src="https://sc01.alicdn.com/kf/Hbc06c22ab9e64f3081a7a4abe752e12ca.png" alt="Eclipse Drop Earrings" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
-                        <div class="absolute bottom-4 left-4 flex space-x-2 z-10">
-                            <button onclick="changeMosaicAngle('https://sc01.alicdn.com/kf/Hbc06c22ab9e64f3081a7a4abe752e12ca.png', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle">
-                                <img src="https://sc01.alicdn.com/kf/Hbc06c22ab9e64f3081a7a4abe752e12ca.png" class="w-full h-full object-contain">
-                            </button>
-                            <button onclick="changeMosaicAngle('https://sc01.alicdn.com/kf/Hbd72ec1af0294f37adccba21c882a261h.png', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
-                                <img src="https://sc01.alicdn.com/kf/Hbd72ec1af0294f37adccba21c882a261h.png" class="w-full h-full object-contain">
-                            </button>
-                        </div>
-                        <span class="absolute top-4 right-4 bg-luxury-gold text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">18K Solid Gold</span>
-                    </div>
-                    <div class="p-8 flex-grow flex flex-col justify-between space-y-6">
-                        <div class="space-y-2">
-                            <h3 class="font-serif text-2xl text-luxury-charcoal tracking-wide">Eclipse Drop Earrings</h3>
-                            <p class="text-xs text-luxury-stone leading-relaxed font-light">18K solid gold (3.65g) with a "Crushed Ice" hammered finish.</p>
-                        </div>
-                        <div class="flex justify-between items-center pt-4 border-t border-[#D4AF37]/10">
-                            <div class="flex flex-col">
-                                <span class="font-serif text-lg text-luxury-charcoal font-medium">From €895</span>
-                                <span class="text-[9px] uppercase tracking-wider text-luxury-stone/60">Excl. €50 Insured Shipping</span>
-                            </div>
-                            <a href="#preorder" onclick="setPreorderProduct('Eclipse Drop Earrings')" class="text-[10px] uppercase tracking-[0.2em] font-semibold text-luxury-gold hover:text-luxury-charcoal transition duration-300">Reserve →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 6: Cat's Eye Knot Earrings -->
-                <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
-                    <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
-                        <img id="cats-eye-img" src="https://sc01.alicdn.com/kf/H5c27b792e20e41e0bf7ec14ece2ce554s.jpg" alt="Cat's Eye Knot Earrings" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
-                        <div class="absolute bottom-4 left-4 flex space-x-2 z-10">
-                            <button onclick="changeCatsEyeAngle('https://sc01.alicdn.com/kf/H5c27b792e20e41e0bf7ec14ece2ce554s.jpg', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle">
-                                <img src="https://sc01.alicdn.com/kf/H5c27b792e20e41e0bf7ec14ece2ce554s.jpg" class="w-full h-full object-contain">
-                            </button>
-                            <button onclick="changeCatsEyeAngle('https://sc01.alicdn.com/kf/H1476434f6cb1442c884d71826218cf94z.png', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
-                                <img src="https://sc01.alicdn.com/kf/H1476434f6cb1442c884d71826218cf94z.png" class="w-full h-full object-contain">
-                            </button>
-                        </div>
-                        <span class="absolute top-4 right-4 bg-luxury-gold text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">18K Solid Gold</span>
-                    </div>
-                    <div class="p-8 flex-grow flex flex-col justify-between space-y-6">
-                        <div class="space-y-2">
-                            <h3 class="font-serif text-2xl text-luxury-charcoal tracking-wide">Cat's Eye Knot Earrings</h3>
-                            <p class="text-xs text-luxury-stone leading-relaxed font-light">18K solid gold (2.97g) with artisanal knots and 4.8mm polished beads.</p>
-                        </div>
-                        <div class="flex justify-between items-center pt-4 border-t border-[#D4AF37]/10">
-                            <div class="flex flex-col">
-                                <span class="font-serif text-lg text-luxury-charcoal font-medium">From €825</span>
-                                <span class="text-[9px] uppercase tracking-wider text-luxury-stone/60">Excl. €50 Insured Shipping</span>
-                            </div>
-                            <a href="#preorder" onclick="setPreorderProduct('Cat\'s Eye Knot Earrings')" class="text-[10px] uppercase tracking-[0.2em] font-semibold text-luxury-gold hover:text-luxury-charcoal transition duration-300">Reserve →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 7: Clover Peridot Pendant -->
-                <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
-                    <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
-                        <img id="clover-img" src="https://sc01.alicdn.com/kf/H6e3c8782b2484e19bd50dae993886901i.jpg" alt="Clover Peridot Pendant" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
-                        <div class="absolute bottom-4 left-4 flex space-x-2 z-10">
-                            <button onclick="changeCloverAngle('https://sc01.alicdn.com/kf/H6e3c8782b2484e19bd50dae993886901i.jpg', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle">
-                                <img src="https://sc01.alicdn.com/kf/H6e3c8782b2484e19bd50dae993886901i.jpg" class="w-full h-full object-contain">
-                            </button>
-                            <button onclick="changeCloverAngle('https://sc01.alicdn.com/kf/H1a309323c7994880a1b41fedb2821c61V.jpg', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
-                                <img src="https://sc01.alicdn.com/kf/H1a309323c7994880a1b41fedb2821c61V.jpg" class="w-full h-full object-contain">
-                            </button>
-                        </div>
-                        <span class="absolute top-4 right-4 bg-luxury-gold text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">18K Solid Gold</span>
-                    </div>
-                    <div class="p-8 flex-grow flex flex-col justify-between space-y-6">
-                        <div class="space-y-2">
-                            <h3 class="font-serif text-2xl text-luxury-charcoal tracking-wide">Clover Peridot Pendant</h3>
-                            <p class="text-xs text-luxury-stone leading-relaxed font-light">18K solid gold with a vibrant 1.11ct natural peridot.</p>
-                        </div>
-                        <div class="flex justify-between items-center pt-4 border-t border-[#D4AF37]/10">
-                            <div class="flex flex-col">
-                                <span class="font-serif text-lg text-luxury-charcoal font-medium">From €475</span>
-                                <span class="text-[9px] uppercase tracking-wider text-luxury-stone/60">Excl. €50 Insured Shipping</span>
-                            </div>
-                            <a href="https://buy.stripe.com/6oU14gflI2kG4i97ucaIM00" target="_blank" class="bg-luxury-gold text-white text-[10px] uppercase tracking-[0.2em] px-4 py-2 hover:bg-luxury-charcoal transition duration-300">Buy Now →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 8: Ruby Heirloom Bracelet -->
-                <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
-                    <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
-                        <!-- Main Product Image -->
-                        <img id="bracelet-img" src="https://sc01.alicdn.com/kf/Ha2e53ce1f963467680b4806fcfc27b5fl.jpg" alt="Ruby & Diamond Bracelet" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
-                        <div class="absolute bottom-4 left-4 flex space-x-2 z-10">
-                            <button onclick="changeBraceletAngle('https://sc01.alicdn.com/kf/Ha2e53ce1f963467680b4806fcfc27b5fl.jpg', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle">
-                                <img src="https://sc01.alicdn.com/kf/Ha2e53ce1f963467680b4806fcfc27b5fl.jpg" class="w-full h-full object-contain">
-                            </button>
-                            <button onclick="changeBraceletAngle('https://sc01.alicdn.com/kf/H0a7abcb7fed14418b2d512f37d89c731Z.jpg', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
-                                <img src="https://sc01.alicdn.com/kf/H0a7abcb7fed14418b2d512f37d89c731Z.jpg" class="w-full h-full object-contain">
-                            </button>
-                        </div>
-                        <span class="absolute top-4 right-4 bg-luxury-gold text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">18K Solid Gold</span>
-                    </div>
-                    <div class="p-8 flex-grow flex flex-col justify-between space-y-6">
-                        <div class="space-y-2">
-                            <h3 class="font-serif text-2xl text-luxury-charcoal tracking-wide">Ruby & Diamond Bracelet</h3>
-                            <p class="text-xs text-luxury-stone leading-relaxed font-light">18K solid gold (18.5cm) with a natural 0.238ct ruby and 0.07ct diamonds.</p>
-                        </div>
-                        <div class="flex justify-between items-center pt-4 border-t border-[#D4AF37]/10">
-                            <div class="flex flex-col">
-                                <span class="font-serif text-lg text-luxury-charcoal font-medium">From €985</span>
-                                <span class="text-[9px] uppercase tracking-wider text-luxury-stone/60">Excl. €50 Insured Shipping</span>
-                            </div>
-                            <a href="#preorder" onclick="setPreorderProduct('Ruby & Diamond Bracelet')" class="text-[10px] uppercase tracking-[0.2em] font-semibold text-luxury-gold hover:text-luxury-charcoal transition duration-300">Reserve →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 9: Wind Sculptural Pendant -->
-                <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
-                    <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
-                        <img id="wind-img" src="https://sc01.alicdn.com/kf/H4d8a284e535b4a12abde2483d7a60a7cL.png" alt="Wind Sculptural Pendant" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
-                        <div class="absolute bottom-4 left-4 flex space-x-2 z-10">
-                            <button onclick="changeWindVariant('https://sc01.alicdn.com/kf/H4d8a284e535b4a12abde2483d7a60a7cL.png', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle">
-                                <img src="https://sc01.alicdn.com/kf/H4d8a284e535b4a12abde2483d7a60a7cL.png" class="w-full h-full object-contain">
-                            </button>
-                            <button onclick="changeWindVariant('https://sc01.alicdn.com/kf/Hc3b340a653fb4343a878696924b4efccz.png', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
-                                <img src="https://sc01.alicdn.com/kf/Hc3b340a653fb4343a878696924b4efccz.png" class="w-full h-full object-contain">
-                            </button>
-                        </div>
-                        <span class="absolute top-4 right-4 bg-luxury-charcoal text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">18K Solid Gold</span>
-                    </div>
-                    <div class="p-8 flex-grow flex flex-col justify-between space-y-6">
-                        <div class="space-y-2">
-                            <h3 class="font-serif text-2xl text-luxury-charcoal tracking-wide">Wind Pendant</h3>
-                            <p class="text-xs uppercase tracking-[0.15em] text-luxury-gold font-semibold font-sans">Signature Collection</p>
-                            <p class="text-xs text-luxury-stone leading-relaxed font-light">Handcrafted in 18K solid gold, available with natural tsavorites or diamonds.</p>
-                        </div>
-                        <div class="flex justify-between items-center pt-4 border-t border-[#D4AF37]/10">
-                            <div class="flex flex-col">
-                                <span class="font-serif text-lg text-luxury-charcoal font-medium">From €675</span>
-                                <span class="text-[9px] uppercase tracking-wider text-luxury-stone/60">Excl. €50 Insured Shipping</span>
-                            </div>
-                            <a href="#preorder" onclick="setPreorderProduct('Wind Sculptural Pendant')" class="text-[10px] uppercase tracking-[0.2em] font-semibold text-luxury-gold hover:text-luxury-charcoal transition duration-300">Reserve →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 10: Tempo Ring -->
-                <div class="bg-white group flex flex-col min-h-[550px] border border-[#D4AF37]/10 hover:border-[#D4AF37]/30 transition-all duration-500">
-                    <div class="aspect-[4/5] overflow-hidden bg-luxury-cream relative">
-                        <img id="tempo-img" src="https://sc01.alicdn.com/kf/Ha36773d22c1a461d9d8bc1a7fdfbb456B.jpg" alt="Tempo Ring" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
-                        <div class="absolute bottom-4 left-4 flex space-x-2 z-20">
-                            <button onclick="changeTempoAngle('https://sc01.alicdn.com/kf/Ha36773d22c1a461d9d8bc1a7fdfbb456B.jpg', this)" class="w-8 h-8 rounded border border-luxury-gold scale-110 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
-                                <img src="https://sc01.alicdn.com/kf/Ha36773d22c1a461d9d8bc1a7fdfbb456B.jpg" class="w-full h-full object-cover">
-                            </button>
-                            <button onclick="changeTempoAngle('https://sc01.alicdn.com/kf/H8e20bf2fa5cc4cd28e2c090132a5dd59X.jpg', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
-                                <img src="https://sc01.alicdn.com/kf/H8e20bf2fa5cc4cd28e2c090132a5dd59X.jpg" class="w-full h-full object-cover">
-                            </button>
-                        </div>
-                        <span class="absolute top-4 right-4 bg-luxury-charcoal text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">18K Solid Gold</span>
-                    </div>
-                    <div class="p-8 flex-grow flex flex-col justify-between space-y-6">
-                        <div class="space-y-2">
-                            <h3 class="font-serif text-2xl text-luxury-charcoal tracking-wide">Tempo Ring</h3>
-                            <p class="text-xs uppercase tracking-[0.15em] text-luxury-gold font-semibold font-sans">Modern Rhythm</p>
-                            <p class="text-xs text-luxury-stone leading-relaxed font-light">Handcrafted in 18K solid gold with alternating polished and diamond-cut segments.</p>
-                        </div>
-                        <div class="flex justify-between items-center pt-4 border-t border-[#D4AF37]/10">
-                            <div class="flex flex-col">
-                                <span class="font-serif text-lg text-luxury-charcoal font-medium">From €495</span>
-                                <span class="text-[9px] uppercase tracking-wider text-luxury-stone/60">Excl. €50 Insured Shipping</span>
-                            </div>
-                            <a href="#preorder" onclick="setPreorderProduct('Tempo Ring')" class="text-[10px] uppercase tracking-[0.2em] font-semibold text-luxury-gold hover:text-luxury-charcoal transition duration-300">Reserve →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 11: Infinite Hoop Earrings -->
-                <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
-                    <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
-                        <img id="hoop-img" src="https://sc02.alicdn.com/kf/H8eb9a949be4947568cc23bae8195221cV.jpg" alt="Infinite Hoop Earrings" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
-                        <div class="absolute bottom-4 left-4 flex space-x-2 z-10">
-                            <button onclick="changeHoopSize('https://sc02.alicdn.com/kf/H8eb9a949be4947568cc23bae8195221cV.jpg', 'From €795', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle" title="40mm Diameter">
-                                <img src="https://sc02.alicdn.com/kf/H8eb9a949be4947568cc23bae8195221cV.jpg" class="w-full h-full object-contain">
-                            </button>
-                            <button onclick="changeHoopSize('https://sc02.alicdn.com/kf/Hf517a048df8d442d874089f4045a930e4.jpg', 'From €885', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold" title="50mm Diameter">
-                                <img src="https://sc02.alicdn.com/kf/Hf517a048df8d442d874089f4045a930e4.jpg" class="w-full h-full object-contain">
-                            </button>
-                        </div>
-                        <span class="absolute top-4 right-4 bg-luxury-gold text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">18K Solid Gold</span>
-                    </div>
-                    <div class="p-8 flex-grow flex flex-col justify-between space-y-6">
-                        <div class="space-y-2">
-                            <h3 class="font-serif text-2xl text-luxury-charcoal tracking-wide">Infinite Hoop Earrings</h3>
-                            <p class="text-xs uppercase tracking-[0.15em] text-luxury-gold font-semibold font-sans">Timeless Minimalism</p>
-                            <p class="text-xs text-luxury-stone leading-relaxed font-light">Hand-crafted 18K solid gold hoops (1.5mm tube). Available in 40mm and 50mm sizes.</p>
-                        </div>
-                        <div class="flex justify-between items-center pt-4 border-t border-[#D4AF37]/10">
-                            <div class="flex flex-col">
-                                <span id="hoop-price" class="font-serif text-lg text-luxury-charcoal font-medium">From €795</span>
-                                <span class="text-[9px] uppercase tracking-wider text-luxury-stone/60">Excl. €50 Insured Shipping</span>
-                            </div>
-                            <a href="#preorder" onclick="setPreorderProduct('Infinite Hoop Earrings')" class="text-[10px] uppercase tracking-[0.2em] font-semibold text-luxury-gold hover:text-luxury-charcoal transition duration-300">Reserve →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Custom Bespoke Commissions Card -->
-                <div class="border border-dashed border-[#D4AF37]/30 bg-white flex flex-col items-center justify-center text-center p-8 min-h-[450px]">
-                    <span class="text-4xl text-luxury-gold mb-4">✦</span>
-                    <h3 class="font-serif text-2xl text-luxury-charcoal tracking-wider">Bespoke Commissions</h3>
-                    <p class="text-xs text-luxury-stone font-light max-w-[280px] mt-4 leading-relaxed">
-                        Have a custom, bespoke vision in mind? Work directly with La Pomellia artisans to craft a uniquely personalized heirloom.
-                    </p>
-                    <a href="#preorder" onclick="setPreorderProduct('Custom Bespoke Commission')" class="mt-8 text-xs uppercase tracking-[0.15em] font-semibold text-luxury-gold hover:opacity-80 border-b border-luxury-gold pb-1 transition">Begin Consultation</a>
-                </div>
-
-                        <span class="absolute top-4 right-4 bg-luxury-gold text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">18K Solid Gold</span>
-                    </div>
-                    <div class="p-8 flex-grow flex flex-col justify-between space-y-6">
-                        <div class="space-y-2">
-                            <h3 class="font-serif text-2xl text-luxury-charcoal tracking-wide">Diamond Triangle Pendant</h3>
-                            <p class="text-xs text-luxury-stone leading-relaxed font-light">18K solid gold (2.08g) set with brilliant-cut diamonds (0.15ct).</p>
-                        </div>
-                        <div class="flex justify-between items-center pt-4 border-t border-[#D4AF37]/10">
-                            <div class="flex flex-col">
-                                <span class="font-serif text-lg text-luxury-charcoal font-medium">From €845</span>
-                                <span class="text-[9px] uppercase tracking-wider text-luxury-stone/60">Excl. €50 Insured Shipping</span>
-                            </div>
-                            <a href="#preorder" onclick="setPreorderProduct('Diamond Triangle Pendant')" class="text-[10px] uppercase tracking-[0.2em] font-semibold text-luxury-gold hover:text-luxury-charcoal transition duration-300">Reserve →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 2: Liquid Gold Pendant -->
-                <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
-                    <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
-                        <img id="liquid-gold-img" src="https://sc02.alicdn.com/kf/A2f10bb6b9e324662baaad8c959a4a4987.png" alt="Liquid Gold Pendant" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
-                        <div class="absolute bottom-4 left-4 flex space-x-2 z-10">
-                            <button onclick="changeLiquidGoldAngle('https://sc02.alicdn.com/kf/A2f10bb6b9e324662baaad8c959a4a4987.png', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle">
-                                <img src="https://sc02.alicdn.com/kf/A2f10bb6b9e324662baaad8c959a4a4987.png" class="w-full h-full object-contain">
-                            </button>
-                            <button onclick="changeLiquidGoldAngle('https://sc02.alicdn.com/kf/A54bf7637fccd4e9f9bd1ed7dafce645bU.png', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
-                                <img src="https://sc02.alicdn.com/kf/A54bf7637fccd4e9f9bd1ed7dafce645bU.png" class="w-full h-full object-contain">
-                            </button>
-                        </div>
-                        <span class="absolute top-4 right-4 bg-luxury-charcoal text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">18K Solid Gold</span>
-                    </div>
-                    <div class="p-8 flex-grow flex flex-col justify-between space-y-6">
-                        <div class="space-y-2">
-                            <h3 class="font-serif text-2xl text-luxury-charcoal tracking-wide">Liquid Gold Pendant</h3>
-                            <p class="text-xs text-luxury-stone leading-relaxed font-light">Solid 18K yellow gold (approx. 1.8g) masterfully polished to a mirror shine.</p>
-                        </div>
-                        <div class="flex justify-between items-center pt-4 border-t border-[#D4AF37]/10">
-                            <div class="flex flex-col">
-                                <span class="font-serif text-lg text-luxury-charcoal font-medium">From €745</span>
-                                <span class="text-[9px] uppercase tracking-wider text-luxury-stone/60">Excl. €50 Insured Shipping</span>
-                            </div>
-                            <a href="#preorder" onclick="setPreorderProduct('Liquid Gold Sculptural Pendant')" class="text-[10px] uppercase tracking-[0.2em] font-semibold text-luxury-gold hover:text-luxury-charcoal transition duration-300">Reserve →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 3: Trinity Ear Cuff -->
-                <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
-                    <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
-                        <img id="ear-cuff-img" src="https://sc01.alicdn.com/kf/H8fc0ac1470a5428ead71a79419af02beM.png" alt="Trinity Ear Cuff" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
-                        <div class="absolute bottom-4 left-4 flex space-x-2 z-10">
-                            <button onclick="changeCuffVariant('https://sc01.alicdn.com/kf/H8fc0ac1470a5428ead71a79419af02beM.png', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle">
-                                <img src="https://sc01.alicdn.com/kf/H8fc0ac1470a5428ead71a79419af02beM.png" class="w-full h-full object-contain">
-                            </button>
-                            <button onclick="changeCuffVariant('https://sc01.alicdn.com/kf/Hca38a9359fd449aeaa83ca64c2910689l.jpg', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
-                                <img src="https://sc01.alicdn.com/kf/Hca38a9359fd449aeaa83ca64c2910689l.jpg" class="w-full h-full object-contain">
-                            </button>
-                        </div>
-                        <span class="absolute top-4 right-4 bg-luxury-charcoal text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">18K Solid Gold</span>
-                    </div>
-                    <div class="p-8 flex-grow flex flex-col justify-between space-y-6">
-                        <div class="space-y-2">
-                            <h3 class="font-serif text-2xl text-luxury-charcoal tracking-wide">Trinity Ear Cuff</h3>
-                            <p class="text-xs text-luxury-stone leading-relaxed font-light">18K solid gold (0.7g) featuring three distinct interlocking bands.</p>
-                        </div>
-                        <div class="flex justify-between items-center pt-4 border-t border-[#D4AF37]/10">
-                            <div class="flex flex-col">
-                                <span class="font-serif text-lg text-luxury-charcoal font-medium">From €218</span>
-                                <span class="text-[9px] uppercase tracking-wider text-luxury-stone/60">Excl. €50 Insured Shipping</span>
-                            </div>
-                            <a href="#preorder" onclick="setPreorderProduct('Trinity Triple-Band Ear Cuff')" class="text-[10px] uppercase tracking-[0.2em] font-semibold text-luxury-gold hover:text-luxury-charcoal transition duration-300">Reserve →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 4: Overtone Hoop Earrings -->
-                <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
-                    <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
-                        <img id="overtone-img" src="https://sc01.alicdn.com/kf/Hc3fe8654779943399471779c04a85c2c0.png" alt="Overtone Hoop Earrings" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
-                        <div class="absolute bottom-4 left-4 flex space-x-2 z-10">
-                            <button onclick="changeOvertoneAngle('https://sc01.alicdn.com/kf/Hc3fe8654779943399471779c04a85c2c0.png', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle">
-                                <img src="https://sc01.alicdn.com/kf/Hc3fe8654779943399471779c04a85c2c0.png" class="w-full h-full object-contain">
-                            </button>
-                            <button onclick="changeOvertoneAngle('https://sc01.alicdn.com/kf/H0bc91a54406c4e56ad58ca6c52a375e0S.png', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
-                                <img src="https://sc01.alicdn.com/kf/H0bc91a54406c4e56ad58ca6c52a375e0S.png" class="w-full h-full object-contain">
-                            </button>
-                        </div>
-                        <span class="absolute top-4 right-4 bg-luxury-gold text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">18K Solid Gold</span>
-                    </div>
-                    <div class="p-8 flex-grow flex flex-col justify-between space-y-6">
-                        <div class="space-y-2">
-                            <h3 class="font-serif text-2xl text-luxury-charcoal tracking-wide">Overtone Hoop Earrings</h3>
-                            <p class="text-xs text-luxury-stone leading-relaxed font-light">18K yellow and white gold hoops (26mm). Twisted duo-tone ribbons.</p>
-                        </div>
-                        <div class="flex justify-between items-center pt-4 border-t border-[#D4AF37]/10">
-                             <div class="flex flex-col">
-                                <span class="font-serif text-lg text-luxury-charcoal font-medium">From €645</span>
-                                <span class="text-[9px] uppercase tracking-wider text-luxury-stone/60">Excl. €50 Insured Shipping</span>
-                            </div>
-                            <a href="#preorder" onclick="setPreorderProduct('Overtone Hoop Earrings')" class="text-[10px] uppercase tracking-[0.2em] font-semibold text-luxury-gold hover:text-luxury-charcoal transition duration-300">Reserve →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 5: Eclipse Drop Earrings -->
-                <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
-                    <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
-                        <img id="mosaic-img" src="https://sc01.alicdn.com/kf/Hbc06c22ab9e64f3081a7a4abe752e12ca.png" alt="Eclipse Drop Earrings" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
-                        <div class="absolute bottom-4 left-4 flex space-x-2 z-10">
-                            <button onclick="changeMosaicAngle('https://sc01.alicdn.com/kf/Hbc06c22ab9e64f3081a7a4abe752e12ca.png', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle">
-                                <img src="https://sc01.alicdn.com/kf/Hbc06c22ab9e64f3081a7a4abe752e12ca.png" class="w-full h-full object-contain">
-                            </button>
-                            <button onclick="changeMosaicAngle('https://sc01.alicdn.com/kf/Hbd72ec1af0294f37adccba21c882a261h.png', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
-                                <img src="https://sc01.alicdn.com/kf/Hbd72ec1af0294f37adccba21c882a261h.png" class="w-full h-full object-contain">
-                            </button>
-                        </div>
-                        <span class="absolute top-4 right-4 bg-luxury-gold text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">18K Solid Gold</span>
-                    </div>
-                    <div class="p-8 flex-grow flex flex-col justify-between space-y-6">
-                        <div class="space-y-2">
-                            <h3 class="font-serif text-2xl text-luxury-charcoal tracking-wide">Eclipse Drop Earrings</h3>
-                            <p class="text-xs text-luxury-stone leading-relaxed font-light">18K solid gold (3.65g) with a "Crushed Ice" hammered finish.</p>
-                        </div>
-                        <div class="flex justify-between items-center pt-4 border-t border-[#D4AF37]/10">
-                            <div class="flex flex-col">
-                                <span class="font-serif text-lg text-luxury-charcoal font-medium">From €895</span>
-                                <span class="text-[9px] uppercase tracking-wider text-luxury-stone/60">Excl. €50 Insured Shipping</span>
-                            </div>
-                            <a href="#preorder" onclick="setPreorderProduct('Eclipse Drop Earrings')" class="text-[10px] uppercase tracking-[0.2em] font-semibold text-luxury-gold hover:text-luxury-charcoal transition duration-300">Reserve →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 6: Cat's Eye Knot Earrings -->
-                <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
-                    <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
-                        <img id="cats-eye-img" src="https://sc01.alicdn.com/kf/H5c27b792e20e41e0bf7ec14ece2ce554s.jpg" alt="Cat's Eye Knot Earrings" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
-                        <div class="absolute bottom-4 left-4 flex space-x-2 z-10">
-                            <button onclick="changeCatsEyeAngle('https://sc01.alicdn.com/kf/H5c27b792e20e41e0bf7ec14ece2ce554s.jpg', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle">
-                                <img src="https://sc01.alicdn.com/kf/H5c27b792e20e41e0bf7ec14ece2ce554s.jpg" class="w-full h-full object-contain">
-                            </button>
-                            <button onclick="changeCatsEyeAngle('https://sc01.alicdn.com/kf/H1476434f6cb1442c884d71826218cf94z.png', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
-                                <img src="https://sc01.alicdn.com/kf/H1476434f6cb1442c884d71826218cf94z.png" class="w-full h-full object-contain">
-                            </button>
-                        </div>
-                        <span class="absolute top-4 right-4 bg-luxury-gold text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">18K Solid Gold</span>
-                    </div>
-                    <div class="p-8 flex-grow flex flex-col justify-between space-y-6">
-                        <div class="space-y-2">
-                            <h3 class="font-serif text-2xl text-luxury-charcoal tracking-wide">Cat's Eye Knot Earrings</h3>
-                            <p class="text-xs text-luxury-stone leading-relaxed font-light">18K solid gold (2.97g) with artisanal knots and 4.8mm polished beads.</p>
-                        </div>
-                        <div class="flex justify-between items-center pt-4 border-t border-[#D4AF37]/10">
-                            <div class="flex flex-col">
-                                <span class="font-serif text-lg text-luxury-charcoal font-medium">From €825</span>
-                                <span class="text-[9px] uppercase tracking-wider text-luxury-stone/60">Excl. €50 Insured Shipping</span>
-                            </div>
-                            <a href="#preorder" onclick="setPreorderProduct('Cat\'s Eye Knot Earrings')" class="text-[10px] uppercase tracking-[0.2em] font-semibold text-luxury-gold hover:text-luxury-charcoal transition duration-300">Reserve →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 7: Clover Peridot Pendant -->
-                <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
-                    <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
-                        <img id="clover-img" src="https://sc01.alicdn.com/kf/H6e3c8782b2484e19bd50dae993886901i.jpg" alt="Clover Peridot Pendant" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
-                        <div class="absolute bottom-4 left-4 flex space-x-2 z-10">
-                            <button onclick="changeCloverAngle('https://sc01.alicdn.com/kf/H6e3c8782b2484e19bd50dae993886901i.jpg', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle">
-                                <img src="https://sc01.alicdn.com/kf/H6e3c8782b2484e19bd50dae993886901i.jpg" class="w-full h-full object-contain">
-                            </button>
-                            <button onclick="changeCloverAngle('https://sc01.alicdn.com/kf/H1a309323c7994880a1b41fedb2821c61V.jpg', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
-                                <img src="https://sc01.alicdn.com/kf/H1a309323c7994880a1b41fedb2821c61V.jpg" class="w-full h-full object-contain">
-                            </button>
-                        </div>
-                        <span class="absolute top-4 right-4 bg-luxury-gold text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">18K Solid Gold</span>
-                    </div>
-                    <div class="p-8 flex-grow flex flex-col justify-between space-y-6">
-                        <div class="space-y-2">
-                            <h3 class="font-serif text-2xl text-luxury-charcoal tracking-wide">Clover Peridot Pendant</h3>
-                            <p class="text-xs text-luxury-stone leading-relaxed font-light">18K solid gold with a vibrant 1.11ct natural peridot.</p>
-                        </div>
-                        <div class="flex justify-between items-center pt-4 border-t border-[#D4AF37]/10">
-                            <div class="flex flex-col">
-                                <span class="font-serif text-lg text-luxury-charcoal font-medium">From €475</span>
-                                <span class="text-[9px] uppercase tracking-wider text-luxury-stone/60">Excl. €50 Insured Shipping</span>
-                            </div>
-                            <a href="https://buy.stripe.com/6oU14gflI2kG4i97ucaIM00" target="_blank" class="bg-luxury-gold text-white text-[10px] uppercase tracking-[0.2em] px-4 py-2 hover:bg-luxury-charcoal transition duration-300">Buy Now →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 8: Ruby Heirloom Bracelet -->
-                <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
-                    <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
-                        <!-- Main Product Image -->
-                        <img id="bracelet-img" src="https://sc01.alicdn.com/kf/Ha2e53ce1f963467680b4806fcfc27b5fl.jpg" alt="Ruby & Diamond Bracelet" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
-                        <div class="absolute bottom-4 left-4 flex space-x-2 z-10">
-                            <button onclick="changeBraceletAngle('https://sc01.alicdn.com/kf/Ha2e53ce1f963467680b4806fcfc27b5fl.jpg', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle">
-                                <img src="https://sc01.alicdn.com/kf/Ha2e53ce1f963467680b4806fcfc27b5fl.jpg" class="w-full h-full object-contain">
-                            </button>
-                            <button onclick="changeBraceletAngle('https://sc01.alicdn.com/kf/H0a7abcb7fed14418b2d512f37d89c731Z.jpg', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
-                                <img src="https://sc01.alicdn.com/kf/H0a7abcb7fed14418b2d512f37d89c731Z.jpg" class="w-full h-full object-contain">
-                            </button>
-                        </div>
-                        <span class="absolute top-4 right-4 bg-luxury-gold text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">18K Solid Gold</span>
-                    </div>
-                    <div class="p-8 flex-grow flex flex-col justify-between space-y-6">
-                        <div class="space-y-2">
-                            <h3 class="font-serif text-2xl text-luxury-charcoal tracking-wide">Ruby & Diamond Bracelet</h3>
-                            <p class="text-xs text-luxury-stone leading-relaxed font-light">18K solid gold (18.5cm) with a natural 0.238ct ruby and 0.07ct diamonds.</p>
-                        </div>
-                        <div class="flex justify-between items-center pt-4 border-t border-[#D4AF37]/10">
-                            <div class="flex flex-col">
-                                <span class="font-serif text-lg text-luxury-charcoal font-medium">From €985</span>
-                                <span class="text-[9px] uppercase tracking-wider text-luxury-stone/60">Excl. €50 Insured Shipping</span>
-                            </div>
-                            <a href="#preorder" onclick="setPreorderProduct('Ruby & Diamond Bracelet')" class="text-[10px] uppercase tracking-[0.2em] font-semibold text-luxury-gold hover:text-luxury-charcoal transition duration-300">Reserve →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 9: Wind Sculptural Pendant -->
-                <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
-                    <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
-                        <img id="wind-img" src="https://sc01.alicdn.com/kf/H4d8a284e535b4a12abde2483d7a60a7cL.png" alt="Wind Sculptural Pendant" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
-                        <div class="absolute bottom-4 left-4 flex space-x-2 z-10">
-                            <button onclick="changeWindVariant('https://sc01.alicdn.com/kf/H4d8a284e535b4a12abde2483d7a60a7cL.png', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle">
-                                <img src="https://sc01.alicdn.com/kf/H4d8a284e535b4a12abde2483d7a60a7cL.png" class="w-full h-full object-contain">
-                            </button>
-                            <button onclick="changeWindVariant('https://sc01.alicdn.com/kf/Hc3b340a653fb4343a878696924b4efccz.png', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
-                                <img src="https://sc01.alicdn.com/kf/Hc3b340a653fb4343a878696924b4efccz.png" class="w-full h-full object-contain">
-                            </button>
-                        </div>
-                        <span class="absolute top-4 right-4 bg-luxury-charcoal text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">18K Solid Gold</span>
-                    </div>
-                    <div class="p-8 flex-grow flex flex-col justify-between space-y-6">
-                        <div class="space-y-2">
-                            <h3 class="font-serif text-2xl text-luxury-charcoal tracking-wide">Wind Pendant</h3>
-                            <p class="text-xs text-luxury-stone leading-relaxed font-light">Handcrafted in 18K solid gold, available with natural tsavorites or diamonds.</p>
-                        </div>
-                        <div class="flex justify-between items-center pt-4 border-t border-[#D4AF37]/10">
-                            <div class="flex flex-col">
-                                <span class="font-serif text-lg text-luxury-charcoal font-medium">From €675</span>
-                                <span class="text-[9px] uppercase tracking-wider text-luxury-stone/60">Excl. €50 Insured Shipping</span>
-                            </div>
-                            <a href="#preorder" onclick="setPreorderProduct('Wind Sculptural Pendant')" class="text-[10px] uppercase tracking-[0.2em] font-semibold text-luxury-gold hover:text-luxury-charcoal transition duration-300">Reserve →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 10: Tempo Ring -->
-                <div class="bg-white group flex flex-col min-h-[550px] border border-[#D4AF37]/10 hover:border-[#D4AF37]/30 transition-all duration-500">
-                    <div class="aspect-[4/5] overflow-hidden bg-luxury-cream relative">
-                        <img id="tempo-img" src="https://sc01.alicdn.com/kf/Ha36773d22c1a461d9d8bc1a7fdfbb456B.jpg" alt="Tempo Ring" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
-                        <div class="absolute bottom-4 left-4 flex space-x-2 z-20">
-                            <button onclick="changeTempoAngle('https://sc01.alicdn.com/kf/Ha36773d22c1a461d9d8bc1a7fdfbb456B.jpg', this)" class="w-8 h-8 rounded border border-luxury-gold scale-110 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
-                                <img src="https://sc01.alicdn.com/kf/Ha36773d22c1a461d9d8bc1a7fdfbb456B.jpg" class="w-full h-full object-cover">
-                            </button>
-                            <button onclick="changeTempoAngle('https://sc01.alicdn.com/kf/H8e20bf2fa5cc4cd28e2c090132a5dd59X.jpg', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold">
-                                <img src="https://sc01.alicdn.com/kf/H8e20bf2fa5cc4cd28e2c090132a5dd59X.jpg" class="w-full h-full object-cover">
-                            </button>
-                        </div>
-                        <span class="absolute top-4 right-4 bg-luxury-charcoal text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">18K Solid Gold</span>
-                    </div>
-                    <div class="p-8 flex-grow flex flex-col justify-between space-y-6">
-                        <div class="space-y-2">
-                            <h3 class="font-serif text-2xl text-luxury-charcoal tracking-wide">Tempo Ring</h3>
-                            <p class="text-xs text-luxury-stone leading-relaxed font-light">Handcrafted in 18K solid gold with alternating polished and diamond-cut segments.</p>
-                        </div>
-                        <div class="flex justify-between items-center pt-4 border-t border-[#D4AF37]/10">
-                            <div class="flex flex-col">
-                                <span class="font-serif text-lg text-luxury-charcoal font-medium">From €495</span>
-                                <span class="text-[9px] uppercase tracking-wider text-luxury-stone/60">Excl. €50 Insured Shipping</span>
-                            </div>
-                            <a href="#preorder" onclick="setPreorderProduct('Tempo Ring')" class="text-[10px] uppercase tracking-[0.2em] font-semibold text-luxury-gold hover:text-luxury-charcoal transition duration-300">Reserve →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 11: Infinite Hoop Earrings -->
-                <div class="bg-white border border-[#D4AF37]/10 flex flex-col hover:shadow-xl transition duration-500 group">
-                    <div class="aspect-square bg-luxury-cream flex items-center justify-center p-8 overflow-hidden relative border-b border-[#D4AF37]/10">
-                        <img id="hoop-img" src="https://sc02.alicdn.com/kf/H8eb9a949be4947568cc23bae8195221cV.jpg" alt="Infinite Hoop Earrings" class="max-h-full object-contain group-hover:scale-105 transition duration-700">
-                        <div class="absolute bottom-4 left-4 flex space-x-2 z-10">
-                            <button onclick="changeHoopSize('https://sc02.alicdn.com/kf/H8eb9a949be4947568cc23bae8195221cV.jpg', 'From €795', this)" class="w-8 h-8 rounded border border-luxury-gold/50 bg-white/80 p-0.5 overflow-hidden transition scale-110 active-angle" title="40mm Diameter">
-                                <img src="https://sc02.alicdn.com/kf/H8eb9a949be4947568cc23bae8195221cV.jpg" class="w-full h-full object-contain">
-                            </button>
-                            <button onclick="changeHoopSize('https://sc02.alicdn.com/kf/Hf517a048df8d442d874089f4045a930e4.jpg', 'From €885', this)" class="w-8 h-8 rounded border border-gray-200 bg-white/80 p-0.5 overflow-hidden transition hover:border-luxury-gold" title="50mm Diameter">
-                                <img src="https://sc02.alicdn.com/kf/Hf517a048df8d442d874089f4045a930e4.jpg" class="w-full h-full object-contain">
-                            </button>
-                        </div>
-                        <span class="absolute top-4 right-4 bg-luxury-gold text-white text-[9px] uppercase tracking-[0.15em] px-3 py-1 font-semibold font-sans">18K Solid Gold</span>
-                    </div>
-                    <div class="p-8 flex-grow flex flex-col justify-between space-y-6">
-                        <div class="space-y-2">
-                            <h3 class="font-serif text-2xl text-luxury-charcoal tracking-wide">Infinite Hoop Earrings</h3>
-                            <p class="text-xs text-luxury-stone leading-relaxed font-light">Hand-crafted 18K solid gold hoops (1.5mm tube). Available in 40mm and 50mm sizes.</p>
-                        </div>
-                        <div class="flex justify-between items-center pt-4 border-t border-[#D4AF37]/10">
-                            <div class="flex flex-col">
-                                <span id="hoop-price" class="font-serif text-lg text-luxury-charcoal font-medium">From €795</span>
-                                <span class="text-[9px] uppercase tracking-wider text-luxury-stone/60">Excl. €50 Insured Shipping</span>
-                            </div>
-                            <a href="#preorder" onclick="setPreorderProduct('Infinite Hoop Earrings')" class="text-[10px] uppercase tracking-[0.2em] font-semibold text-luxury-gold hover:text-luxury-charcoal transition duration-300">Reserve →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Custom Bespoke Commissions Card -->
-                <div class="border border-dashed border-[#D4AF37]/30 bg-white flex flex-col items-center justify-center text-center p-8 min-h-[450px]">
-                    <span class="text-4xl text-luxury-gold mb-4">✦</span>
-                    <h3 class="font-serif text-2xl text-luxury-charcoal tracking-wider">Bespoke Commissions</h3>
-                    <p class="text-xs text-luxury-stone font-light max-w-[280px] mt-4 leading-relaxed">
-                        Have a custom, bespoke vision in mind? Work directly with La Pomellia artisans to craft a uniquely personalized heirloom.
-                    </p>
-                    <a href="#preorder" onclick="setPreorderProduct('Custom Bespoke Commission')" class="mt-8 text-xs uppercase tracking-[0.15em] font-semibold text-luxury-gold hover:opacity-80 border-b border-luxury-gold pb-1 transition">Begin Consultation</a>
-                </div>
-
             </div>
         </div>
     </section>
@@ -1275,12 +636,6 @@
         }
         function changeBraceletAngle(imgUrl, buttonElement) {
             document.getElementById('bracelet-img').src = imgUrl;
-            const buttons = buttonElement.parentNode.querySelectorAll('button');
-            buttons.forEach(b => { b.classList.remove('active-angle', 'scale-110'); b.classList.add('border-gray-200'); });
-            buttonElement.classList.remove('border-gray-200'); buttonElement.classList.add('active-angle', 'scale-110');
-        }
-        function changeRubyBraceletAngle(imgUrl, buttonElement) {
-            document.getElementById('ruby-bracelet-img').src = imgUrl;
             const buttons = buttonElement.parentNode.querySelectorAll('button');
             buttons.forEach(b => { b.classList.remove('active-angle', 'scale-110'); b.classList.add('border-gray-200'); });
             buttonElement.classList.remove('border-gray-200'); buttonElement.classList.add('active-angle', 'scale-110');
