@@ -3,10 +3,9 @@
 This file is automatically updated by Accio every 3 days.
 Campaign: **La Pomellia - Tempo - Premium EU**
 
-| Date | Region | Spend (€) | Reach | Link Clicks | CTR (%) | Conversations | Cost per Conv. | Status |
+| Date | Region | Spend ($) | Reach | Link Clicks | CTR (%) | LPV | CPC ($) | Status |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-07-23 | Germany | 0.00 | 0 | 0 | 0.00 | 0 | - | Started |
-| 2026-07-23 | Paris | 0.00 | 0 | 0 | 0.00 | 0 | - | Started |
+| 2026-07-26 | Germany/Paris | 124.40 | 7,497 | 365 | 4.00 | 159 | 0.34 | Active |
 
 ---
 ## 💡 Insights & Recommendations
