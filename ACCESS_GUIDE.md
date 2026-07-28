@@ -1,4 +1,4 @@
-# 🗝️ La Pomellia: Access & Credentials Guide
+# 🗝️ La Pomellia by Anara: Access & Credentials Guide
 
 Keep this document safe. If you lose access to your devices, use these details to recover your business assets.
 
