@@ -2,35 +2,55 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="LA POMELLIA by Anara - Premium Fine Jewelry. Handcrafted 18K solid gold creations.">
     <meta name="facebook-domain-verification" content="jgi91yyimkaylbahrztahrtyowcjbk" />
     <title>LA POMELLIA by Anara | Premium Fine Jewelry</title>
-    <!-- CSS is embedded to ensure zero dependencies -->
+    <!-- Meta Pixel -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(f,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1362246469337917');
+    fbq('track', 'PageView');
+    </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
-        :root { --gold: #D4AF37; --charcoal: #1A1A1A; --cream: #FAF8F5; }
+        :root { --gold: #D4AF37; --charcoal: #1A1A1A; --cream: #FAF8F5; --white: #FFFFFF; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { background: var(--cream); color: var(--charcoal); font-family: 'Montserrat', sans-serif; -webkit-font-smoothing: antialiased; line-height: 1.6; }
         .font-serif { font-family: 'Playfair Display', serif; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
         header { position: fixed; top: 0; left: 0; width: 100%; height: 80px; z-index: 1000; background: rgba(250, 248, 245, 0.98); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(212, 175, 55, 0.1); }
         .nav-container { display: flex; justify-content: space-between; align-items: center; height: 100%; }
+        .brand-logo { text-decoration: none; display: flex; flex-direction: column; }
         .nav-links { display: none; gap: 40px; }
         @media (min-width: 768px) { .nav-links { display: flex; } }
-        .nav-links a { font-size: 11px; text-transform: uppercase; letter-spacing: 0.2em; color: var(--charcoal); text-decoration: none; font-weight: 500; }
+        .nav-links a { font-size: 11px; text-transform: uppercase; letter-spacing: 0.2em; color: var(--charcoal); text-decoration: none; font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--gold); }
         .btn-outline { border: 1px solid var(--gold); padding: 12px 24px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--charcoal); text-decoration: none; transition: 0.3s; }
+        .btn-outline:hover { background: var(--gold); color: white; }
         .hero { min-height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; padding-top: 80px; }
+        .divider { width: 60px; height: 1px; background: var(--gold); margin: 24px auto; }
         .product-grid { display: grid; grid-template-columns: 1fr; gap: 40px; padding: 60px 0; }
         @media (min-width: 768px) { .product-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (min-width: 1024px) { .product-grid { grid-template-columns: repeat(3, 1fr); } }
-        .product-card { background: white; border: 1px solid rgba(212, 175, 55, 0.08); overflow: hidden; }
-        .img-wrapper { height: 400px; overflow: hidden; background: white; position: relative; display: flex; align-items: center; justify-content: center; }
+        .product-card { background: var(--white); border: 1px solid rgba(212, 175, 55, 0.08); transition: 0.4s; }
+        .product-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .img-wrapper { height: 450px; overflow: hidden; background: #fff; position: relative; display: flex; align-items: center; justify-content: center; }
         .product-img { max-width: 100%; max-height: 100%; object-fit: contain; padding: 10px; image-rendering: -webkit-optimize-contrast; }
-        .angle-selector { position: absolute; bottom: 12px; left: 12px; display: flex; gap: 6px; }
-        .angle-btn { width: 30px; height: 30px; border: 1px solid #eee; background: white; padding: 2px; cursor: pointer; }
+        .angle-selector { position: absolute; bottom: 16px; left: 16px; display: flex; gap: 8px; }
+        .angle-btn { width: 32px; height: 32px; border: 1px solid #eee; background: white; padding: 2px; cursor: pointer; }
         .angle-btn.active { border-color: var(--gold); border-width: 2px; }
         .angle-btn img { width: 100%; height: 100%; object-fit: cover; }
-        .btn-primary { background: var(--charcoal); color: white; padding: 16px 32px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.2em; text-decoration: none; display: inline-block; }
+        .btn-primary { background: var(--charcoal); color: white; padding: 16px 32px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.2em; text-decoration: none; display: inline-block; transition: 0.3s; }
+        .btn-primary:hover { background: var(--gold); }
+        footer { padding: 80px 24px; text-align: center; background: var(--white); border-top: 1px solid rgba(212, 175, 55, 0.1); }
     </style>
 </head>
 <body>
@@ -51,11 +71,12 @@
 
     <section class="hero container">
         <div style="max-width:800px;">
-            <span class="uppercase" style="font-size:11px; letter-spacing:0.3em; color:#D4AF37; font-weight:600;">The Premiere Creations</span>
+            <span class="uppercase tracking-widest text-luxury-gold" style="font-size:11px; font-weight:600;">The Premiere Creations</span>
             <h1 class="font-serif uppercase" style="font-size: clamp(32px, 8vw, 64px); line-height:1.2; margin-top:16px;">
                 LA POMELLIA <span style="display:block; font-size: 0.5em; color:#D4AF37; letter-spacing:0.3em; margin-top:8px;">by Anara</span>
             </h1>
-            <p class="font-serif italic" style="font-size:20px; color:#707070; margin-top:24px;">"Sculptural gold geometry meeting modern fine jewelry."</p>
+            <div class="divider"></div>
+            <p class="font-serif italic" style="font-size:20px; color:#707070;">"Sculptural gold geometry meeting modern fine jewelry."</p>
         </div>
     </section>
 
@@ -64,22 +85,22 @@
             <!-- 1: Tempo Ring -->
             <article class="product-card">
                 <div class="img-wrapper">
-                    <img id="img-tempo" src="img/tempo_sharp_v29_tempo-18k-gold-ring-quiet-luxury.jpg" alt="Tempo" class="product-img">
+                    <img id="img-tempo" src="assets/img_hd/tempo/tempo-18k-gold-ring-quiet-luxury 4.jpg.jpg" alt="Tempo" class="product-img">
                     <div class="angle-selector">
-                        <button onclick="changeAngle('img-tempo', 'img/tempo_sharp_v29_tempo-18k-gold-ring-quiet-luxury.jpg', this)" class="angle-btn active">
-                            <img src="img/tempo_sharp_v29_tempo-18k-gold-ring-quiet-luxury.jpg">
+                        <button onclick="changeAngle('img-tempo', 'assets/img_hd/tempo/tempo-18k-gold-ring-quiet-luxury 4.jpg.jpg', this)" class="angle-btn active">
+                            <img src="assets/img_hd/tempo/tempo-18k-gold-ring-quiet-luxury 4.jpg.jpg">
                         </button>
-                        <button onclick="changeAngle('img-tempo', 'img/tempo_sharp_v29_tempo-18k-gold-ring-quiet-luxury 4.jpg.jpg', this)" class="angle-btn">
-                            <img src="img/tempo_sharp_v29_tempo-18k-gold-ring-quiet-luxury 4.jpg.jpg">
+                        <button onclick="changeAngle('img-tempo', 'assets/img_hd/tempo/tempo-18k-gold-ring-quiet-luxury.jpg', this)" class="angle-btn">
+                            <img src="assets/img_hd/tempo/tempo-18k-gold-ring-quiet-luxury.jpg">
                         </button>
                     </div>
                 </div>
-                <div style="padding:24px;">
-                    <h3 class="font-serif" style="font-size:20px;">Tempo Ring</h3>
-                    <p style="font-size:12px; color:#707070; margin: 12px 0;">18K solid gold with rhythmic diamond-cut texture.</p>
+                <div style="padding:32px;">
+                    <h3 class="font-serif" style="font-size:20px; margin-bottom:8px;">Tempo Ring</h3>
+                    <p style="font-size:12px; color:#707070; margin-bottom:24px;">Solid 18K gold with rhythmic diamond-cut texture.</p>
                     <div style="display:flex; justify-content:space-between; align-items:center;">
-                        <span class="font-serif">€495</span>
-                        <a href="https://wa.me/8618665723438" style="font-size:10px; font-weight:700; color:#D4AF37; text-decoration:none;">RESERVE →</a>
+                        <span class="font-serif" style="font-size:18px;">From €495</span>
+                        <a href="https://wa.me/8618665723438" class="uppercase" style="font-size:10px; font-weight:700; color:#D4AF37; text-decoration:none;">RESERVE →</a>
                     </div>
                 </div>
             </article>
@@ -87,22 +108,22 @@
             <!-- 2: Heirloom Bracelet -->
             <article class="product-card">
                 <div class="img-wrapper">
-                    <img id="img-bracelet" src="img/2026-06-26_131844_sharp_v29.jpg" alt="Bracelet" class="product-img">
+                    <img id="img-bracelet" src="assets/img_hd/ruby diamond bracelet/2026-06-26 131844.jpg" alt="Bracelet" class="product-img">
                     <div class="angle-selector">
-                        <button onclick="changeAngle('img-bracelet', 'img/2026-06-26_131844_sharp_v29.jpg', this)" class="angle-btn active">
-                            <img src="img/2026-06-26_131844_sharp_v29.jpg">
+                        <button onclick="changeAngle('img-bracelet', 'assets/img_hd/ruby diamond bracelet/2026-06-26 131844.jpg', this)" class="angle-btn active">
+                            <img src="assets/img_hd/ruby diamond bracelet/2026-06-26 131844.jpg">
                         </button>
-                        <button onclick="changeAngle('img-bracelet', 'img/2026-06-26_132656_sharp_v29.jpg', this)" class="angle-btn">
-                            <img src="img/2026-06-26_132656_sharp_v29.jpg">
+                        <button onclick="changeAngle('img-bracelet', 'assets/img_hd/ruby diamond bracelet/2026-06-26 132656.jpg', this)" class="angle-btn">
+                            <img src="assets/img_hd/ruby diamond bracelet/2026-06-26 132656.jpg">
                         </button>
                     </div>
                 </div>
-                <div style="padding:24px;">
-                    <h3 class="font-serif" style="font-size:20px;">Heirloom Bracelet</h3>
-                    <p style="font-size:12px; color:#707070; margin: 12px 0;">Natural Ruby & Diamonds in 18K solid gold.</p>
+                <div style="padding:32px;">
+                    <h3 class="font-serif" style="font-size:20px; margin-bottom:8px;">Heirloom Bracelet</h3>
+                    <p style="font-size:12px; color:#707070; margin-bottom:24px;">Natural Ruby & Diamonds in 18K solid gold.</p>
                     <div style="display:flex; justify-content:space-between; align-items:center;">
-                        <span class="font-serif">€985</span>
-                        <a href="https://wa.me/8618665723438" style="font-size:10px; font-weight:700; color:#D4AF37; text-decoration:none;">RESERVE →</a>
+                        <span class="font-serif" style="font-size:18px;">From €985</span>
+                        <a href="https://wa.me/8618665723438" class="uppercase" style="font-size:10px; font-weight:700; color:#D4AF37; text-decoration:none;">RESERVE →</a>
                     </div>
                 </div>
             </article>
@@ -110,22 +131,22 @@
             <!-- 3: Diamond Triangle -->
             <article class="product-card">
                 <div class="img-wrapper">
-                    <img id="img-triangle" src="img/3月3日首饰61303_sharp_v29.jpg" alt="Triangle" class="product-img">
+                    <img id="img-triangle" src="assets/img_hd/diamond triangle/3月3日首饰61303.jpg" alt="Triangle" class="product-img">
                     <div class="angle-selector">
-                        <button onclick="changeAngle('img-triangle', 'img/3月3日首饰61303_sharp_v29.jpg', this)" class="angle-btn active">
-                            <img src="img/3月3日首饰61303_sharp_v29.jpg">
+                        <button onclick="changeAngle('img-triangle', 'assets/img_hd/diamond triangle/3月3日首饰61303.jpg', this)" class="angle-btn active">
+                            <img src="assets/img_hd/diamond triangle/3月3日首饰61303.jpg">
                         </button>
-                        <button onclick="changeAngle('img-triangle', 'img/2026-03-24_152333_sharp_v29.jpg', this)" class="angle-btn">
-                            <img src="img/2026-03-24_152333_sharp_v29.jpg">
+                        <button onclick="changeAngle('img-triangle', 'assets/img_hd/diamond triangle/2026-03-24 152333.jpg', this)" class="angle-btn">
+                            <img src="assets/img_hd/diamond triangle/2026-03-24 152333.jpg">
                         </button>
                     </div>
                 </div>
-                <div style="padding:24px;">
-                    <h3 class="font-serif" style="font-size:20px;">Diamond Triangle</h3>
-                    <p style="font-size:12px; color:#707070; margin: 12px 0;">Geometric precision with a premium diamond pavé.</p>
+                <div style="padding:32px;">
+                    <h3 class="font-serif" style="font-size:20px; margin-bottom:8px;">Diamond Triangle</h3>
+                    <p style="font-size:12px; color:#707070; margin-bottom:24px;">Geometric precision with a premium diamond pavé.</p>
                     <div style="display:flex; justify-content:space-between; align-items:center;">
-                        <span class="font-serif">€845</span>
-                        <a href="https://wa.me/8618665723438" style="font-size:10px; font-weight:700; color:#D4AF37; text-decoration:none;">RESERVE →</a>
+                        <span class="font-serif" style="font-size:18px;">From €845</span>
+                        <a href="https://wa.me/8618665723438" class="uppercase" style="font-size:10px; font-weight:700; color:#D4AF37; text-decoration:none;">RESERVE →</a>
                     </div>
                 </div>
             </article>
@@ -133,22 +154,22 @@
             <!-- 4: Liquid Gold -->
             <article class="product-card">
                 <div class="img-wrapper">
-                    <img id="img-liquid" src="img/3月3日首饰61275_sharp_v29.jpg" alt="Liquid Gold" class="product-img">
+                    <img id="img-liquid" src="assets/img_hd/liquid gold pendant/3月3日首饰61275.jpg" alt="Liquid Gold" class="product-img">
                     <div class="angle-selector">
-                        <button onclick="changeAngle('img-liquid', 'img/3月3日首饰61275_sharp_v29.jpg', this)" class="angle-btn active">
-                            <img src="img/3月3日首饰61275_sharp_v29.jpg">
+                        <button onclick="changeAngle('img-liquid', 'assets/img_hd/liquid gold pendant/3月3日首饰61275.jpg', this)" class="angle-btn active">
+                            <img src="assets/img_hd/liquid gold pendant/3月3日首饰61275.jpg">
                         </button>
-                        <button onclick="changeAngle('img-liquid', 'img/2026-04-02_114656_sharp_v29.jpg', this)" class="angle-btn">
-                            <img src="img/2026-04-02_114656_sharp_v29.jpg">
+                        <button onclick="changeAngle('img-liquid', 'assets/img_hd/liquid gold pendant/2026-04-02 114656.jpg', this)" class="angle-btn">
+                            <img src="assets/img_hd/liquid gold pendant/2026-04-02 114656.jpg">
                         </button>
                     </div>
                 </div>
-                <div style="padding:24px;">
-                    <h3 class="font-serif" style="font-size:20px;">Liquid Gold</h3>
-                    <p style="font-size:12px; color:#707070; margin: 12px 0;">Hand-polished fluid 18K solid gold silhouette.</p>
+                <div style="padding:32px;">
+                    <h3 class="font-serif" style="font-size:20px; margin-bottom:8px;">Liquid Gold</h3>
+                    <p style="font-size:12px; color:#707070; margin-bottom:24px;">Organic, fluid silhouette in hand-polished 18K gold.</p>
                     <div style="display:flex; justify-content:space-between; align-items:center;">
-                        <span class="font-serif">€745</span>
-                        <a href="https://wa.me/8618665723438" style="font-size:10px; font-weight:700; color:#D4AF37; text-decoration:none;">RESERVE →</a>
+                        <span class="font-serif" style="font-size:18px;">From €745</span>
+                        <a href="https://wa.me/8618665723438" class="uppercase" style="font-size:10px; font-weight:700; color:#D4AF37; text-decoration:none;">RESERVE →</a>
                     </div>
                 </div>
             </article>
@@ -156,22 +177,22 @@
             <!-- 5: Eclipse -->
             <article class="product-card">
                 <div class="img-wrapper">
-                    <img id="img-eclipse" src="img/微信图片_20260729110429_1298_26_sharp_v29.jpg" alt="Eclipse" class="product-img">
+                    <img id="img-eclipse" src="assets/img_hd/eclipse/微信图片_20260729110429_1298_26.jpg" alt="Eclipse" class="product-img">
                     <div class="angle-selector">
-                        <button onclick="changeAngle('img-eclipse', 'img/微信图片_20260729110429_1298_26_sharp_v29.jpg', this)" class="angle-btn active">
-                            <img src="img/微信图片_20260729110429_1298_26_sharp_v29.jpg">
+                        <button onclick="changeAngle('img-eclipse', 'assets/img_hd/eclipse/微信图片_20260729110429_1298_26.jpg', this)" class="angle-btn active">
+                            <img src="assets/img_hd/eclipse/微信图片_20260729110429_1298_26.jpg">
                         </button>
-                        <button onclick="changeAngle('img-eclipse', 'img/2026-05-13_140242_sharp_v29.jpg', this)" class="angle-btn">
-                            <img src="img/2026-05-13_140242_sharp_v29.jpg">
+                        <button onclick="changeAngle('img-eclipse', 'assets/img_hd/eclipse/2026-05-13 140242.jpg', this)" class="angle-btn">
+                            <img src="assets/img_hd/eclipse/2026-05-13 140242.jpg">
                         </button>
                     </div>
                 </div>
-                <div style="padding:24px;">
-                    <h3 class="font-serif" style="font-size:20px;">Eclipse Drop</h3>
-                    <p style="font-size:12px; color:#707070; margin: 12px 0;">Hand-hammered 18K gold with a signature finish.</p>
+                <div style="padding:32px;">
+                    <h3 class="font-serif" style="font-size:20px; margin-bottom:8px;">Eclipse Drop</h3>
+                    <p style="font-size:12px; color:#707070; margin-bottom:24px;">Hand-hammered 18K gold with a signature finish.</p>
                     <div style="display:flex; justify-content:space-between; align-items:center;">
-                        <span class="font-serif">€895</span>
-                        <a href="https://wa.me/8618665723438" style="font-size:10px; font-weight:700; color:#D4AF37; text-decoration:none;">RESERVE →</a>
+                        <span class="font-serif" style="font-size:18px;">From €895</span>
+                        <a href="https://wa.me/8618665723438" class="uppercase" style="font-size:10px; font-weight:700; color:#D4AF37; text-decoration:none;">RESERVE →</a>
                     </div>
                 </div>
             </article>
@@ -179,37 +200,46 @@
             <!-- 6: Infinite Hoops -->
             <article class="product-card">
                 <div class="img-wrapper">
-                    <img id="img-hoops" src="img/微信图片_20260729105333_1297_26_sharp_v29.jpg" alt="Hoops" class="product-img">
+                    <img id="img-hoops" src="assets/img_hd/infinity hoops/微信图片_20260729105333_1297_26.jpg" alt="Hoops" class="product-img">
                     <div class="angle-selector">
-                        <button onclick="changeAngle('img-hoops', 'img/微信图片_20260729105333_1297_26.jpg?v=29_1240', this)" class="angle-btn active">
-                            <img src="img/微信图片_20260729105333_1297_26_sharp_v29.jpg">
+                        <button onclick="changeAngle('img-hoops', 'assets/img_hd/infinity hoops/微信图片_20260729105333_1297_26.jpg', this)" class="angle-btn active">
+                            <img src="assets/img_hd/infinity hoops/微信图片_20260729105333_1297_26.jpg">
                         </button>
-                        <button onclick="changeAngle('img-hoops', 'img/微信图片_20260711131932_15570_128_sharp_v29.jpg', this)" class="angle-btn">
-                            <img src="img/微信图片_20260711131932_15570_128_sharp_v29.jpg">
+                        <button onclick="changeAngle('img-hoops', 'assets/img_hd/infinity hoops/微信图片_20260711131932_15570_128.jpg', this)" class="angle-btn">
+                            <img src="assets/img_hd/infinity hoops/微信图片_20260711131932_15570_128.jpg">
                         </button>
                     </div>
                 </div>
-                <div style="padding:24px;">
-                    <h3 class="font-serif" style="font-size:20px;">Infinite Hoops</h3>
-                    <p style="font-size:12px; color:#707070; margin: 12px 0;">Timeless solid gold hoops, crafted for generations.</p>
+                <div style="padding:32px;">
+                    <h3 class="font-serif" style="font-size:20px; margin-bottom:8px;">Infinite Hoops</h3>
+                    <p style="font-size:12px; color:#707070; margin-bottom:24px;">Timeless 18K solid gold hoops, crafted for longevity.</p>
                     <div style="display:flex; justify-content:space-between; align-items:center;">
-                        <span class="font-serif">€795</span>
-                        <a href="https://wa.me/8618665723438" style="font-size:10px; font-weight:700; color:#D4AF37; text-decoration:none;">RESERVE →</a>
+                        <span class="font-serif" style="font-size:18px;">From €795</span>
+                        <a href="https://wa.me/8618665723438" class="uppercase" style="font-size:10px; font-weight:700; color:#D4AF37; text-decoration:none;">RESERVE →</a>
                     </div>
                 </div>
             </article>
         </div>
     </section>
 
-    <footer style="padding:60px 24px; text-align:center; border-top:1px solid rgba(212,175,55,0.1);">
-        <div class="font-serif uppercase" style="font-size:22px; letter-spacing:0.2em; margin-bottom:8px;">LA POMELLIA</div>
+    <section id="philosophy" style="background:#1A1A1A; color:white; padding:100px 24px; text-align:center;">
+        <div class="container">
+            <h2 class="font-serif" style="font-size:32px; margin-bottom:32px;">Jewelry to be Inherited</h2>
+            <p style="max-width:600px; margin:0 auto; font-size:14px; opacity:0.8; font-weight:300; letter-spacing:0.05em; line-height:1.8;">
+                La Pomellia by Anara rejects the transient nature of modern fashion. Every piece is a permanent legacy, crafted in 18K solid gold to endure for generations as a personal family heirloom.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="font-serif uppercase" style="font-size:22px; letter-spacing:0.2em; margin-bottom:8px; color:#1A1A1A;">LA POMELLIA</div>
         <div style="font-size:10px; letter-spacing:0.4em; color:#D4AF37; font-weight:700; text-transform:uppercase; margin-bottom:32px;">by Anara</div>
         <p style="font-size:9px; color:#707070;">© 2027 La Pomellia by Anara. All Rights Reserved.</p>
     </footer>
 
     <script>
         function changeAngle(id, url, btn) {
-            document.getElementById(id).src = url;
+            document.getElementById(id).src = url + '?v=' + new Date().getTime();
             const container = btn.parentElement;
             container.querySelectorAll('.angle-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
