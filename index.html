@@ -21,8 +21,9 @@
     </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
-        :root { --gold: #D4AF37; --charcoal: #1A1A1A; --stone: #707070; --cream: #FAF8F5; --white: #FFFFFF; }
+        :root { --gold: #D4AF37; --charcoal: #1A1A1A; --cream: #FAF8F5; --white: #FFFFFF; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body { background: var(--cream); color: var(--charcoal); font-family: 'Montserrat', sans-serif; -webkit-font-smoothing: antialiased; line-height: 1.6; }
         .font-serif { font-family: 'Playfair Display', serif; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
@@ -52,6 +53,8 @@
         .btn-primary:hover { background: var(--gold); }
         .content-section { padding: 100px 0; border-top: 1px solid rgba(212, 175, 55, 0.1); }
         footer { padding: 80px 24px; text-align: center; background: var(--white); border-top: 1px solid rgba(212, 175, 55, 0.1); }
+        .social-links { display: flex; justify-content: center; gap: 20px; margin-top: 24px; }
+        .social-links a { font-size: 12px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--gold); text-decoration: none; font-weight: 600; }
     </style>
 </head>
 <body>
@@ -65,9 +68,9 @@
                 <a href="#collection">Collection</a>
                 <a href="#heritage">Heritage</a>
                 <a href="#philosophy">Philosophy</a>
-                <a href="#concierge">Concierge</a>
+                <a href="#shipping">Shipping</a>
             </nav>
-            <a href="#concierge" class="btn-outline">Reserve</a>
+            <a href="https://wa.me/8618665723438" class="btn-outline">Reserve</a>
         </div>
     </header>
 
@@ -86,29 +89,28 @@
     </section>
 
     <section id="collection" class="container">
+        <div class="section-title" style="text-align:center;">
+            <span class="uppercase tracking-widest text-luxury-gold" style="font-size:11px; font-weight:600;">Handcrafted Masterpieces</span>
+            <h2 class="font-serif" style="font-size:32px; margin-top:8px;">The Collection</h2>
+            <div class="divider"></div>
+        </div>
+
         <div class="product-grid">
             <!-- 1: Tempo Ring -->
             <article class="product-card">
                 <div class="img-wrapper">
-                    <img id="img-tempo" src="img/tempo_1.jpg" alt="Tempo" class="product-img">
+                    <img id="img-p1" src="img/p1a.jpg?v=23" alt="Tempo" class="product-img">
                     <div class="angle-selector">
-                        <button onclick="changeAngle('img-tempo', 'img/tempo_1.jpg', this)" class="angle-btn active">
-                            <img src="img/tempo_1.jpg">
-                        </button>
-                        <button onclick="changeAngle('img-tempo', 'img/tempo_2.jpg', this)" class="angle-btn">
-                            <img src="img/tempo_2.jpg">
-                        </button>
+                        <button onclick="changeAngle('img-p1', 'img/p1a.jpg?v=23', this)" class="angle-btn active"><img src="img/p1a.jpg"></button>
+                        <button onclick="changeAngle('img-p1', 'img/p1b.jpg?v=23', this)" class="angle-btn"><img src="img/p1b.jpg"></button>
                     </div>
                 </div>
                 <div style="padding:24px;">
                     <h3 class="font-serif" style="font-size:20px; margin-bottom:8px;">Tempo Ring</h3>
-                    <p style="font-size:12px; color:#707070; margin-bottom:24px;">Rhythmic 18K gold band with brilliant diamond-cut texture.</p>
-                    <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid rgba(212,175,55,0.1); padding-top:16px;">
-                        <div style="display:flex; flex-direction:column;">
-                            <span class="font-serif" style="font-size:18px;">From €495</span>
-                            <span style="font-size:9px; color:#707070; opacity:0.6;">Excl. €50 Insured Shipping</span>
-                        </div>
-                        <a href="#concierge" class="uppercase" style="font-size:10px; font-weight:700; color:#D4AF37; text-decoration:none;">RESERVE →</a>
+                    <p style="font-size:12px; color:#707070; margin-bottom:24px;">Solid 18K gold with rhythmic diamond-cut texture.</p>
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                        <span class="font-serif" style="font-size:18px;">From €495</span>
+                        <a href="https://wa.me/8618665723438" class="uppercase" style="font-size:10px; font-weight:700; color:#D4AF37; text-decoration:none;">RESERVE →</a>
                     </div>
                 </div>
             </article>
@@ -116,22 +118,18 @@
             <!-- 2: Heirloom Bracelet -->
             <article class="product-card">
                 <div class="img-wrapper">
-                    <img id="img-bracelet" src="img/bracelet_1.jpg" alt="Bracelet" class="product-img">
+                    <img id="img-p2" src="img/p2a.jpg?v=23" alt="Bracelet" class="product-img">
                     <div class="angle-selector">
-                        <button onclick="changeAngle('img-bracelet', 'img/bracelet_1.jpg', this)" class="angle-btn active">
-                            <img src="img/bracelet_1.jpg">
-                        </button>
-                        <button onclick="changeAngle('img-bracelet', 'img/bracelet_2.jpg', this)" class="angle-btn">
-                            <img src="img/bracelet_2.jpg">
-                        </button>
+                        <button onclick="changeAngle('img-p2', 'img/p2a.jpg?v=23', this)" class="angle-btn active"><img src="img/p2a.jpg"></button>
+                        <button onclick="changeAngle('img-p2', 'img/p2b.jpg?v=23', this)" class="angle-btn"><img src="img/p2b.jpg"></button>
                     </div>
                 </div>
                 <div style="padding:24px;">
                     <h3 class="font-serif" style="font-size:20px; margin-bottom:8px;">Heirloom Bracelet</h3>
-                    <p style="font-size:12px; color:#707070; margin-bottom:24px;">Natural Ruby and Diamonds set in artisanal 18K gold.</p>
-                    <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid rgba(212,175,55,0.1); padding-top:16px;">
+                    <p style="font-size:12px; color:#707070; margin-bottom:24px;">Natural Ruby & Diamonds in 18K solid gold.</p>
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
                         <span class="font-serif" style="font-size:18px;">From €985</span>
-                        <a href="#concierge" class="uppercase" style="font-size:10px; font-weight:700; color:#D4AF37; text-decoration:none;">RESERVE →</a>
+                        <a href="https://wa.me/8618665723438" class="uppercase" style="font-size:10px; font-weight:700; color:#D4AF37; text-decoration:none;">RESERVE →</a>
                     </div>
                 </div>
             </article>
@@ -139,22 +137,18 @@
             <!-- 3: Diamond Triangle -->
             <article class="product-card">
                 <div class="img-wrapper">
-                    <img id="img-triangle" src="img/triangle_1.jpg" alt="Triangle" class="product-img">
+                    <img id="img-p3" src="img/p3a.jpg?v=23" alt="Triangle" class="product-img">
                     <div class="angle-selector">
-                        <button onclick="changeAngle('img-triangle', 'img/triangle_1.jpg', this)" class="angle-btn active">
-                            <img src="img/triangle_1.jpg">
-                        </button>
-                        <button onclick="changeAngle('img-triangle', 'img/triangle_2.jpg', this)" class="angle-btn">
-                            <img src="img/triangle_2.jpg">
-                        </button>
+                        <button onclick="changeAngle('img-p3', 'img/p3a.jpg?v=23', this)" class="angle-btn active"><img src="img/p3a.jpg"></button>
+                        <button onclick="changeAngle('img-p3', 'img/p3b.jpg?v=23', this)" class="angle-btn"><img src="img/p3b.jpg"></button>
                     </div>
                 </div>
                 <div style="padding:24px;">
                     <h3 class="font-serif" style="font-size:20px; margin-bottom:8px;">Diamond Triangle</h3>
-                    <p style="font-size:12px; color:#707070; margin-bottom:24px;">Pure geometric precision with a premium diamond pavé.</p>
-                    <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid rgba(212,175,55,0.1); padding-top:16px;">
+                    <p style="font-size:12px; color:#707070; margin-bottom:24px;">Geometric precision with a premium diamond pavé.</p>
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
                         <span class="font-serif" style="font-size:18px;">From €845</span>
-                        <a href="#concierge" class="uppercase" style="font-size:10px; font-weight:700; color:#D4AF37; text-decoration:none;">RESERVE →</a>
+                        <a href="https://wa.me/8618665723438" class="uppercase" style="font-size:10px; font-weight:700; color:#D4AF37; text-decoration:none;">RESERVE →</a>
                     </div>
                 </div>
             </article>
@@ -162,22 +156,18 @@
             <!-- 4: Liquid Gold -->
             <article class="product-card">
                 <div class="img-wrapper">
-                    <img id="img-liquid" src="img/liquid_1.jpg" alt="Liquid Gold" class="product-img">
+                    <img id="img-p4" src="img/p4a.jpg?v=23" alt="Liquid Gold" class="product-img">
                     <div class="angle-selector">
-                        <button onclick="changeAngle('img-liquid', 'img/liquid_1.jpg', this)" class="angle-btn active">
-                            <img src="img/liquid_1.jpg">
-                        </button>
-                        <button onclick="changeAngle('img-liquid', 'img/liquid_2.jpg', this)" class="angle-btn">
-                            <img src="img/liquid_2.jpg">
-                        </button>
+                        <button onclick="changeAngle('img-p4', 'img/p4a.jpg?v=23', this)" class="angle-btn active"><img src="img/p4a.jpg"></button>
+                        <button onclick="changeAngle('img-p4', 'img/p4b.jpg?v=23', this)" class="angle-btn"><img src="img/p4b.jpg"></button>
                     </div>
                 </div>
                 <div style="padding:24px;">
                     <h3 class="font-serif" style="font-size:20px; margin-bottom:8px;">Liquid Gold</h3>
-                    <p style="font-size:12px; color:#707070; margin-bottom:24px;">Organic, fluid silhouette in hand-polished 18K gold.</p>
-                    <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid rgba(212,175,55,0.1); padding-top:16px;">
+                    <p style="font-size:12px; color:#707070; margin-bottom:24px;">Hand-polished fluid 18K solid gold silhouette.</p>
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
                         <span class="font-serif" style="font-size:18px;">From €745</span>
-                        <a href="#concierge" class="uppercase" style="font-size:10px; font-weight:700; color:#D4AF37; text-decoration:none;">RESERVE →</a>
+                        <a href="https://wa.me/8618665723438" class="uppercase" style="font-size:10px; font-weight:700; color:#D4AF37; text-decoration:none;">RESERVE →</a>
                     </div>
                 </div>
             </article>
@@ -185,22 +175,18 @@
             <!-- 5: Eclipse Drop -->
             <article class="product-card">
                 <div class="img-wrapper">
-                    <img id="img-eclipse" src="img/eclipse_1.jpg" alt="Eclipse" class="product-img">
+                    <img id="img-p5" src="img/p5a.jpg?v=23" alt="Eclipse" class="product-img">
                     <div class="angle-selector">
-                        <button onclick="changeAngle('img-eclipse', 'img/eclipse_1.jpg', this)" class="angle-btn active">
-                            <img src="img/eclipse_1.jpg">
-                        </button>
-                        <button onclick="changeAngle('img-eclipse', 'img/eclipse_2.jpg', this)" class="angle-btn">
-                            <img src="img/eclipse_2.jpg">
-                        </button>
+                        <button onclick="changeAngle('img-p5', 'img/p5a.jpg?v=23', this)" class="angle-btn active"><img src="img/p5a.jpg"></button>
+                        <button onclick="changeAngle('img-p5', 'img/p5b.jpg?v=23', this)" class="angle-btn"><img src="img/p5b.jpg"></button>
                     </div>
                 </div>
                 <div style="padding:24px;">
                     <h3 class="font-serif" style="font-size:20px; margin-bottom:8px;">Eclipse Drop</h3>
-                    <p style="font-size:12px; color:#707070; margin-bottom:24px;">Hand-hammered 18K gold with signature "Crushed Ice" finish.</p>
-                    <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid rgba(212,175,55,0.1); padding-top:16px;">
+                    <p style="font-size:12px; color:#707070; margin-bottom:24px;">Hand-hammered 18K gold with signature finish.</p>
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
                         <span class="font-serif" style="font-size:18px;">From €895</span>
-                        <a href="#concierge" class="uppercase" style="font-size:10px; font-weight:700; color:#D4AF37; text-decoration:none;">RESERVE →</a>
+                        <a href="https://wa.me/8618665723438" class="uppercase" style="font-size:10px; font-weight:700; color:#D4AF37; text-decoration:none;">RESERVE →</a>
                     </div>
                 </div>
             </article>
@@ -208,25 +194,135 @@
             <!-- 6: Infinite Hoops -->
             <article class="product-card">
                 <div class="img-wrapper">
-                    <img id="img-hoops" src="img/hoops_1.jpg" alt="Hoops" class="product-img">
+                    <img id="img-p6" src="img/p6a.jpg?v=23" alt="Hoops" class="product-img">
                     <div class="angle-selector">
-                        <button onclick="changeAngle('img-hoops', 'img/hoops_1.jpg', this)" class="angle-btn active">
-                            <img src="img/hoops_1.jpg">
-                        </button>
-                        <button onclick="changeAngle('img-hoops', 'img/hoops_2.jpg', this)" class="angle-btn">
-                            <img src="img/hoops_2.jpg">
-                        </button>
+                        <button onclick="changeAngle('img-p6', 'img/p6a.jpg?v=23', this)" class="angle-btn active"><img src="img/p6a.jpg"></button>
+                        <button onclick="changeAngle('img-p6', 'img/p6b.jpg?v=23', this)" class="angle-btn"><img src="img/p6b.jpg"></button>
                     </div>
                 </div>
                 <div style="padding:24px;">
                     <h3 class="font-serif" style="font-size:20px; margin-bottom:8px;">Infinite Hoops</h3>
-                    <p style="font-size:12px; color:#707070; margin-bottom:24px;">Timeless solid gold hoops, crafted for generations.</p>
-                    <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid rgba(212,175,55,0.1); padding-top:16px;">
+                    <p style="font-size:12px; color:#707070; margin-bottom:24px;">Timeless 18K solid gold hoops, crafted for generations.</p>
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
                         <span class="font-serif" style="font-size:18px;">From €795</span>
-                        <a href="#concierge" class="uppercase" style="font-size:10px; font-weight:700; color:#D4AF37; text-decoration:none;">RESERVE →</a>
+                        <a href="https://wa.me/8618665723438" class="uppercase" style="font-size:10px; font-weight:700; color:#D4AF37; text-decoration:none;">RESERVE →</a>
                     </div>
                 </div>
             </article>
+
+            <!-- 7: Cat's Eye -->
+            <article class="product-card">
+                <div class="img-wrapper">
+                    <img id="img-p7" src="img/p7a.jpg?v=23" alt="Cats Eye" class="product-img">
+                    <div class="angle-selector">
+                        <button onclick="changeAngle('img-p7', 'img/p7a.jpg?v=23', this)" class="angle-btn active"><img src="img/p7a.jpg"></button>
+                        <button onclick="changeAngle('img-p7', 'img/p7b.jpg?v=23', this)" class="angle-btn"><img src="img/p7b.jpg"></button>
+                    </div>
+                </div>
+                <div style="padding:24px;">
+                    <h3 class="font-serif" style="font-size:20px; margin-bottom:8px;">Cat's Eye Knot</h3>
+                    <p style="font-size:12px; color:#707070; margin-bottom:24px;">Traditional craftsmanship meets high-polish beads.</p>
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                        <span class="font-serif" style="font-size:18px;">From €825</span>
+                        <a href="https://wa.me/8618665723438" class="uppercase" style="font-size:10px; font-weight:700; color:#D4AF37; text-decoration:none;">RESERVE →</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 8: Trinity Cuff -->
+            <article class="product-card">
+                <div class="img-wrapper">
+                    <img id="img-p8" src="img/p8a.png?v=23" alt="Trinity" class="product-img">
+                    <div class="angle-selector">
+                        <button onclick="changeAngle('img-p8', 'img/p8a.png?v=23', this)" class="angle-btn active"><img src="img/p8a.png"></button>
+                        <button onclick="changeAngle('img-p8', 'img/p8b.jpg?v=23', this)" class="angle-btn"><img src="img/p8b.jpg"></button>
+                    </div>
+                </div>
+                <div style="padding:24px;">
+                    <h3 class="font-serif" style="font-size:20px; margin-bottom:8px;">Trinity Ear Cuff</h3>
+                    <p style="font-size:12px; color:#707070; margin-bottom:24px;">Interlocking bands in solid 18K gold.</p>
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                        <span class="font-serif" style="font-size:18px;">From €218</span>
+                        <a href="https://wa.me/8618665723438" class="uppercase" style="font-size:10px; font-weight:700; color:#D4AF37; text-decoration:none;">RESERVE →</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 9: Overtone Hoops -->
+            <article class="product-card">
+                <div class="img-wrapper">
+                    <img id="img-p9" src="img/p9a.jpg?v=23" alt="Overtone" class="product-img">
+                    <div class="angle-selector">
+                        <button onclick="changeAngle('img-p9', 'img/p9a.jpg?v=23', this)" class="angle-btn active"><img src="img/p9a.jpg"></button>
+                        <button onclick="changeAngle('img-p9', 'img/p9b.jpg?v=23', this)" class="angle-btn"><img src="img/p9b.jpg"></button>
+                    </div>
+                </div>
+                <div style="padding:24px;">
+                    <h3 class="font-serif" style="font-size:20px; margin-bottom:8px;">Overtone Hoops</h3>
+                    <p style="font-size:12px; color:#707070; margin-bottom:24px;">Bold twisted silhouette in high-polish 18K gold.</p>
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                        <span class="font-serif" style="font-size:18px;">From €645</span>
+                        <a href="https://wa.me/8618665723438" class="uppercase" style="font-size:10px; font-weight:700; color:#D4AF37; text-decoration:none;">RESERVE →</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 10: Wind Pendant -->
+            <article class="product-card">
+                <div class="img-wrapper">
+                    <img id="img-p10" src="img/p10a.jpg?v=23" alt="Wind" class="product-img">
+                    <div class="angle-selector">
+                        <button onclick="changeAngle('img-p10', 'img/p10a.jpg?v=23', this)" class="angle-btn active"><img src="img/p10a.jpg"></button>
+                        <button onclick="changeAngle('img-p10', 'img/p10b.jpg?v=23', this)" class="angle-btn"><img src="img/p10b.jpg"></button>
+                    </div>
+                </div>
+                <div style="padding:24px;">
+                    <h3 class="font-serif" style="font-size:20px; margin-bottom:8px;">Wind Pendant</h3>
+                    <p style="font-size:12px; color:#707070; margin-bottom:24px;">Sculptural motion captured in 18K gold.</p>
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                        <span class="font-serif" style="font-size:18px;">From €675</span>
+                        <a href="https://wa.me/8618665723438" class="uppercase" style="font-size:10px; font-weight:700; color:#D4AF37; text-decoration:none;">RESERVE →</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 11: Clover Peridot -->
+            <article class="product-card">
+                <div class="img-wrapper">
+                    <img id="img-p11" src="img/p11a.jpg?v=23" alt="Clover" class="product-img">
+                    <div class="angle-selector">
+                        <button onclick="changeAngle('img-p11', 'img/p11a.jpg?v=23', this)" class="angle-btn active"><img src="img/p11a.jpg"></button>
+                        <button onclick="changeAngle('img-p11', 'img/p11b.jpg?v=23', this)" class="angle-btn"><img src="img/p11b.jpg"></button>
+                    </div>
+                </div>
+                <div style="padding:24px;">
+                    <h3 class="font-serif" style="font-size:20px; margin-bottom:8px;">Clover Peridot</h3>
+                    <p style="font-size:12px; color:#707070; margin-bottom:24px;">1.11ct Natural Peridot in 18K solid yellow gold.</p>
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                        <span class="font-serif" style="font-size:18px;">From €475</span>
+                        <a href="https://wa.me/8618665723438" class="uppercase" style="font-size:10px; font-weight:700; color:#D4AF37; text-decoration:none;">RESERVE →</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Craftsmanship Section -->
+    <section id="quality" class="content-section container">
+        <div style="max-width:800px; margin:0 auto; text-align:center;">
+            <span class="uppercase tracking-widest text-luxury-gold" style="font-size:11px; font-weight:600;">Our Guarantee</span>
+            <h2 class="font-serif" style="font-size:32px; margin:24px 0;">Artisanal Quality</h2>
+            <div class="divider"></div>
+            <div style="display:grid; grid-template-columns: 1fr; md:grid-template-columns: 1fr 1fr; gap:40px; text-align:left; margin-top:40px;">
+                <div style="background:white; padding:32px; border:1px solid rgba(212,175,55,0.1);">
+                    <h4 class="font-serif" style="margin-bottom:12px; color:#1A1A1A;">Certificate of Authenticity</h4>
+                    <p style="font-size:13px; color:#707070;">Every creation is accompanied by a bilingual physical certificate confirming the weight and purity of the gold and the carat of any precious stones.</p>
+                </div>
+                <div style="background:white; padding:32px; border:1px solid rgba(212,175,55,0.1);">
+                    <h4 class="font-serif" style="margin-bottom:12px; color:#1A1A1A;">Bespoke Crafting</h4>
+                    <p style="font-size:13px; color:#707070;">As each piece is meticulously handcrafted in our Guangzhou atelier, please allow approximately 1 month for production and quality inspection.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -256,7 +352,7 @@
     </section>
 
     <!-- Shipping Section -->
-    <section class="content-section container" style="text-align:center;">
+    <section id="shipping" class="content-section container" style="text-align:center;">
         <span class="uppercase tracking-widest text-luxury-gold" style="font-size:11px; font-weight:600;">Global Logistics</span>
         <h2 class="font-serif" style="font-size:28px; margin:24px 0;">Insured Worldwide Delivery</h2>
         <div class="divider"></div>
@@ -265,21 +361,26 @@
         </p>
     </section>
 
-    <section id="concierge" class="container" style="padding:100px 0;">
-        <div style="background:#FAF8F5; border:1px solid rgba(212,175,55,0.2); padding:60px 24px; text-align:center;">
-            <h2 class="font-serif" style="font-size:28px; margin-bottom:16px;">WhatsApp Concierge</h2>
+    <section id="concierge" class="container" style="padding:100px 0; text-align:center;">
+        <div style="background:#FAF8F5; border:1px solid rgba(212,175,55,0.2); padding:60px 24px;">
+            <h2 class="font-serif" style="font-size:28px; margin-bottom:16px;">Concierge Service</h2>
             <p style="font-size:12px; color:#707070; margin-bottom:40px;">Bespoke consultations and private orders.</p>
             <div style="display:flex; justify-content:center; gap:20px;">
                 <a href="https://wa.me/8618665723438" target="_blank" class="btn-primary" style="background:#25D366; text-decoration:none;">WhatsApp</a>
                 <a href="mailto:concierge@lapomellia.com" class="btn-primary" style="text-decoration:none;">Email</a>
             </div>
+            <div class="social-links">
+                <a href="https://www.instagram.com/lapomellia.jewelry/" target="_blank">Instagram</a>
+                <a href="https://www.pinterest.com/lapomellia/" target="_blank">Pinterest</a>
+            </div>
         </div>
     </section>
 
-    <footer>
+    <footer style="padding:60px 24px; text-align:center; background:white; border-top: 1px solid rgba(212,175,55,0.1);">
         <div class="font-serif uppercase" style="font-size:22px; letter-spacing:0.2em; margin-bottom:8px; color:#1A1A1A;">LA POMELLIA</div>
-        <div style="font-size:10px; letter-spacing:0.4em; color:#D4AF37; font-weight:700; text-transform:uppercase; margin-bottom:32px;">by Anara</div>
-        <p style="font-size:9px; color:#707070;">© 2027 La Pomellia by Anara. All Rights Reserved.</p>
+        <div style="font-size:10px; letter-spacing:0.4em; color:#D4AF37; font-weight:700; text-transform:uppercase; margin-bottom:8px;">by Anara</div>
+        <p style="font-size:9px; color:#707070; letter-spacing:0.1em; margin-bottom:16px;">© 2027 La Pomellia by Anara. All Rights Reserved.</p>
+        <p style="font-size:8px; color:#eee; letter-spacing:0.1em;">MASTER BUILD v1.23</p>
     </footer>
 
     <script>
